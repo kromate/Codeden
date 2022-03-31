@@ -5,7 +5,11 @@ module.exports = {
   ],
   mode:'jit',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#20083BBF"
+      }
+    },
   },
   plugins: [],
 }

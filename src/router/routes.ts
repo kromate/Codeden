@@ -16,6 +16,9 @@ const makeRoute = async (page: string[]) => {
 	}
 }
 
+const modules = import.meta.glob('../views/*')
+console.log(Object.keys(modules) );
+
 const allPages = require.context('../views', true, /\.vue$/, 'lazy').keys()
 	.map((key: string) => key.slice(2).replace('.vue', '').split('/'))
 	.map((path) => {

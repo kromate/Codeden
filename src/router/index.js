@@ -1,5 +1,5 @@
 
-import { routes } from '@/router/routes';
+import { routes } from '@/router/routes'
 import { createRouter, createWebHistory } from 'vue-router'
 
 

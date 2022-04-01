@@ -7,7 +7,6 @@ module.exports = {
 	extends: [
 		'plugin:vue/vue3-essential',
 		'eslint:recommended',
-		'@vue/typescript/recommended',
 		"prettier"
 	],
 	parserOptions: {
@@ -40,10 +39,10 @@ module.exports = {
 		'no-tabs': 'off',
 		'no-var': 'error',
 		'no-use-before-define': 'off',
-		indent: ['error', 'tab', { SwitchCase: 1 }],
+		indent: ['warn', 'tab', { SwitchCase: 1 }],
 		'no-mixed-spaces-and-tabs': ['off', 'smart-tabs'],
-		semi: ['error', 'never'],
-		quotes: ['error', 'single'],
+		semi: ['warn', 'never'],
+		quotes: ['warn', 'single'],
 		'prefer-const': ['error'],
 		'arrow-parens': ['error', 'always'],
 		'no-return-assign': 'off',

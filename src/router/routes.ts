@@ -16,11 +16,14 @@ const makeRoute = async (page: string[]) => {
 	}
 }
 
-const modules = import.meta.glob('../views/*')
-console.log(Object.keys(modules) );
+const view = import.meta.glob('../views/*.vue')
+const singleLayerView = import.meta.glob('../views/*/*.vue')
 
-const allPages = require.context('../views', true, /\.vue$/, 'lazy').keys()
-	.map((key: string) => key.slice(2).replace('.vue', '').split('/'))
+const allViews = {...view, ...singleLayerView}
+
+
+const allPages = Object.keys(allViews)
+	.map((key: string) => key.slice(9).replace('.vue', '').split('/'))
 	.map((path) => {
 		let parent = null as null | string
 
@@ -29,6 +32,7 @@ const allPages = require.context('../views', true, /\.vue$/, 'lazy').keys()
 
 		return { parent, path }
 	})
+
 
 const nestedPages = allPages.filter((page) => page.parent)
 

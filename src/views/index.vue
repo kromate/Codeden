@@ -22,13 +22,14 @@
 				<div class="flex flex-col items-center mt-12 text-center">
 					<span class="relative flex flex-wrap w-full md:w-auto gap-4">
 						<router-link to="/" class="btn">
-							components
+							Get Started
 						</router-link>
 						<router-link to="/" class="btn">
 							Stages
 						</router-link>
+					
 						<router-link to="/" class="btn">
-							Get Started
+							components
 						</router-link>
 						
 					</span>

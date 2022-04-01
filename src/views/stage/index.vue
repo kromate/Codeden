@@ -1,7 +1,10 @@
 <template>
 	<nav class="bg-primary p-4">
-		<span class="px-5 text-xl font-black leading-none text-white"><span>CodeDen</span><span class="text-white">.</span></span>
+		<span class="md:px-5 text-xl font-black leading-none text-white"><span>CodeDen</span><span class="text-white">.</span></span>
 	</nav>
+
+	<div class="flex w-full bg-white h-screen">
+	</div>
 </template>
 
 <script lang="ts" setup>

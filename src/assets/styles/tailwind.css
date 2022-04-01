@@ -8,6 +8,9 @@
     .btn{
         @apply flex items-center justify-center w-auto px-8 py-4 text-base font-bold  text-white bg-indigo-600 rounded-md  hover:bg-indigo-500 
     }
+    .btn-outline{
+        @apply flex items-center justify-center w-auto px-8 py-4 text-base font-bold  text-white bg-indigo-600 rounded-md  hover:bg-indigo-500 
+    }
     .pc{
         @apply hidden md:flex
     }

@@ -5,7 +5,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 
 export const setupRouter = async () => {
-	console.log( await Promise.all(routes))
 	const router = createRouter({
 		history: createWebHistory(),
 		routes: await Promise.all(routes)

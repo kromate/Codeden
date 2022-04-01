@@ -1,4 +1,4 @@
-export const readBlocks = async () => {
+export const readBlocks = () => {
 
     let result: string[] = []
 

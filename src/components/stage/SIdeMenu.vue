@@ -5,6 +5,9 @@
 </template>
 
 <script lang="ts" setup>
+import { readBlocks } from '../../composables/useFileSystem'
+
+readBlocks()
 
 </script>
 

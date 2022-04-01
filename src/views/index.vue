@@ -3,7 +3,7 @@
 		<div class="mx-auto container">
 			<NavBar />
 			<div
-				class="container max-w-lg px-4 py-32 mx-auto text-left md:max-w-none md:text-center"
+				class="container py-32 mx-auto text-left md:max-w-none md:text-center"
 			>
 				<h1
 					class="text-5xl font-extrabold leading-10 tracking-normal text-left text-gray-900 md:text-center sm:leading-none md:text-6xl lg:text-7xl"
@@ -20,11 +20,17 @@
 					An Open Source Project that is focused on helping you spend less time on coding UI designs and more time building the actual application by providing already made components and pages
 				</div>
 				<div class="flex flex-col items-center mt-12 text-center">
-					<span class="relative inline-flex w-full md:w-auto">
+					<span class="relative flex flex-wrap w-full md:w-auto gap-4">
+						<router-link to="/" class="btn">
+							components
+						</router-link>
+						<router-link to="/" class="btn">
+							Stages
+						</router-link>
 						<router-link to="/" class="btn">
 							Get Started
 						</router-link>
-					
+						
 					</span>
 				</div>
 			</div>

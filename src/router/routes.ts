@@ -16,8 +16,10 @@ const makeRoute = async (page: string[]) => {
 	}
 }
 
-const view = import.meta.glob('../views/*.vue')
+
 const singleLayerView = import.meta.glob('../views/*/*.vue')
+const view = import.meta.glob('../views/*.vue')
+
 
 const allViews = { ...view, ...singleLayerView }
 
@@ -29,7 +31,6 @@ const allPages = Object.keys(allViews)
 
 		const nestedIndex = path.findIndex((p) => p.startsWith('^'))
 		if (nestedIndex > -1) parent = getPath(path.slice(0, nestedIndex))
-
 		return { parent, path }
 	})
 

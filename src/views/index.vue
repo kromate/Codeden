@@ -24,8 +24,8 @@
 						<router-link to="/" class="btn">
 							Get Started
 						</router-link>
-						<router-link to="/" class="btn">
-							Stages
+						<router-link to="/stage" class="btn">
+							Stage
 						</router-link>
 						<router-link to="/" class="btn">
 							components

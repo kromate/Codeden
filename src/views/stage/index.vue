@@ -1,6 +1,6 @@
 <template>
-	<nav class="bg-primary">
-		<span class="p-1 text-xl font-black leading-none text-gray-900"><span>CodeDen</span><span class="text-indigo-600">.</span></span>
+	<nav class="bg-primary p-4">
+		<span class="text-xl font-black leading-none text-white"><span>CodeDen</span><span class="text-white">.</span></span>
 	</nav>
 </template>
 

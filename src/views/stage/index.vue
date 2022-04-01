@@ -4,8 +4,8 @@
 	</nav>
 
 	<div class="flex w-full p-4">
-		<div class="w-48 h-96 rounded-md shadow-xl bg-white flex flex-col items-center">
-			<span class="">Header</span>
+		<div class="w-40 h-96 rounded-md shadow-xl bg-white flex flex-col items-center">
+			<span class="text-lg font-bold text-gray-500" v-for="n in 12">Header</span>
 		</div>
 	</div>
 </template>

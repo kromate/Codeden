@@ -6,7 +6,7 @@ export const readBlocks = async () => {
     const BlockArr = Object.keys(requireComponent)
 
     for (let i = 0; i < BlockArr.length; i++) {
-        console.log(BlockArr[i].split('/'))
+        BlockArr[i].split('/')[3]
     }
 
 }

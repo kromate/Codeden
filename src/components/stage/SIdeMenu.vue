@@ -7,7 +7,10 @@
 <script lang="ts" setup>
 import { readBlocks } from '../../composables/useFileSystem'
 
-readBlocks()
+const Block = readBlocks()
+
+console.log(Block)
+
 
 </script>
 

@@ -9,4 +9,6 @@ export const readBlocks = async () => {
         result.push(BlockArr[i].split('/')[3])
     }
 
+    return result
+
 }

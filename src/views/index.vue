@@ -42,14 +42,14 @@ import NavBar from '../components/NavBar.vue'
 
 
 <style scoped>
-.gradient {
-  background: #8A2387;
-   background: linear-gradient(to right, #F27121 20%, #E94057 40%, #E94057 60%, 8A2387 80%);
-  background-size: 200% auto;
+.gradient  {
+  text-align: center;
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   background-clip: text;
-
-    animation: shine 1s linear infinite;
-  }
+  text-fill-color: transparent;
+  animation: hue 10s infinite linear;
+}
 
 @keyframes hue {
   from {

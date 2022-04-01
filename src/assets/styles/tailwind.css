@@ -6,10 +6,10 @@
 
 @layer components{
     .btn{
-        @apply flex items-center justify-center w-auto px-8 py-4 text-base font-bold  text-white bg-indigo-600 rounded-md  hover:bg-indigo-500 
+        @apply flex items-center justify-center w-auto px-8 md:py-3.5 py-2.5  text-base font-bold  text-white bg-primary rounded-md  hover:bg-indigo-500 
     }
     .btn-outline{
-        @apply flex items-center justify-center w-auto px-8 py-4 text-base font-bold  text-white bg-indigo-600 rounded-md  hover:bg-indigo-500 
+        @apply flex items-center justify-center w-auto px-8 md:py-3.5 py-2.5  text-base font-bold  text-primary border border-primary rounded-md  
     }
     .pc{
         @apply hidden md:flex

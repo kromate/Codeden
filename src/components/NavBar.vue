@@ -7,7 +7,7 @@
 				</a>
 			</div>
 
-			<router-link to="#_" v-if="showMenu" class="btn rounded-none py-3">Get Started</router-link>
+			<router-link to="#_" v-if="showMenu" class="btn rounded-none py-3 w-full">Get Started</router-link>
 			<router-link to="#_"  class="btn pc py-3">Get Started</router-link>
 			
 			<div @click="showMenu = !showMenu" class="absolute right-0 flex flex-col items-center  justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">

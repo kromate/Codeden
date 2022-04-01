@@ -6,12 +6,12 @@
 				class="container py-32 mx-auto text-left md:max-w-none md:text-center"
 			>
 				<h1
-					class="text-5xl font-extrabold leading-10 tracking-normal text-left text-gray-900 md:text-center sm:leading-none md:text-6xl lg:text-7xl"
+					class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-10 tracking-normal text-left text-gray-900 md:text-center sm:leading-none "
 				>
-					<span class="inline md:block">Spend more time Building</span>
+					<span class="inline md:block">Spend more time Building</span> 
 					<span
-						class="relative mt-2  bg-clip-text gradient md:inline-block"
-					>less time Coding</span
+						class="relative mt-2  bg-clip-text gradient md:inline-block pl-3"
+					> and less time Coding</span
 					>
 				</h1>
 				<div
@@ -27,7 +27,6 @@
 						<router-link to="/" class="btn">
 							Stages
 						</router-link>
-					
 						<router-link to="/" class="btn">
 							components
 						</router-link>
@@ -48,7 +47,7 @@ import NavBar from '../components/NavBar.vue'
 <style scoped>
 .gradient  {
   text-align: center;
-  color: #3426f3;
+  color: #4f46e5;
   background-image: -webkit-linear-gradient(92deg, #3426f3, #feab3a);
   background-clip: text;
   text-fill-color: transparent;

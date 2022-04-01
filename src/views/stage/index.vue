@@ -5,7 +5,7 @@
 
 	<div class="flex w-full p-4 gap-4 h-screen">
 	
-		<SideMenu/>
+		<!-- <SideMenu/> -->
 		<MainView/>
 
 	
@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import SideMenu from '../../components/stage/SideMenu.vue'
+// import SideMenu from '../../components/stage/SideMenu.vue'
 import MainView from '../../components/stage/MainView.vue'
 
 

@@ -19,7 +19,7 @@ const makeRoute = async (page: string[]) => {
 const view = import.meta.glob('../views/*.vue')
 const singleLayerView = import.meta.glob('../views/*/*.vue')
 
-const allViews = {...view, ...singleLayerView}
+const allViews = { ...view, ...singleLayerView }
 
 
 const allPages = Object.keys(allViews)

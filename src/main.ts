@@ -7,7 +7,6 @@ const init = async () => {
     
 const router = await setupRouter
     const app = createApp(App)
-    console.log( router)
     // await router.isReady()
 
     app.use(router).mount('#app')

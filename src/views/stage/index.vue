@@ -13,7 +13,9 @@
 </template>
 
 <script lang="ts" setup>
+import SideMenu from '../../components/stage/SideMenu.vue'
 import MainView from '../../components/stage/MainView.vue'
+
 
 </script>
 

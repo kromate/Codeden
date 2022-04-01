@@ -2,7 +2,7 @@ export const readBlocks = async () => {
 
     const requireComponent = import.meta.glob('../../blocks/*/index.vue')
 
-    console.log(Object.keys(requireComponent).length);
+    Object.keys(requireComponent)
 
 
 }

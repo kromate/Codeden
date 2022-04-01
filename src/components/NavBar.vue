@@ -1,5 +1,5 @@
 <template>
-	<nav class="relative z-50 h-24 select-none"  v-if="!showMenu">
+	<nav class="relative z-50 h-24 select-none"  >
 		<div class="container relative flex flex-wrap items-center justify-between h-24 mx-auto  font-medium border-b border-gray-200 md:overflow-visible">
 			<div class="flex items-center justify-start w-1/4 h-full pr-4">
 				<a href="#_" class="inline-block py-4 md:py-0">
@@ -7,7 +7,8 @@
 				</a>
 			</div>
 
-			<a href="#_" class="inline-flex items-center w-full px-6 py-3 text-sm font-medium leading-4 text-white bg-indigo-600 md:px-3 md:w-auto md:rounded-full lg:px-5 hover:bg-indigo-500 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-indigo-600">Get Started</a>
+			<router-link to="#_" v-if="showMenu" class="btn rounded-none py-3">Get Started</router-link>
+			<router-link to="#_"  class="btn hidden py-3">Get Started</router-link>
 			
 			<div @click="showMenu = !showMenu" class="absolute right-0 flex flex-col items-center  justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">
 				<svg class="w-6 h-6 text-gray-700" v-if="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak="">

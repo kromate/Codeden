@@ -1,9 +1,10 @@
-interface ExampleObject {
+interface blockObject {
+    comp: string
     name: string
 }
 
 export const readBlocks = () => {
-    let result: object[] = []
+    let result: blockObject[] = []
 
     const requireComponent = import.meta.glob('../../blocks/*/index.vue')
     const BlockArr = Object.keys(requireComponent)

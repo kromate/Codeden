@@ -4,11 +4,11 @@
 			class="self-start text-sm inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"
 			v-for="n in Block" :key="n"
 			@mouseover="test"
-			@mouseleave="close"
+			
 		>{{n}}</span>
 	</div>
 	<transition appear name="toast">
-		<div class="w-[25rem] h-full card flex flex-col items-start py-5 px-5 gap-2 absolute left-48" v-if="currentBlock">
+		<div class="w-[25rem] h-full card flex flex-col items-start py-5 px-5 gap-2 absolute left-48" v-if="currentBlock" @mouseleave="close">
 			{{currentBlock}}
 			<span
 				class="self-start text-sm inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"

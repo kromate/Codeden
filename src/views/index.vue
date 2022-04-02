@@ -46,8 +46,11 @@ import NavBar from '@/components/NavBar.vue'
 
 <style scoped>
 .bg{
-	background: url('@/assets/images/Banner.png');
+	background:  rgba(0, 0, 0, 0.5) url('@/assets/images/Banner.png');
+background-blend-mode: lighten;
 }
+
+
 .gradient  {
   text-align: center;
   color: #4f46e5;

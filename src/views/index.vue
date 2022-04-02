@@ -45,6 +45,9 @@ import NavBar from '@/components/NavBar.vue'
 
 
 <style scoped>
+.bg{
+	
+}
 .gradient  {
   text-align: center;
   color: #4f46e5;

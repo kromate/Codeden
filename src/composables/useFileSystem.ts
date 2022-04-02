@@ -1,3 +1,7 @@
+interface ExampleObject {
+    name: string
+}
+
 export const readBlocks = () => {
     let result: object[] = []
 

@@ -46,7 +46,7 @@ import NavBar from '@/components/NavBar.vue'
 
 <style scoped>
 .bg{
-	background:  rgba(0, 0, 0, 0.5) url('@/assets/images/Banner.png');
+
 background-blend-mode: lighten;
 }
 

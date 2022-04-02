@@ -44,16 +44,13 @@ const Block = readBlocks()
     animation: wobble 0.5s ease;
   }
 
-  .toast-leave-to {
-    opacity: 0;
-    transform: translateX(100px);
-  }
+
   .toast-leave-active {
     transition: all 0.3s ease;
   }
   @keyframes wobble {
-    0% { transform: translateX(100px); opacity: 0 }
-    100% { transform: translateY(0px); opacity: 1 }
+    0% { transform: translateX(-100px); opacity: 0 }
+    100% { transform: translateX(0px); opacity: 1 }
 
   }
 </style>

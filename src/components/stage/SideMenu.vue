@@ -8,7 +8,7 @@
 		>{{n}}</span>
 	</div>
 	<transition appear name="toast">
-		<div class="bg-black  fixed shadow-2xl w-[45rem] h-full" v-if="currentBlock" @mouseleave="close">
+		<div class="bg-black  fixed left-0 top-0 shadow-2xl w-[45rem] h-full" v-if="currentBlock" @mouseleave="close">
 			<div class="w-[25rem] h-full card !bg-green-700 flex flex-col items-start py-5 px-5 gap-2 absolute right-0 " >
 				{{currentBlock}}
 				<span

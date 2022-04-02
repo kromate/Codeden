@@ -6,6 +6,7 @@
 
 <script lang="ts" setup>
 import { readBlocks } from '../../composables/useFileSystem'
+import { useElementHover } from '@vueuse/core'
 
 const Block = readBlocks()
 

@@ -1,5 +1,5 @@
 <template>
-	<section class="w-full px-6 pb-12 antialiased bg-white">
+	<section class="w-full px-6 pb-12 antialiased bg-white bg">
 		<div class="mx-auto container">
 			<NavBar />
 			<div
@@ -40,10 +40,18 @@
 
 <script lang="ts" setup>
 import NavBar from '@/components/NavBar.vue'
+
+console.log(NavBar)
 </script>
 
 
 <style scoped>
+.bg{
+
+background-blend-mode: lighten;
+}
+
+
 .gradient  {
   text-align: center;
   color: #4f46e5;

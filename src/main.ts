@@ -1,13 +1,10 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import "@/assets/styles/tailwind.css";
-import { router as setupRouter } from "@/router";
+import { createApp } from 'vue'
+import App from './App.vue'
+import '@/assets/styles/tailwind.css'
+import { router } from '@/router'
 
-const init = async () => {
-    const router = await setupRouter;
-    const app = createApp(App);
+const app = createApp(App)
 
-    app.use(router).mount("#app");
-};
+app.use(router)
 
-init().then();
+app.mount('#app')

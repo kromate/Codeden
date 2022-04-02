@@ -1,14 +1,22 @@
-export const readBlocks = () => {
+interface blockObject {
+    comp: () => Promise<{ [key: string]: any }>
+    name: string
+}
 
-    let result: string[] = []
+export const readBlocks = () => {
+    let result: blockObject[] = []
 
     const requireComponent = import.meta.glob('../../blocks/*/index.vue')
     const BlockArr = Object.keys(requireComponent)
 
     for (let i = 0; i < BlockArr.length; i++) {
-        result.push(BlockArr[i].split('/')[3])
+        let obj = {
+            comp: requireComponent[BlockArr[i]],
+            name: BlockArr[i].split('/')[3],
+        }
+
+        result.push(obj)
     }
 
     return result
-
 }

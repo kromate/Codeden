@@ -1,5 +1,10 @@
 interface blockObject {
-    comp: string
+    comp: Record<
+        string,
+        () => Promise<{
+            [key: string]: any
+        }>
+    >
     name: string
 }
 

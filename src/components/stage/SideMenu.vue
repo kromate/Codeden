@@ -7,7 +7,7 @@
 			@mouseleave="close"
 		>{{n}}</span>
 	</div>
-	<transition appear name="slideIn">
+	<transition appear name="slide">
 		<div class="w-96 h-full card flex flex-col items-start py-5 px-5 gap-2 absolute left-48" v-if="currentBlock">
 			{{currentBlock}}
 			<span
@@ -37,17 +37,13 @@ const Block = readBlocks()
 
 </script>
 
-<style  scoped>
-.slideIn-enter{
+<style  scoped>.slide-enter,
+.slide-leave-to{
 	transform: translateX(-30rem);
 	opacity: 0;
 }
-.slideIn-enter-to{
-	transform: translateX(0);
-	opacity: 1;
-}
 
-.slideIn-enter-active{
-	transition: all 10s ease-in;
+.slide-enter-active, .slide-leave-active{
+	transition: all 10.5s ease;
 }
 </style>

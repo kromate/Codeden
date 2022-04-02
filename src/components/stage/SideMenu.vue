@@ -9,7 +9,7 @@
 	</div>
 	<transition appear name="toast">
 		<div class="bg-black mix-blend-lighten absolute left-48 w-[25rem] h-full" v-if="currentBlock" @mouseleave="close">
-			<div class="w-[25rem] h-full card flex flex-col items-start py-5 px-5 gap-2 " >
+			<div class="w-[25rem] h-full card !bg-green-700 flex flex-col items-start py-5 px-5 gap-2 " >
 				{{currentBlock}}
 				<span
 					class="self-start text-sm inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"

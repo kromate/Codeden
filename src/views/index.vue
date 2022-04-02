@@ -41,6 +41,8 @@
 <script lang="ts" setup>
 //@ts-ignore
 import NavBar from '@/components/NavBar.vue'
+
+console.log(NavBar)
 </script>
 
 

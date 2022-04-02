@@ -3,15 +3,15 @@
 		<span
 			class="self-start text-sm inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"
 			v-for="n in Block" :key="n.name"
-			@mouseover="test"
+			@mouseover="test(n.name, n.comp)"
 			
 		>{{n.name}}</span>
 	</div>
 	<transition appear name="toast">
-		<div class="bg-bgDark  fixed left-0 top-0 w-[300px]  h-full" v-if="currentBlock" @mouseleave="close">
+		<div class="bg-bgDark  fixed left-0 top-0 w-[300px]  h-full" v-if="currentBlockName" @mouseleave="close">
 			<div class="w-[25rem] h-full card  shadow-xl flex flex-col items-start py-5 px-5 gap-2 absolute left-56 " >
-				{{currentBlock}}
-				<component is="p"/>
+				{{currentBlockName}}
+				<component :is="currentBlockComp"/>
 			</div>
 		</div>
 	
@@ -20,17 +20,20 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, shallowRef } from 'vue'
 import { readBlocks } from '../../composables/useFileSystem'
 
 
-const currentBlock = ref('')
-const test = (el)=>{
-	currentBlock.value =	el.target.innerHTML
+const currentBlockName = ref('')
+const currentBlockComp = shallowRef('')
+
+const test = async(name, comp)=>{
+	const show = await comp()
+	currentBlockName.value = name
+	currentBlockComp.value = show.default
 }
-const close = (el)=>{
-	console.log(el.target.className)
-	currentBlock.value =''
+const close = ()=>{
+	currentBlockName.value =''
 }
 const Block = readBlocks()
 

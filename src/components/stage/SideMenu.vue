@@ -45,7 +45,10 @@ const Block = readBlocks()
     animation: wobble 0.5s ease;
   }
 
-
+  .toast-leave-to {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
   .toast-leave-active {
     transition: all 0.3s ease;
   }

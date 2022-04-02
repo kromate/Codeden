@@ -39,7 +39,6 @@
 </template>
 
 <script lang="ts" setup>
-//@ts-ignore
 import NavBar from '@/components/NavBar.vue'
 </script>
 

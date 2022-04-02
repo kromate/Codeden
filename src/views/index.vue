@@ -1,5 +1,5 @@
 <template>
-	<section class="w-full px-6 pb-12 antialiased bg-white">
+	<section class="w-full px-6 pb-12 antialiased bg-white bg">
 		<div class="mx-auto container">
 			<NavBar />
 			<div
@@ -46,7 +46,7 @@ import NavBar from '@/components/NavBar.vue'
 
 <style scoped>
 .bg{
-	
+	background: url('@/assets/images/Banner.png');
 }
 .gradient  {
   text-align: center;

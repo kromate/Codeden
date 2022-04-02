@@ -12,7 +12,7 @@
 import { readBlocks } from '../../composables/useFileSystem'
 
 const test = (el)=>{
-	console.log(el)
+	console.log(el.target)
 	
 }
 const Block = readBlocks()

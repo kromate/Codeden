@@ -7,6 +7,7 @@
 		>{{n}}</span>
 	</div>
 	<div class="w-48 h-full card flex flex-col items-start py-5 px-5 gap-2" v-if="currentBlock">
+		{{currentBlock}}
 		<span
 			class="self-start text-sm inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"
 			v-for="n in Block" :key="n"
@@ -22,7 +23,7 @@ import { readBlocks } from '../../composables/useFileSystem'
 
 const currentBlock = ref('')
 const test = (el)=>{
-	console.log(el.target.innerHTML)
+	currentBlock.value =	el.target.innerHTML
 	
 }
 const Block = readBlocks()

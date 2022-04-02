@@ -1,14 +1,17 @@
 export const readBlocks = () => {
-
-    let result: string[] = []
+    let result: object[] = []
 
     const requireComponent = import.meta.glob('../../blocks/*/index.vue')
     const BlockArr = Object.keys(requireComponent)
 
     for (let i = 0; i < BlockArr.length; i++) {
-        result.push(BlockArr[i].split('/')[3])
+        let obj = {
+            comp: requireComponent[BlockArr[i]],
+            name: BlockArr[i].split('/')[3],
+        }
+
+        result.push(obj)
     }
 
     return result
-
 }

@@ -1,15 +1,15 @@
 <template>
-	<div class="w-48 h-full card flex flex-col items-start py-5 px-5 gap-2 z-30">
+	<div class="w-48 h-full card flex flex-col items-start py-5 px-5 gap-2 z-30 ">
 		<span
 			class="self-start text-sm inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"
-			v-for="n in Block" :key="n"
+			v-for="n in Block" :key="n.name"
 			@mouseover="test"
 			
-		>{{n}}</span>
+		>{{n.name}}</span>
 	</div>
 	<transition appear name="toast">
-		<div class="bg-black  fixed left-0 top-0 shadow-2xl w-[45rem] h-full" v-if="currentBlock" @mouseleave="close">
-			<div class="w-[25rem] h-full card !bg-green-700 flex flex-col items-start py-5 px-5 gap-2 absolute right-0 " >
+		<div class="bg-bgDark  fixed left-0 top-0 w-[300px]  h-full" v-if="currentBlock" @mouseleave="close">
+			<div class="w-[25rem] h-full card  shadow-xl flex flex-col items-start py-5 px-5 gap-2 absolute left-56 " >
 				{{currentBlock}}
 				<span
 					class="self-start text-sm inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"

@@ -7,7 +7,7 @@
 			@mouseleave="close"
 		>{{n}}</span>
 	</div>
-	<transition appear name="slide">
+	<transition appear name="toast">
 		<div class="w-96 h-full card flex flex-col items-start py-5 px-5 gap-2 absolute left-48" v-if="currentBlock">
 			{{currentBlock}}
 			<span
@@ -37,13 +37,23 @@ const Block = readBlocks()
 
 </script>
 
-<style  scoped>.slide-enter,
-.slide-leave-to{
-	transform: translateX(-30rem);
-	opacity: 0;
-}
+<style  scoped>
 
-.slide-enter-active, .slide-leave-active{
-	transition: all 10.5s ease;
-}
+
+.toast-enter-active {
+    animation: wobble 0.5s ease;
+  }
+
+  .toast-leave-to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  .toast-leave-active {
+    transition: all 0.3s ease;
+  }
+  @keyframes wobble {
+    0% { transform: translateX(100px); opacity: 0 }
+    100% { transform: translateY(0px); opacity: 1 }
+
+  }
 </style>

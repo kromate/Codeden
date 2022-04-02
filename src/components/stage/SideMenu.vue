@@ -38,9 +38,13 @@ const Block = readBlocks()
 </script>
 
 <style  scoped>
-.slideIn-enter-to{
+.slideIn-enter{
 	transform: translateX(-30rem);
 	opacity: 0;
+}
+.slideIn-enter-to{
+	transform: translateX(0);
+	opacity: 1;
 }
 
 .slideIn-enter-active{

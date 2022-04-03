@@ -1,5 +1,7 @@
 <template>
-	<div class="w-full card ">
+	<div class="w-full card ml-56 ">
+
+		
 	</div>
 </template>
 

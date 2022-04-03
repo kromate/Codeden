@@ -1,8 +1,10 @@
 <template>
 	<draggable v-model="list" group="people" @start="drag=true" @end="drag=false">
-		<div v-for="(n, i) in list" :key="i">
-			{{ n }}
-		</div>
+		<template #item="{ element }">
+			<div class="list-group-item" :class="{ 'not-draggable': !drag }">
+				{{ element.name }}
+			</div>
+		</template>
 		<!-- <img src="./one/image.png" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover" v-for="n in list" :key="n"> -->
 	</draggable>
 	

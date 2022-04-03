@@ -29,10 +29,10 @@ const currentBlockName = ref('')
 const currentBlockComp = shallowRef('')
 
 const test = async(name, comp)=>{
-	const show = await comp()
+	const {default:show} = await comp()
 	currentBlockName.value = ''
 	currentBlockName.value = name
-	currentBlockComp.value = show.default
+	currentBlockComp.value = show
 }
 const close = ( )=>{
 	currentBlockName.value =''

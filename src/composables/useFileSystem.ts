@@ -8,7 +8,7 @@ export const readBlocks = () => {
 
     const requireComponent = import.meta.glob('../../blocks/*/index.vue')
     const BlockArr = Object.keys(requireComponent)
- 
+
     for (let i = 0; i < BlockArr.length; i++) {
         let obj = {
             comp: requireComponent[BlockArr[i]],
@@ -19,4 +19,10 @@ export const readBlocks = () => {
     }
 
     return result
+}
+
+export const getBlockContent = (folderName) => {
+    const requireComponent = import.meta.glob(`../../blocks/${folderName}/**/*`)
+
+    console.log(requireComponent)
 }

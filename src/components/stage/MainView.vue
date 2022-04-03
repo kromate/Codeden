@@ -1,31 +1,64 @@
 <template>
+
 	<draggable
-		class="w-full card ml-56"
+		class="w-full card ml-56 "
 		:list="list2"
 		group="people"
-		@change="checkMove"
+		@change="log"
 		itemKey="name"
 	>
 		<template #item="{ element, index }">
-			<div class="w-full card ml-56 ">
-				{{element}} -------- {{index}}
-		
-			</div>
+			<div class="list-group-item">{{ element.name }} {{ index }}</div>
 		</template>
 	</draggable>
+
 	<!-- <div class="w-full card ml-56 ">
 
 		
 	</div> -->
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" >
 import draggable from 'vuedraggable'
-const checkMove = (el)=>{
-	console.log(el)
+export default {
+	name: 'two-lists',
+	display: 'Two Lists',
+	order: 1,
+	components: {
+		draggable
+	},
+	data() {
+		return {
+			list1: [
+				{ name: 'John', id: 1 },
+				{ name: 'Joao', id: 2 },
+				{ name: 'Jean', id: 3 },
+				{ name: 'Gerard', id: 4 }
+			],
+			list2: [
+				{ name: 'Juan', id: 5 },
+				{ name: 'Edgard', id: 6 },
+				{ name: 'Johnson', id: 7 }
+			]
+		}
+	},
+	methods: {
+		add: function() {
+			this.list.push({ name: 'Juan' })
+		},
+		replace: function() {
+			this.list = [{ name: 'Edgard' }]
+		},
+		clone: function(el) {
+			return {
+				name: el.name + ' cloned'
+			}
+		},
+		log: function(evt) {
+			window.console.log(evt)
+		}
+	}
 }
-
-const list2 = [0]
 </script>
 
 <style  scoped>

@@ -1,7 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "ES2017",
-		"module": "esnext",
+		"module": "es2022",
 		"moduleResolution": "Node",
 		"strict": true,
 		"jsx": "preserve",
@@ -23,7 +22,7 @@
 		},
 		"lib": ["esnext", "dom"]
 	},
-    "include": ["src"],
+    "include": ["src, blocks"],
 	"exclude": [
 		"node_modules",
 		"build",

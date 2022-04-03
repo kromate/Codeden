@@ -7,7 +7,7 @@
 import {getBlockNavigations} from '@/composables/useFileSystem'
 import { ref, onMounted } from 'vue'
 
-const blockDate = ref({})
+const blockDate = ref()
 onMounted(async()=>{
 	blockDate.value = await getBlockNavigations()
 

@@ -1,6 +1,9 @@
 <template>
 	<draggable :list="list" group="my-group">
-		<img src="./one/image.png" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover" v-for="n in list" :key="n">
+		<div v-for="(n, i) in list" :key="i">
+			{{ n }}
+		</div>
+		<!-- <img src="./one/image.png" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover" v-for="n in list" :key="n"> -->
 	</draggable>
 	
 </template>

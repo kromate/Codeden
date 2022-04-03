@@ -39,6 +39,8 @@ const close = ( )=>{
 }
 const Block = readBlocks()
 
+console.log(await Block)
+
 
 
 </script>

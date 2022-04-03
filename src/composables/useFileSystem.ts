@@ -29,6 +29,7 @@ export const getBlockNavigations = async () => {
   let result = [];
   for (let i = 0; i < BlockArr.length; i++) {
     let pos = BlockArr[i].split("/")[4];
+    console.log(BlockArr[i].split("image")[1]);
     if (curr !== pos && pos !== "index.vue") {
       let obj = {
         comp: (await import(`../../blocks/Navigations/${pos}/index.vue`))

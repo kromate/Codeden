@@ -1,22 +1,22 @@
 <template>
 	<draggable
-		class="list-group"
+		class="w-full card ml-56"
 		:list="list2"
 		group="people"
 		@change="checkMove"
 		itemKey="name"
 	>
-		<template #item="{  }">
+		<template #item="{ element, index }">
 			<div class="w-full card ml-56 ">
-
+				{{element}} -------- {{index}}
 		
 			</div>
 		</template>
 	</draggable>
-	<div class="w-full card ml-56 ">
+	<!-- <div class="w-full card ml-56 ">
 
 		
-	</div>
+	</div> -->
 </template>
 
 <script lang="ts" setup>
@@ -25,7 +25,7 @@ const checkMove = (el)=>{
 	console.log(el)
 }
 
-const list2 = [1,2,3,4,5,6,7,8,9,10]
+const list2 = [0]
 </script>
 
 <style  scoped>

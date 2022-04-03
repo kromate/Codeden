@@ -9,8 +9,9 @@
 	</div>
 	<transition appear name="slideIn">
 		<div class="bg-bgDark  fixed left-0 top-0 w-[300px]  h-full" v-if="currentBlockName" @mouseleave="close">
-			<div class="w-[25rem] h-full card  shadow-xl flex flex-col items-start py-5 px-5 gap-2 absolute left-56 " >
+			<div class="w-[30rem] h-full card !bg-transparent  shadow-xl flex flex-col items-start py-5 px-5 gap-2 absolute left-56 " >
 				{{currentBlockName}}
+				
 				<component :is="currentBlockComp"/>
 			</div>
 		</div>

@@ -9,12 +9,12 @@
 		@start="drag = true"
 		@end="drag = false"
 	>
-		<template #item="{ element }">
+		<template #item="{  }">
 			<div class="list-group-item" :class="{ 'not-draggable': !enabled }">
-				{{ element.name }}
+				<img src="./one/image.png" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover mt-2" >
 			</div>
 		</template>
-		<!-- <img src="./one/image.png" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover" v-for="n in list" :key="n"> -->
+	
 	</draggable>
 	
 </template>

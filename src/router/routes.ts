@@ -8,7 +8,17 @@ const getPath = (page: string[]) => page.map((path) => {
 
 const makeRoute = async (page: string[]) => {
 	const path = '/' + getPath(page)
-	const { default: component } = await import(`../views/${page.join('/')}.vue`)
+	// to understand why we need to use several conditional statement here, see: https://github.com/vitejs/vite/issues/4945
+	if (page.length == 1) {
+		var { default: component } = await import(`../views/${page[0]}.vue`)
+	} else if (page.length == 2) {
+		var { default: component } = await import(`../views/${page[0] + '/' + page[1]}.vue`)
+	} else if (page.length == 3) { 
+		var { default: component } = await import(`../views/${page[0] + '/' + page[1] + '/' + page[2]}.vue`)
+	}else if (page.length == 4) { 
+		var { default: component } = await import(`../views/${page[0] + '/' + page[1] + '/' + page[2] + '/' + page[3]}.vue`)
+	}
+	
 	const { displayName = '', middlewares = [], name = '' } = component
 	return {
 		path, name, component,

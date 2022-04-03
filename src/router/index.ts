@@ -1,38 +1,38 @@
+// import { createRouter, createWebHistory } from 'vue-router';
+// import type { RouteRecordRaw } from 'vue-router';
+
+// export const routes: RouteRecordRaw[] = [
+//     {
+//         path: '/',
+//         component: () => import('../views/index.vue'),
+//     },
+//     {
+//         path: '/stage',
+//         component: () => import('../views/stage/index.vue'),
+//     },
+// ]
+
+// export const router = createRouter({
+//     history: createWebHistory(),
+//     routes,
+// })
+
+import { routes } from '@/router/routes'
 import { createRouter, createWebHistory } from 'vue-router'
-import type { RouteRecordRaw } from 'vue-router'
 
-export const routes: RouteRecordRaw[] = [
-    {
-        path: '/',
-        component: () => import('../views/index.vue'),
-    },
-    {
-        path: '/stage',
-        component: () => import('../views/stage/index.vue'),
-    },
-]
+export const setupRouter = async () => {
+	// console.log(await Promise.all(routes));
 
-export const router = createRouter({
-    history: createWebHistory(),
-    routes,
-})
+	const router = createRouter({
+		history: createWebHistory(),
+		routes: await Promise.all(routes)
+	})
 
-// import { routes } from '@/router/routes'
-// import { createRouter, createWebHistory } from 'vue-router'
+	router.afterEach(() => {
+		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+	})
 
-// export const setupRouter = async () => {
-// 	console.log(await Promise.all(routes));
+	return router
+}
 
-// 	const router = createRouter({
-// 		history: createWebHistory(),
-// 		routes: await Promise.all(routes)
-// 	})
-
-// 	router.afterEach(() => {
-// 		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-// 	})
-
-// 	return router
-// }
-
-// export const router = setupRouter()
+export const router = setupRouter()

@@ -1,12 +1,14 @@
 <template>
-	<draggable>
-		<img src="./one/image.png" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover" v-for="n in 20" :key="n">
+	<draggable :list="list" group="my-group">
+		<img src="./one/image.png" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover" v-for="n in list" :key="n">
 	</draggable>
 	
 </template>
 
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
+
+const list = [1,2,3,4,5,6,7,8,9,10]
 </script>
 
 <style  scoped>

@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import {getBlockContent} from '@/composables/useFileSystem'
+import {getBlockNavigations} from '@/composables/useFileSystem'
 
-getBlockContent('Navigations')
+getBlockNavigations()
 </script>
 
 <style  scoped>

@@ -3,7 +3,7 @@ interface blockObject {
   name: string;
 }
 
-export const readBlocks = async () => {
+export const readBlocks = () => {
   let result: blockObject[] = [];
   //@ts-ignore
   const requireComponent = import.meta.glob("../../blocks/*/index.vue");
@@ -11,7 +11,7 @@ export const readBlocks = async () => {
 
   for (let i = 0; i < BlockArr.length; i++) {
     let obj = {
-      comp: await requireComponent[BlockArr[i]].default,
+      comp: requireComponent[BlockArr[i]],
       name: BlockArr[i].split("/")[3],
     };
 

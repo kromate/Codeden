@@ -29,17 +29,15 @@ const currentBlockName = ref('')
 const currentBlockComp = shallowRef('')
 
 const test = async(name, comp)=>{
-
+	const {default:show} = await comp()
 	currentBlockName.value = ''
 	currentBlockName.value = name
-	currentBlockComp.value = comp
+	currentBlockComp.value = show
 }
 const close = ( )=>{
-//	currentBlockName.value =''
+	// currentBlockName.value =''
 }
 const Block = readBlocks()
-
-console.log(await Block)
 
 
 

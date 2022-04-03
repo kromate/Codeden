@@ -7,7 +7,7 @@
 			
 		>{{n.name}}</span>
 	</div>
-	<transition appear name="toast">
+	<transition appear name="slideIn">
 		<div class="bg-bgDark  fixed left-0 top-0 w-[300px]  h-full" v-if="currentBlockName" @mouseleave="close">
 			<div class="w-[25rem] h-full card  shadow-xl flex flex-col items-start py-5 px-5 gap-2 absolute left-56 " >
 				{{currentBlockName}}
@@ -45,18 +45,18 @@ const Block = readBlocks()
 <style  scoped>
 
 
-.toast-enter-active {
-    animation: wobble 0.5s ease;
+.slideIn-enter-active {
+    animation: slideIn .5s ease;
   }
 
-  .toast-leave-to {
+  .slideIn-leave-to {
     opacity: 0;
     transform: translateX(-100px);
   }
-  .toast-leave-active {
+  .slideIn-leave-active {
     transition: all 0.3s ease;
   }
-  @keyframes wobble {
+  @keyframes slideIn {
     0% { transform: translateX(-100px); opacity: 0 }
     100% { transform: translateX(0px); opacity: 1 }
 

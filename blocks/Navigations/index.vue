@@ -1,7 +1,16 @@
 <template>
-	<draggable v-model="list" group="people" @start="drag=true" @end="drag=false">
+	<draggable 
+		:list="list"
+		:disabled="!enabled"
+		item-key="name"
+		class="list-group"
+		ghost-class="ghost"
+		:move="checkMove"
+		@start="drag = true"
+		@end="drag = false"
+	>
 		<template #item="{ element }">
-			<div class="list-group-item" :class="{ 'not-draggable': !drag }">
+			<div class="list-group-item" :class="{ 'not-draggable': !enabled }">
 				{{ element.name }}
 			</div>
 		</template>
@@ -13,6 +22,10 @@
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
 const drag = false
+const checkMove = (el)=>{
+	console.log(el)
+}
+const enabled = false
 const list = [1,2,3,4,5,6,7,8,9,10]
 </script>
 

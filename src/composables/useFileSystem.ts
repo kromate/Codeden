@@ -3,7 +3,7 @@ interface blockObject {
   name: string;
 }
 
-export const readBlocks = () => {
+export const readBlocks = async () => {
   let result: blockObject[] = [];
   //@ts-ignore
   const requireComponent = import.meta.glob("../../blocks/*/index.vue");
@@ -11,7 +11,7 @@ export const readBlocks = () => {
 
   for (let i = 0; i < BlockArr.length; i++) {
     let obj = {
-      comp: requireComponent[BlockArr[i]],
+      comp: await requireComponent[BlockArr[i]].default,
       name: BlockArr[i].split("/")[3],
     };
 
@@ -21,25 +21,27 @@ export const readBlocks = () => {
   return result;
 };
 
-export const getBlockNavigations = (folderName) => {
+export const getBlockNavigations = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../blocks/Navigations/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-  let   result = [];
+  let result = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    if (curr !== BlockArr[i].split("/")[4]) {
+    let pos = BlockArr[i].split("/")[4];
+    if (curr !== pos && pos !== "index.vue") {
       let obj = {
-        comp: requireComponent[BlockArr[i]],
-        index: BlockArr[i].split("/")[4],
-        name: `${BlockArr[i].split("/")[3]}  ${BlockArr[i].split("/")[4]}`,
+        comp: (await import(`../../blocks/Navigations/${pos}/index.vue`))
+          .default,
+        img: (await import(`../../blocks/Navigations/${pos}/image.png`))
+          .default,
+        index: pos,
+        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
       };
-      curr = BlockArr[i].split("/")[4];
+      result.push(obj);
+      curr = pos;
     }
-    result.push(obj);
-
-    BlockArr[i].split("/")[3];
   }
-  // if(keeper.has() )
-  // console.log(requireComponent)
+
+  return result;
 };

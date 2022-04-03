@@ -1,5 +1,5 @@
 <template>
-	<div class="w-48 h-full card flex flex-col items-start py-5 px-5 gap-2 z-30 ">
+	<div class="w-48 h-fit rounded-xl fixed card flex flex-col items-start py-5 px-5 gap-2 z-10 ">
 		<span
 			class="self-start text-sm inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"
 			v-for="n in Block" :key="n.name"
@@ -8,9 +8,9 @@
 		>{{n.name}}</span>
 	</div>
 	<transition appear name="slideIn">
-		<div class="bg-bgDark  fixed left-0 top-0 w-[300px]  h-full" v-if="currentBlockName" @mouseleave="close">
-			<div class="w-[30rem] h-full card !bg-transparent  shadow-xl flex flex-col items-start py-5 px-5 gap-2 absolute left-56 " >
-				{{currentBlockName}}
+		<div class="bg-bgDark  fixed left-0 top-0 w-[40rem] z-0  h-full" v-if="currentBlockName" @mouseleave="close">
+			<div class="w-[30rem] h-full card !bg-transparent  shadow-none flex flex-col items-start py-5 px-5 gap-4 absolute left-48 top-[50px] overflow-y-auto" >
+				<!-- {{currentBlockName}} -->
 				
 				<component :is="currentBlockComp"/>
 			</div>

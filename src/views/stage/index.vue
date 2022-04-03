@@ -1,9 +1,9 @@
 <template>
-	<nav class="bg-primary p-4">
-		<span class="md:px-5 text-xl font-black leading-none text-white"><span>CodeDen</span><span class="text-white">.</span></span>
+	<nav class="bg-primary p-4 z-50 fixed top-0 inset-x-0 mb-48">
+		<span class="md:px-5 text-xl font-black leading-none text-white "><span>CodeDen</span><span class="text-white">.</span></span>
 	</nav>
 
-	<div class="flex w-full p-4 gap-4 h-screen">
+	<div class="flex w-full p-4 gap-4 h-screen mt-20">
 	
 		<SideMenu/>
 		<MainView/>

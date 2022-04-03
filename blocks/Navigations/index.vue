@@ -1,8 +1,5 @@
 <template>
-	<div class="text-xl font-bold">
-		This is the Navigation</div>
-
-	<img src="./one/image.png" alt="Navigation one" class="rounded-md">
+	<img src="./one/image.png" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover" v-for="n in 20" :key="n">
 </template>
 
 <script lang="ts" setup>

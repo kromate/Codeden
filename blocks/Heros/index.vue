@@ -10,7 +10,6 @@ import { ref, onMounted } from 'vue'
 const blockDate = ref()
 onMounted(async()=>{
 	blockDate.value = await getBlockHeros()
-
 } )
 </script>
 

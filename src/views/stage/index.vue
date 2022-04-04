@@ -1,7 +1,7 @@
 <template>
 	<nav class="bg-primary p-4 z-50 fixed top-0 inset-x-0 mb-48">
 		<span class=" text-xl font-black leading-none text-white flex items-center ">
-			//  <img src="@/assets/images/logoWhite.png" alt="logo" class="w-12 mr-3">
+		 <img src="@/assets/images/logoWhite.png" alt="logo" class="w-12 mr-3">
 			<span>CodeDen</span><span class="text-white">.</span></span>
 	</nav>
 

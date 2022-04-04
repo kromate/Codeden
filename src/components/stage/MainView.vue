@@ -30,8 +30,8 @@ const addedComp = [
 
 const log = (evt)=> {
 	if(evt.added){
-		// addedComp.push()
-		console.log(evt.added.element)
+		addedComp.push(evt.added.element)
+		console.log(addedComp)
 	}
 	
 }

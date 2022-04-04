@@ -8,11 +8,11 @@
 
 <script lang="ts" setup>
 //@ts-ignore
-import {getBlockNavigations} from '@/composables/useFileSystem'
+import {getBlockNavigations, getBlockObject} from '../../src/composables/useFileSystem'
 import { ref, onMounted } from 'vue'
 import SkeletonLoader from '../../src/components/core/SkeletonLoader.vue'
 
-const blockDate = ref()
+const blockDate:getBlockObject = ref()
 onMounted(async()=>{
 	blockDate.value = await getBlockNavigations()
 

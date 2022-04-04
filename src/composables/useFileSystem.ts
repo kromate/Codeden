@@ -2,12 +2,12 @@ interface readBlockObject {
   comp: () => Promise<{ [key: string]: any }>;
   name: string;
 }
-interface getBlockObject {
+export interface getBlockObject {
   comp: () => Promise<{ [key: string]: any }>;
   img: string;
   index: string;
-  compLoaded: string;
-  imgLoaded: string;
+  compLoaded: boolean;
+  imgLoaded: boolean;
   name: string;
 }
 

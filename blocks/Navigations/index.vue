@@ -1,6 +1,6 @@
 <template>
 	<div v-for="n in blockDate"  :key="n.index" class="w-full">
-		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  v-if="n.imgLoaded" @load="check(n.imgLoaded)">
+		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  v-if="n.imgLoaded" @loadstart="check(n.imgLoaded)">
 		<SkeletonLoader v-else height="100px" width="100%" radius="6px"/>
 	</div>
 

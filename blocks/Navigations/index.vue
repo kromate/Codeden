@@ -8,11 +8,11 @@
 
 <script lang="ts" setup>
 //@ts-ignore
-import {getBlockNavigations, getBlockObject} from '../../src/composables/useFileSystem'
-import { ref, onMounted, Ref } from 'vue'
+import {getBlockNavigations} from '@/composables/useFileSystem'
+import { ref, onMounted } from 'vue'
 import SkeletonLoader from '../../src/components/core/SkeletonLoader.vue'
 
-const blockDate:Ref<getBlockObject[]> = ref()
+const blockDate = ref()
 onMounted(async()=>{
 	blockDate.value = await getBlockNavigations()
 
@@ -26,9 +26,7 @@ onMounted(async()=>{
 
 
     <!-- imgLoad() {
-      var image = document.querySelector("img");=
-      "&.;=[]\
-    
+      var image = document.querySelector("img");
       console.log(image.complete);
       if (image.complete && image.naturalHeight >= 0) {
         this.loaded = true;

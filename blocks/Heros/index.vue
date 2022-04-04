@@ -9,6 +9,7 @@
 //@ts-ignore
 import {getBlockHeros} from '@/composables/useFileSystem'
 import { ref, onMounted } from 'vue'
+import SkeletonLoader from '@/components/core/SkeletonLoader.vue'
 
 const blockDate = ref()
 onMounted(async()=>{

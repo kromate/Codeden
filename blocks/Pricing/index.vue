@@ -30,20 +30,7 @@ const blockDate = ref()
 onMounted(async()=>{
 	blockDate.value = await getBlockHeaders()
 } )
-// const order = 1 
 
-
-// const add= function() {
-// 	this.list.push({ name: 'Juan' })
-// }
-// const replace = function() {
-// 	this.list = [{ name: 'Edgard' }]
-// }
-// const clone = function(el) {
-// 	return {
-// 		name: el.name + ' cloned'
-// 	}
-// }
 const log = function(evt) {
 	window.console.log(evt)
 }

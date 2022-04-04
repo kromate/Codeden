@@ -1,8 +1,8 @@
 <template>
 
 	<draggable
-		class="list-group"
-		:list="[...blockDate, ...blockDate, ...blockDate]"
+		class="w-full"
+		:list="blockDate"
 		group="people"
 		@change="log"
 		itemKey="name"

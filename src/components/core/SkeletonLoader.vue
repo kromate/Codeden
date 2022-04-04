@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="pulsate"
-		:style="{ width: width + 'px', height: h + 'px', 'border-radius': b + 'px' }"
+		:style="{ width: width, height: height, 'border-radius': radius }"
 	></div>
 </template>
 
@@ -10,7 +10,15 @@ defineProps({
 	width: {
 		default : '120px',
 		type:String
-	}
+	},
+	height: {
+		default : '120px',
+		type:String
+	},
+	radius: {
+		default : '0px',
+		type:String
+	},
 })
 </script>
 

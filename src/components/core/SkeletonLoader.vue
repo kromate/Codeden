@@ -25,20 +25,20 @@ defineProps({
 <style  scoped>
 .pulsate {
   max-width: 90vw !important;
-  background: linear-gradient(30deg, #6a3f05, #a2691e, #804b0a, #a56417);
+  background: linear-gradient(90deg, #baa891, #a9a9a9, #4948484f, #16130e);
   background-size: 400% 400%;
   -webkit-animation: Gradient 2.25s ease infinite;
   animation: Gradient 2s ease infinite;
 }
 @keyframes Gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 100%;
   }
 }
 </style>

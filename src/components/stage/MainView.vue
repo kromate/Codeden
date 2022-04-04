@@ -25,7 +25,7 @@ import draggable from 'vuedraggable'
 
 
 const addedComp = [
-
+	{name:'test', id:6}
 ]
 
 // const add= function() {

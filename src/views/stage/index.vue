@@ -1,6 +1,8 @@
 <template>
 	<nav class="bg-primary p-4 z-50 fixed top-0 inset-x-0 mb-48">
-		<span class="md:px-5 text-xl font-black leading-none text-white "> <img src="@/assets/images/logoBlack.png" alt="logo" class="w-12"><span>CodeDen</span><span class="text-white">.</span></span>
+		<span class=" text-xl font-black leading-none text-white flex items-center ">
+			//  <img src="@/assets/images/logoWhite.png" alt="logo" class="w-12 mr-3">
+			<span>CodeDen</span><span class="text-white">.</span></span>
 	</nav>
 
 	<div class="flex w-full p-4 gap-4 min-h-[85vh] h-auto mt-20">

@@ -4,6 +4,10 @@ interface readBlockObject {
 }
 interface getBlockObject {
   comp: () => Promise<{ [key: string]: any }>;
+  img: string;
+  index: string;
+  compLoaded: string;
+  imgLoaded: string;
   name: string;
 }
 

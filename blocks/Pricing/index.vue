@@ -2,7 +2,7 @@
 
 	<draggable
 		class="list-group"
-		:list="addedComp"
+		:list="blockDate"
 		group="people"
 		@change="log"
 		itemKey="name"
@@ -18,21 +18,19 @@
 </template>
 
 <script lang="ts" setup>
+//@ts-ignore
+import {getBlockHeaders} from '@/composables/useFileSystem'
 import draggable from 'vuedraggable'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import SkeletonLoader from '@/components/core/SkeletonLoader.vue'
 
 
-const blockDate = ref
+const blockDate = ref()
 onMounted(async()=>{
 	blockDate.value = await getBlockHeaders()
 } )
 // const order = 1 
 
-
-const addedComp = [
-	{name:'test', id:6}
-]
 
 // const add= function() {
 // 	this.list.push({ name: 'Juan' })

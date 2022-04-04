@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
 //@ts-ignore
-import {getBlockHeaders} from '@/composables/useFileSystem'
+import {getBlockPricings} from '@/composables/useFileSystem'
 import draggable from 'vuedraggable'
 import { ref, onMounted } from 'vue'
 import SkeletonLoader from '@/components/core/SkeletonLoader.vue'
@@ -28,7 +28,7 @@ import SkeletonLoader from '@/components/core/SkeletonLoader.vue'
 
 const blockDate = ref()
 onMounted(async()=>{
-	blockDate.value = await getBlockHeaders()
+	blockDate.value = await getBlockPricings()
 } )
 
 const log = function(evt) {

@@ -103,3 +103,27 @@ export const getBlockHeros = async () => {
 
   return result;
 };
+export const getBlockPricings = async () => {
+  //@ts-ignore
+  const requireComponent = import.meta.glob(`../../blocks/Pricing/**`);
+  const BlockArr = Object.keys(requireComponent);
+  let curr = "";
+  let result = [];
+  for (let i = 0; i < BlockArr.length; i++) {
+    let pos = BlockArr[i].split("/")[4];
+    if (curr !== pos && pos !== "index.vue") {
+      let obj = {
+        comp: (await import(`../../blocks/Pricing/${pos}/index.vue`)).default,
+        img: (await import(`../../blocks/Pricing/${pos}/image.jpeg`)).default,
+        index: pos,
+        compLoaded: false,
+        imgLoaded: false,
+        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
+      };
+      result.push(obj);
+      curr = pos;
+    }
+  }
+
+  return result;
+};

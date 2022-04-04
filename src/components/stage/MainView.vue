@@ -2,13 +2,13 @@
 
 	<draggable
 		class="w-full card ml-56 "
-		:list="list2"
+		:list="addedComp"
 		group="people"
 		@change="log"
-		itemKey="name"
+		itemKey="id"
 	>
 		<template #item="{ element, index }">
-			<div class="list-group-item">{{ element.name }} {{ index }}</div>
+			<div class="list-group-item w-full bg-primary mt-3">{{ element.name }} {{ index }}</div>
 		</template>
 	</draggable>
 
@@ -24,10 +24,8 @@ import draggable from 'vuedraggable'
 // const order = 1 
 
 
-const list2 = [
-	{ name: 'Juan', id: 5 },
-	{ name: 'Edgard', id: 6 },
-	{ name: 'Johnson', id: 7 }
+const addedComp = [
+
 ]
 
 // const add= function() {

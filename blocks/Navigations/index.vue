@@ -18,3 +18,20 @@ onMounted(async()=>{
 <style  scoped>
 
 </style>
+
+
+    <!-- imgLoad() {
+      var image = document.querySelector("img");
+      console.log(image.complete);
+      if (image.complete && image.naturalHeight >= 0) {
+        this.loaded = true;
+        clearInterval(this.inter);
+      }
+    }, 
+	
+	    show() {
+      this.inter = setInterval(() => {
+        this.imgLoad();
+      }, 1000);
+    },
+	-->

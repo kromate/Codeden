@@ -2,7 +2,8 @@
 	<nav class="relative z-50 h-24 select-none"  >
 		<div class="container relative flex flex-wrap items-center justify-between h-24 mx-auto  font-medium border-b border-gray-200 md:overflow-visible">
 			<div class="flex items-center justify-start w-1/4 h-full pr-4">
-				<a href="#_" class="inline-block py-4 md:py-0">
+				<a href="#_" class="inline-block py-4 md:py-0 flex items-center">
+					<img src="../assets/images/logoBlack.png" alt="logo" class="w-4">
 					<span class="p-1 text-xl font-black leading-none text-gray-900"><span>CodeDen</span><span class="text-indigo-600">.</span></span>
 				</a>
 			</div>

@@ -33,7 +33,7 @@ export const getBlockNavigations = async () => {
       let obj = {
         comp: (await import(`../../blocks/Navigations/${pos}/index.vue`))
           .default,
-        img: (await import(`../../blocks/Navigations/${pos}/image.png`))
+        img: (await import(`../../blocks/Navigations/${pos}/image.jpeg`))
           .default,
         index: pos,
         name: `${BlockArr[i].split("/")[3]}  ${pos}`,
@@ -56,7 +56,7 @@ export const getBlockHeaders = async () => {
     if (curr !== pos && pos !== "index.vue") {
       let obj = {
         comp: (await import(`../../blocks/Headers/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Headers/${pos}/image.png`)).default,
+        img: (await import(`../../blocks/Headers/${pos}/image.jpeg`)).default,
         index: pos,
         name: `${BlockArr[i].split("/")[3]}  ${pos}`,
       };
@@ -78,7 +78,7 @@ export const getBlockHeros = async () => {
     if (curr !== pos && pos !== "index.vue") {
       let obj = {
         comp: (await import(`../../blocks/Heros/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Heros/${pos}/image.png`)).default,
+        img: (await import(`../../blocks/Heros/${pos}/image.jpeg`)).default,
         index: pos,
         name: `${BlockArr[i].split("/")[3]}  ${pos}`,
       };

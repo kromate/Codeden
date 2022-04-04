@@ -9,7 +9,7 @@
 //@ts-ignore
 import {getBlockHeaders} from '@/composables/useFileSystem'
 import { ref, onMounted } from 'vue'
-import SkeletonLoader from '../../src/components/core/SkeletonLoader.vue'
+import SkeletonLoader from '@/components/core/SkeletonLoader.vue'
 
 const blockDate = ref()
 onMounted(async()=>{

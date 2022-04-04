@@ -2,13 +2,13 @@
 
 	<draggable
 		class="list-group"
-		:list="blockDate"
+		:list="[...blockDate, ...blockDate, ...blockDate]"
 		group="people"
 		@change="log"
 		itemKey="name"
 	>
 		<template #item="{ element }">
-			<div class="w-full mt-3">
+			<div class="w-full mt-5">
 				<img :src="element.img" :alt="element.name" class="rounded-md w-full shadow-xl object-cover"  @load="element.imgLoaded = true">
 				<SkeletonLoader v-if="!element.imgLoaded" height="100px" width="100%" radius="6px"/>
 			</div>

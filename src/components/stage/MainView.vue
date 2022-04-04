@@ -7,8 +7,9 @@
 		@change="log"
 		itemKey="id"
 	>
-		<template #item="{ element, index }">
-			<div class="list-group-item w-full bg-primary mt-3">{{ element.name }} {{ index }}</div>
+		<template #item="{ element }">
+			<component :is="element.comp"/>
+
 		</template>
 	</draggable>
 

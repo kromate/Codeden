@@ -30,15 +30,12 @@ defineProps({
   -webkit-animation: Gradient 2.25s ease infinite;
   animation: Gradient 2s ease infinite;
 }
-@keyframes Gradient {
-  0% {
-    background-position: 0%;
-  }
-  50% {
-    background-position: 50%;
-  }
-  100% {
-    background-position: 100%;
-  }
+ @keyframes Gradient {
+    0% {
+        background-position: -468px 0;
+    }
+     100% {
+        background-position: 468px 0;
+    }
 }
 </style>

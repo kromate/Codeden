@@ -1,7 +1,7 @@
 <template>
 	<div v-for="n in blockDate"  :key="n.index" >
-		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  v-if="!n.imgLoaded">
-		<SkeletonLoader/>
+		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  v-if="n.imgLoaded">
+		<SkeletonLoader v-else/>
 	</div>
 
 </template>

@@ -25,10 +25,11 @@ defineProps({
 <style  scoped>
 .pulsate {
   max-width: 90vw !important;
-     background: linear-gradient(to right, #77767633 8%, #8282824d 18%, #82828233 33%);
-   background-size: 800px 100px;
-  -webkit-animation: Gradient 2.25s ease infinite;
-     animation: wave-squares 2s infinite ease-out;
+  background: linear-gradient(to right, #77767633 8%, #8282824d 18%, #82828233 33%);
+  background-size: 800px 100px;
+  background: #82828233;
+  animation: Gradient 2s ease-out infinite;
+
 
 }
  @keyframes Gradient {

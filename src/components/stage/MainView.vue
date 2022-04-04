@@ -28,8 +28,12 @@ const addedComp = [
 	// {name:'test', id:6}
 ]
 
-const log = function(evt) {
-	window.console.log(evt)
+const log = (evt)=> {
+	if(evt.added){
+		// addedComp.push()
+		console.log(evt.added.element)
+	}
+	
 }
 
 

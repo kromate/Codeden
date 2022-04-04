@@ -1,18 +1,17 @@
 <template>
-	<div class="col-3">
-		<h3>Draggable 1</h3>
-		<draggable
-			class="list-group"
-			:list="list1"
-			group="people"
-			@change="log"
-			itemKey="name"
-		>
-			<template #item="{ element, index }">
-				<div class="list-group-item">{{ element.name }} {{ index }}</div>
-			</template>
-		</draggable>
-	</div>
+
+	<draggable
+		class="list-group"
+		:list="list1"
+		group="people"
+		@change="log"
+		itemKey="name"
+	>
+		<template #item="{ element, index }">
+			<div class="list-group-item">{{ element.name }} {{ index }}</div>
+		</template>
+	</draggable>
+
 
 </template>
 

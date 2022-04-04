@@ -1,6 +1,6 @@
 <template>
 	<div v-for="n in blockDate"  :key="n.index" class="w-full">
-		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  v-if="n.imgLoaded" @load="n.imgLoaded = true">
+		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  v-if="n.imgLoaded" @load="check(n.imgLoaded)">
 		<SkeletonLoader v-else height="100px" width="100%" radius="6px"/>
 	</div>
 
@@ -15,8 +15,11 @@ import SkeletonLoader from '../../src/components/core/SkeletonLoader.vue'
 const blockDate = ref()
 onMounted(async()=>{
 	blockDate.value = await getBlockNavigations()
+})
 
-} )
+const check = (val)=>{
+	console.log(val)
+}
 
 </script>
 

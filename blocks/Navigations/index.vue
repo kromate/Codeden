@@ -1,6 +1,6 @@
 <template>
 	<div v-for="n in blockDate"  :key="n.index" class="w-full">
-		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  @load="check(n.imgLoaded)">
+		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  @load="check(n)">
 	
 		<SkeletonLoader v-if="!n.imgLoaded" height="100px" width="100%" radius="6px"/>
 	</div>
@@ -18,8 +18,8 @@ onMounted(async()=>{
 	blockDate.value = await getBlockNavigations()
 })
 
-const check = (val)=>{
-	console.log(val)
+const check = (n)=>{
+	n.imgLoaded = true
 }
 
 </script>

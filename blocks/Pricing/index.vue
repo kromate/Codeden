@@ -7,10 +7,11 @@
 		@change="log"
 		itemKey="name"
 	>
-		<template #item="{ element, index }">
-			<div class="list-group-item">{{ element.name }} {{ index }}</div>
-			<img :src="element.img" :alt="element.name" class="rounded-md w-full shadow-xl object-cover"  @load="element.imgLoaded = true">
-			<SkeletonLoader v-if="!element.imgLoaded" height="100px" width="100%" radius="6px"/>
+		<template #item="{ element }">
+			<div class="w-full mt-3">
+				<img :src="element.img" :alt="element.name" class="rounded-md w-full shadow-xl object-cover"  @load="element.imgLoaded = true">
+				<SkeletonLoader v-if="!element.imgLoaded" height="100px" width="100%" radius="6px"/>
+			</div>
 		</template>
 	</draggable>
 

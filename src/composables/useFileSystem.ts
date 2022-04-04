@@ -1,10 +1,14 @@
-interface blockObject {
+interface readBlockObject {
+  comp: () => Promise<{ [key: string]: any }>;
+  name: string;
+}
+interface getBlockObject {
   comp: () => Promise<{ [key: string]: any }>;
   name: string;
 }
 
 export const readBlocks = () => {
-  let result: blockObject[] = [];
+  let result: readBlockObject[] = [];
   //@ts-ignore
   const requireComponent = import.meta.glob("../../blocks/*/index.vue");
   const BlockArr = Object.keys(requireComponent);
@@ -26,7 +30,7 @@ export const getBlockNavigations = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Navigations/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-  let result = [];
+  let result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
     let pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {

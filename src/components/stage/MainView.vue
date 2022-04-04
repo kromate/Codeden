@@ -4,7 +4,7 @@
 		class="w-full card ml-56 "
 		:list="addedComp"
 		group="people"
-		@change="log"
+		@add="log"
 		itemKey="id"
 	>
 		<template #item="{ element }">

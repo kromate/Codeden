@@ -35,7 +35,7 @@ const test = async(name, comp)=>{
 	currentBlockComp.value = show
 }
 const close = ( )=>{
-	currentBlockName.value =''
+	// currentBlockName.value =''
 }
 const Block = readBlocks()
 

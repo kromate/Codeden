@@ -2,7 +2,7 @@
 
 	<draggable
 		class="list-group"
-		:list="list1"
+		:list="addedComp"
 		group="people"
 		@change="log"
 		itemKey="name"

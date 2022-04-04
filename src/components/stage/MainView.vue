@@ -25,20 +25,9 @@ import draggable from 'vuedraggable'
 
 
 const addedComp = [
-	{name:'test', id:6}
+	// {name:'test', id:6}
 ]
 
-// const add= function() {
-// 	this.list.push({ name: 'Juan' })
-// }
-// const replace = function() {
-// 	this.list = [{ name: 'Edgard' }]
-// }
-// const clone = function(el) {
-// 	return {
-// 		name: el.name + ' cloned'
-// 	}
-// }
 const log = function(evt) {
 	window.console.log(evt)
 }

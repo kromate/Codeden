@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
 
-// const order = 1
+// const order = 1 
 
 
 const list2 = [

@@ -1,6 +1,5 @@
 interface blockObject {
   comp: () => Promise<{ [key: string]: any }>;
-  compLoaded:false,
   name: string;
 }
 
@@ -13,7 +12,6 @@ export const readBlocks = () => {
   for (let i = 0; i < BlockArr.length; i++) {
     let obj = {
       comp: requireComponent[BlockArr[i]],
-      compLoaded:false,
       name: BlockArr[i].split("/")[3],
     };
 
@@ -38,7 +36,8 @@ export const getBlockNavigations = async () => {
         img: (await import(`../../blocks/Navigations/${pos}/image.jpeg`))
           .default,
         index: pos,
-        compLoaded:false,
+        compLoaded: false,
+        imgLoaded: false,
         name: `${BlockArr[i].split("/")[3]}  ${pos}`,
       };
       result.push(obj);
@@ -61,7 +60,8 @@ export const getBlockHeaders = async () => {
         comp: (await import(`../../blocks/Headers/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Headers/${pos}/image.jpeg`)).default,
         index: pos,
-        compLoaded:false,
+        compLoaded: false,
+        imgLoaded: false,
         name: `${BlockArr[i].split("/")[3]}  ${pos}`,
       };
       result.push(obj);
@@ -84,7 +84,8 @@ export const getBlockHeros = async () => {
         comp: (await import(`../../blocks/Heros/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Heros/${pos}/image.jpeg`)).default,
         index: pos,
-        compLoaded:false,
+        compLoaded: false,
+        imgLoaded: false,
         name: `${BlockArr[i].split("/")[3]}  ${pos}`,
       };
       result.push(obj);

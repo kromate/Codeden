@@ -27,7 +27,7 @@ defineProps({
   max-width: 90vw !important;
   background: linear-gradient(to right, #77767633 8%, #8282824d 18%, #82828233 33%);
   background-size: 800px 100px;
-  animation: Gradient 2s ease infinite;
+  animation: Gradient 2s ease-out infinite;
 
 
 }
@@ -36,7 +36,7 @@ defineProps({
         background-position: -468px 0;
     }
      100% {
-        background-position: 46px 0;
+        background-position: 468px 0;
     }
 }
 </style>

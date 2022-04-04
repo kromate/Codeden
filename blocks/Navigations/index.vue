@@ -1,6 +1,7 @@
 <template>
 	<div v-for="n in blockDate"  :key="n.index" >
 		<img :src="n.img" alt="Navigation one" class="rounded-md w-full shadow-xl object-cover"  v-if="!n.imgLoaded">
+		<SkeletonLoader/>
 	</div>
 
 </template>
@@ -9,6 +10,7 @@
 //@ts-ignore
 import {getBlockNavigations} from '@/composables/useFileSystem'
 import { ref, onMounted } from 'vue'
+import SkeletonLoader from '../../src/components/core/SkeletonLoader.vue'
 
 const blockDate = ref()
 onMounted(async()=>{

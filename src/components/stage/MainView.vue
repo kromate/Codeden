@@ -20,17 +20,16 @@
 
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
+import { ref } from 'vue'
 
 // const order = 1 
 
 
-const addedComp = [
-	// {name:'test', id:6}
-]
+const addedComp = ref([])
 
 const log = (evt)=> {
 	if(evt.added){
-		addedComp.push(evt.added.element)
+		addedComp.value.push(evt.added.element)
 		console.log(addedComp)
 	}
 	

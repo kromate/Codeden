@@ -9,6 +9,8 @@
 	>
 		<template #item="{ element, index }">
 			<div class="list-group-item">{{ element.name }} {{ index }}</div>
+			<img :src="element.img" :alt="element.name" class="rounded-md w-full shadow-xl object-cover"  @load="element.imgLoaded = true">
+			<SkeletonLoader v-if="!element.imgLoaded" height="100px" width="100%" radius="6px"/>
 		</template>
 	</draggable>
 
@@ -17,7 +19,14 @@
 
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
+import { ref } from 'vue'
+import SkeletonLoader from '@/components/core/SkeletonLoader.vue'
 
+
+const blockDate = ref
+onMounted(async()=>{
+	blockDate.value = await getBlockHeaders()
+} )
 // const order = 1 
 
 

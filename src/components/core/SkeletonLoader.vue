@@ -8,11 +8,11 @@
 <script lang="ts" setup>
 defineProps({
 	width: {
-		default : '120px',
+		default : '100%',
 		type:String
 	},
 	height: {
-		default : '120px',
+		default : '100%',
 		type:String
 	},
 	radius: {
@@ -25,7 +25,7 @@ defineProps({
 <style  scoped>
 .pulsate {
   max-width: 90vw !important;
-  background: linear-gradient(90deg, #baa891, #a9a9a9, #4948484f, #16130e);
+  background: linear-gradient(90deg, #baa891, #a9a9a9, #4948484f, #928fd8);
   background-size: 400% 400%;
   -webkit-animation: Gradient 2.25s ease infinite;
   animation: Gradient 2s ease infinite;

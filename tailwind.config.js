@@ -11,7 +11,7 @@ module.exports = {
 				bgDark: '#0000000f',
 			},
 			    boxShadow: {
-				'block': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+				'block': '0 20px rgba(0,0,0,0.8)',
 			}
 		},
 	},

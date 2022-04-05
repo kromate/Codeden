@@ -10,7 +10,9 @@ module.exports = {
 				primary: '#4f46e5',
 				bgDark: '#0000000f',
 			},
-			sha
+			    boxShadow: {
+				'block': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+			}
 		},
 	},
 	plugins: [],

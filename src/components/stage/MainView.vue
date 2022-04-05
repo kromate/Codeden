@@ -8,7 +8,7 @@
 		itemKey="id"
 	>
 		<template #item="{ element }">
-			<component :is="element.comp"/>
+			<component :is="{...element.comp}"/>
 
 		</template>
 	</draggable>

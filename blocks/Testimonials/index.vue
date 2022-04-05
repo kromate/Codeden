@@ -14,7 +14,7 @@
 	</draggable>
 </template>
 
-<script lang="jsx" setup>
+<script lang="ts" setup>
 //@ts-ignore
 import {getBlockTestimonials} from '@/composables/useFileSystem'
 import { ref, onMounted } from 'vue'

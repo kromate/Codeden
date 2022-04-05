@@ -10,8 +10,6 @@
 	<transition appear name="slideIn">
 		<div class="bg-bgDark  fixed left-0 top-0 w-[42rem] z-20  h-full" v-if="currentBlockName" @mouseleave="close">
 			<div class="w-[30rem] h-full card !bg-transparent  shadow-none flex flex-col items-start  pb-32 px-5 gap-4 absolute left-[13rem] top-[75px] overflow-y-auto" >
-				<!-- {{currentBlockName}} -->
-				
 				<component :is="currentBlockComp"/>
 			</div>
 		</div>

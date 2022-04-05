@@ -8,7 +8,7 @@
 		itemKey="id"
 	>
 		<template #item="{ element }">
-			<div>
+			<div class="hover:scale-[1.1]">
 				<component :is="{...element.comp}"/>
 			</div>
 		

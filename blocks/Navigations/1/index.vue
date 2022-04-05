@@ -24,7 +24,7 @@
 			</nav>
 
 			<div class="relative z-10 inline-flex items-center space-x-3 md:ml-5 lg:justify-end">
-				<a href="#" class="mr-5 inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-600 ">
+				<a href="#" class="mr-4 inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-600 ">
 					Sign in
 				</a>
 				<span class="inline-flex rounded-md shadow-sm ">

@@ -6,26 +6,26 @@
 			<a href="#_" class="relative z-10 flex items-center w-auto text-2xl font-extrabold leading-none text-black select-none">tails.</a>
 
 			<nav class="top-0 left-0 z-0 flex items-center justify-center w-auto h-full py-5 -ml-0 space-x-5 text-base  md:absolute">
-				<a href="#_" class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+				<a href="#_" class="mr-5 relative font-medium leading-6 text-gray-600">
 					<span class="block">Home</span>
 				
 				</a>
-				<a href="#_" class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+				<a href="#_" class="mr-5 relative font-medium leading-6 text-gray-600">
 					<span class="block">Features</span>
 				
 				</a>
-				<a href="#_" class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+				<a href="#_" class="mr-5 relative font-medium leading-6 text-gray-600">
 					<span class="block">Pricing</span>
 				
 				</a>
-				<a href="#_" class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+				<a href="#_" class="mr-5 relative font-medium leading-6 text-gray-600">
 					<span class="block">Blog</span>
 				
 				</a>
 			</nav>
 
 			<div class="relative z-10 inline-flex items-center space-x-3 md:ml-5 lg:justify-end">
-				<a href="#" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-200 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
+				<a href="#" class="mr-5 inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-200 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
 					Sign in
 				</a>
 				<span class="inline-flex rounded-md shadow-sm">

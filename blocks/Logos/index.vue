@@ -16,14 +16,14 @@
 
 <script lang="ts" setup>
 //@ts-ignore
-import {getBlockTeams} from '@/composables/useFileSystem'
+import {getBlockLogos} from '@/composables/useFileSystem'
 import { ref, onMounted } from 'vue'
 import draggable from 'vuedraggable'
 import SkeletonLoader from '@/components/core/SkeletonLoader.vue'
 
 const blockDate = ref()
 onMounted(async()=>{
-	blockDate.value = await getBlockTeams()
+	blockDate.value = await getBlockLogos()
 })
 </script>
 

@@ -44,3 +44,9 @@ import { ref } from 'vue'
 
 const hover = ref(false)
 </script>
+
+<style>
+.bg{
+	color:#2563eb
+}
+</style>

@@ -2,7 +2,6 @@
 	<section class="w-full px-8 py-16 bg-gray-100 xl:px-8">
 		<div class="max-w-5xl mx-auto">
 			<div class="flex flex-col items-center md:flex-row">
-
 				<div class="w-full space-y-5 md:w-3/5 md:pr-16">
 					<p class="font-medium text-blue-500 uppercase">Building Businesses</p>
 					<h2 class="text-2xl font-extrabold leading-none text-black sm:text-3xl md:text-5xl">
@@ -22,7 +21,6 @@
 						<p class="w-full mt-4 text-sm text-center text-gray-500">Don't have an account? <a href="#_" class="text-blue-500 underline">Sign up here</a></p>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>

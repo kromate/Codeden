@@ -1,7 +1,7 @@
 <template>
 	<section class="py-20 bg-gray-50">
 		<div class="container items-center max-w-6xl px-4 mx-auto sm:px-20 md:px-32 lg:px-16">
-			<div class="flex flex-wrap md:flex-nowrap items-center -mx-3">
+			<div class="flex  items-center -mx-3">
 				<div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
 					<div class="w-full lg:max-w-md">
 						<h2 class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">Jam-packed with all the tools you need to succeed!</h2>
@@ -22,7 +22,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img class="mx-auto sm:max-w-sm lg:max-w-[10%]" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image"></div>
+				<div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img class="mx-auto sm:max-w-sm lg:max-w-sm" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image"></div>
 			</div>
 		</div>
 	</section>

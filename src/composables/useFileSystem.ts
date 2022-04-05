@@ -251,3 +251,51 @@ export const getBlockForms = async () => {
 
   return result;
 };
+export const getBlockFooters = async () => {
+  //@ts-ignore
+  const requireComponent = import.meta.glob(`../../blocks/Footers/**`);
+  const BlockArr = Object.keys(requireComponent);
+  let curr = "";
+  let result = [];
+  for (let i = 0; i < BlockArr.length; i++) {
+    let pos = BlockArr[i].split("/")[4];
+    if (curr !== pos && pos !== "index.vue") {
+      let obj = {
+        comp: (await import(`../../blocks/Footers/${pos}/index.vue`)).default,
+        img: (await import(`../../blocks/Footers/${pos}/image.jpeg`)).default,
+        index: pos,
+        compLoaded: false,
+        imgLoaded: false,
+        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
+      };
+      result.push(obj);
+      curr = pos;
+    }
+  }
+
+  return result;
+};
+export const getBlockFeatures = async () => {
+  //@ts-ignore
+  const requireComponent = import.meta.glob(`../../blocks/Features/**`);
+  const BlockArr = Object.keys(requireComponent);
+  let curr = "";
+  let result = [];
+  for (let i = 0; i < BlockArr.length; i++) {
+    let pos = BlockArr[i].split("/")[4];
+    if (curr !== pos && pos !== "index.vue") {
+      let obj = {
+        comp: (await import(`../../blocks/Features/${pos}/index.vue`)).default,
+        img: (await import(`../../blocks/Features/${pos}/image.jpeg`)).default,
+        index: pos,
+        compLoaded: false,
+        imgLoaded: false,
+        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
+      };
+      result.push(obj);
+      curr = pos;
+    }
+  }
+
+  return result;
+};

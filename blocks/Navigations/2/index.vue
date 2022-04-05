@@ -17,7 +17,7 @@
 				<a href="#" class="text-base font-medium leading-6 text-gray-600  hover:text-gray-900">
 					Sign in
 				</a>
-				<a href="#" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-primary ">
+				<a href="#" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-primary rounded-md shadow-sm">
 					Sign up
 				</a>
 			</div>

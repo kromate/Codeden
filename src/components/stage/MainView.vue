@@ -8,7 +8,7 @@
 		itemKey="id"
 	>
 		<template #item="{ element }">
-			<div class="hover:scale-[1.01] hover:ring-4 ring-opacity-0 hover:ring-opacity-50 rounded-lg py-1">
+			<div class="hover:scale-[1.01] hover:ring-4 ring-opacity-0 hover:ring-opacity-50 rounded-lg ring-primary transition duration-300 ease transform ">
 				<component :is="{...element.comp}"/>
 			</div>
 		
@@ -16,8 +16,7 @@
 	</draggable>
 
 	<!-- <div class="w-full card ml-56 ">
-block-container relative w-full transition duration-300 ease transform 
-overflow-visible z-0 scale-100 hover:scale-102 hover:z-10 ring-indigo-300 bg-white rounded-lg hover:overflow-hidden ring-4 ring-opacity-0 hover:ring-opacity-50
+
 		
 	</div> -->
 </template>

@@ -1,12 +1,33 @@
 <template>
-	<div class="text-xl font-bold">
-		This is the Testimonials</div>
+	<draggable
+		class="w-full"
+		:list="blockDate"
+		group="people"
+		itemKey="name"
+	>
+		<template #item="{ element }">
+			<div class="w-full mt-5">
+				<img :src="element.img" :alt="element.name" class="rounded-md w-full shadow-xl object-cover"  @load="element.imgLoaded = true">
+				<SkeletonLoader v-if="!element.imgLoaded" height="100px" width="100%" radius="6px"/>
+			</div>
+		</template>
+	</draggable>
 </template>
 
-<script lang="ts" setup>
+<script lang="jsx" setup>
+//@ts-ignore
+import {getBlockTestimonials} from '@/composables/useFileSystem'
+import { ref, onMounted } from 'vue'
+import draggable from 'vuedraggable'
+import SkeletonLoader from '@/components/core/SkeletonLoader.vue'
 
+const blockDate = ref()
+onMounted(async()=>{
+	blockDate.value = await getBlockTestimonials()
+})
 </script>
 
 <style  scoped>
 
 </style>
+

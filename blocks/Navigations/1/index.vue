@@ -5,7 +5,7 @@
 		<div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
 			<a href="#_" class="relative  flex items-center w-auto text-xl font-extrabold leading-none text-black select-none">tails.</a>
 
-			<nav class="top-0 left-0 z-0 flex items-center justify-center w-auto h-full py-5 -ml-0 space-x-5 text-base  md:absolute">
+			<nav class="flex items-center justify-center w-auto h-full py-5 -ml-0 space-x-5 text-base ">
 				<a href="#_" class="mr-5 relative font-medium leading-6 text-gray-600">
 					<span class="block">Home</span>
 				

@@ -1,5 +1,5 @@
 <template>
-	<div class="w-auto h-fit rounded-xl fixed card flex flex-col items-start py-5 px-5 gap-2 z-10 ">
+	<div class="w-auto h-fit rounded-xl fixed card flex flex-col items-start py-5 px-5 gap-2 z-30 ">
 		<span
 			class="self-start text-sm leading-6 inline-block text-slate-500 px-2 py-1  rounded-md cursor-pointer font-bold hover:bg-slate-200 w-full"
 			v-for="n in Block" :key="n.name"

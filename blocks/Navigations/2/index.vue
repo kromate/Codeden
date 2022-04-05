@@ -1,5 +1,5 @@
 <template>
-	<section class="w-full px-8 text-gray-700 bg-white">
+	<section class="w-full px-8 text-gray-700 bg-white rounded-md">
 		<div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
 			<div class="relative flex flex-col md:flex-row">
 				<a href="#_" class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0">

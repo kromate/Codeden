@@ -8,7 +8,7 @@
 		itemKey="id"
 	>
 		<template #item="{ element }">
-			<div class="hover:scale-[1.02] hover:">
+			<div class="hover:scale-[1.01] hover:ring-4 ring-opacity-0 hover:ring-opacity-50 rounded-lg py-1">
 				<component :is="{...element.comp}"/>
 			</div>
 		

@@ -33,7 +33,7 @@
 import draggable from 'vuedraggable'
 import {stagedComp, delBlock} from '@/composables/useStage'
 import {useStorage} from '@vueuse/core'
-import { serialize } from '@/composables/useUtils'
+import { serialize, deserialize } from '@/composables/useUtils'
 
 
 const savedComp = useStorage('savedComp', [])

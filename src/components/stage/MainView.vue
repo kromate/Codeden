@@ -31,32 +31,22 @@
 
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
-import {stagedComp, delBlock, elemObject} from '../../composables/useStage'
-import {useStorage} from '@vueuse/core'
+import {stagedComp, delBlock, loadSavedComp} from '../../composables/useStage'
+
 import { onMounted } from 'vue'
 
 
-const savedComp = useStorage('savedComp', [])
-
-onMounted(()=>{
-	for(const elem of savedComp.value){
-		const newArr = elem.split(' ')
-		const elemArrPos = newArr.pop()
-		newArr.pop()
-		const elemName = newArr.join(' ')
-		import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d)=>{
-			stagedComp.value.push(new elemObject(d.default,elemArrPos,elem))	
-		})
-	}
-})
-const log = (evt)=> {
-	if(evt.added){ 
-		savedComp.value.push(evt.added.element.name)
-	}
-	console.log(stagedComp.value)
 
 
-}
+onMounted(loadSavedComp)
+// const log = (evt)=> {
+// 	if(evt.added){ 
+// 		savedComp.value.push(evt.added.element.name)
+// 	}
+// 	console.log(stagedComp.value)
+
+
+// }
 
 
 

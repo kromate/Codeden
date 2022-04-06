@@ -1,11 +1,5 @@
 import { ref } from 'vue';
 
-export const stagedComp = ref([]);
-
-export const delBlock = (index) => {
-  stagedComp.value.splice(index, 1);
-};
-
 export const elemObject = function (comp, pos, name) {
   let obj = {
     comp: comp,
@@ -17,3 +11,11 @@ export const elemObject = function (comp, pos, name) {
   };
   return obj;
 };
+
+export const stagedComp = ref([]);
+
+export const delBlock = (index) => {
+  stagedComp.value.splice(index, 1);
+};
+
+

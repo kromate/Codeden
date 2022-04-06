@@ -44,15 +44,10 @@ onMounted(()=>{
 		const elemArrPos = newArr.pop()
 		newArr.pop()
 		const elemName = newArr.join(' ')
-		console.log(elemName)
 		import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d)=>{
 			stagedComp.value.push(new elemObject(d.default,elemArrPos,elem))	
 		})
-		
-		
 	}
-	// 
-	
 })
 const log = (evt)=> {
 	if(evt.added){ 

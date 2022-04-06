@@ -3,8 +3,9 @@
 </template>
 
 <script setup>
-import {stagedComp} from '../../composables/useStage'
-
+import {stagedComp, loadSavedComp} from '../../composables/useStage'
+import { onMounted } from 'vue'
+onMounted(loadSavedComp)
 console.log(stagedComp.value)
 
 

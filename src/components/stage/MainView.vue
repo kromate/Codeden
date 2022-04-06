@@ -46,7 +46,7 @@ onMounted(()=>{
 		const elemName = newArr.join(' ')
 		console.log(elemName)
 		import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d)=>{
-			console.log(new elemObject(d.default,elemArrPos,elem))
+			stagedComp.value.push(new elemObject(d.default,elemArrPos,elem))	
 		})
 		
 		

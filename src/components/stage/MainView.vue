@@ -39,7 +39,12 @@ import { onMounted } from 'vue'
 const savedComp = useStorage('savedComp', [])
 
 onMounted(()=>{
-	console.log(new elemObject('a','b','c'))
+	for(const elem of savedComp.value){
+		const d =	import.meta.glob('../../blocks/Navigations/**')
+		console.log(d)
+		
+	}
+	// console.log(new elemObject('a','b','c'))
 	
 })
 const log = (evt)=> {

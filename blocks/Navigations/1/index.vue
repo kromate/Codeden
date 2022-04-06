@@ -2,7 +2,7 @@
 
 	<!-- Section 1 -->
 	<section class="relative w-full px-8 text-gray-700 bg-white body-font ">
-		<div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
+		<div class="container flex  flex-wrap items-center justify-between py-5 mx-auto  max-w-7xl">
 			<a href="#_" class="relative  flex items-center w-auto text-xl font-extrabold leading-none text-black select-none">tails.</a>
 
 			<nav class="flex items-center justify-center w-auto h-full   text-base ">

@@ -14,11 +14,11 @@ export const elemObject = function (comp, pos, name) {
 };
 
 export const stagedComp = ref([]);
-
 export const savedComp = useStorage("savedComp", []);
 
 export const delBlock = (index) => {
   stagedComp.value.splice(index, 1);
+  savedComp.value.splice(index, 1);
 };
 
 export const loadSavedComp = () => {
@@ -33,10 +33,9 @@ export const loadSavedComp = () => {
   }
 };
 
-
-export const detectChnages = (evt)=> {
-	if(evt.added){ 
-		savedComp.value.push(evt.added.element.name)
-	}
-	console.log(stagedComp.value)
-}
+export const detectChnages = (evt) => {
+  if (evt.added) {
+    savedComp.value.push(evt.added.element.name);
+  }
+  console.log(stagedComp.value);
+};

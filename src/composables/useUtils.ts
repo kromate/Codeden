@@ -12,10 +12,12 @@ export const deserialize = (key, value) => {
     const startArgs = value.indexOf("(") + 1;
     const endArgs = value.indexOf(")");
 
-    return new Function(
+    const b = new Function(
       value.substring(startArgs, endArgs),
       value.substring(startBody, endBody)
     );
+
+    console.log("=====", b);
   }
   return value;
 };

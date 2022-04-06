@@ -40,8 +40,10 @@ const savedComp = useStorage('savedComp', [])
 
 onMounted(()=>{
 	for(const elem of savedComp.value){
-		const elemArrPos = elem.split(' ').splice(-1)
-		console.log(elemArrPos, elem)
+		elem.trim()
+		const newArr = elem.split(' ')
+		const elemArrPos = newArr.pop()
+		console.log(elemArrPos, newArr)
 		
 		const d =	import.meta.glob('../../../blocks/Navigations/**')
 		console.log(d)

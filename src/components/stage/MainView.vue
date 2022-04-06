@@ -4,7 +4,7 @@
 		class="w-full card ml-56 "
 		:list="stagedComp"
 		group="people"
-		@change="log"
+		@change="detectChnages"
 		itemKey="id"
 	>
 		<template #item="{ element, index }">
@@ -23,30 +23,14 @@
 		</template>
 	</draggable>
 
-	<!-- <div class="w-full card ml-56 ">
-
-		
-	</div> -->
 </template>
 
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
-import {stagedComp, delBlock, loadSavedComp} from '../../composables/useStage'
-
+import {stagedComp, delBlock, loadSavedComp, detectChnages} from '../../composables/useStage'
 import { onMounted } from 'vue'
-
-
-
-
 onMounted(loadSavedComp)
-// const log = (evt)=> {
-// 	if(evt.added){ 
-// 		savedComp.value.push(evt.added.element.name)
-// 	}
-// 	console.log(stagedComp.value)
 
-
-// }
 
 
 

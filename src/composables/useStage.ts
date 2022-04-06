@@ -32,3 +32,11 @@ export const loadSavedComp = () => {
     });
   }
 };
+
+
+export const detectChnages = (evt)=> {
+	if(evt.added){ 
+		savedComp.value.push(evt.added.element.name)
+	}
+	console.log(stagedComp.value)
+}

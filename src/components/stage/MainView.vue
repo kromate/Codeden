@@ -41,7 +41,9 @@ const savedComp = useStorage('savedComp', [])
 const log = (evt)=> {
 	if(evt.added){ 
 		// stagedComp.value.push(evt.added.element)
-		console.log(evt.added.element)
+		const elementStringed = JSON.stringify(evt.added.element, serialize)
+		console.log(elementStringed)
+		savedComp.value.push(elementStringed)
 	}
 	console.log(stagedComp.value)
 

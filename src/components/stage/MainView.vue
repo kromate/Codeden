@@ -40,12 +40,11 @@ const savedComp = useStorage('savedComp', [])
 
 onMounted(()=>{
 	for(const elem of savedComp.value){
-		elem.trim()
 		const newArr = elem.split(' ')
 		const elemArrPos = newArr.pop()
 		console.log(elemArrPos, newArr)
 		
-		const d =	import.meta.glob('../../../blocks/Navigations/**')
+		const d =	import(`../../../blocks/Navigations/${elemArrPos}/index.vue`)
 		console.log(d)
 		
 	}

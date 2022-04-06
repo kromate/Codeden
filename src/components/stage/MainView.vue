@@ -41,7 +41,7 @@ const savedComp = useStorage('savedComp', [])
 
 onMounted(()=>{
 	for(const elem of savedComp.value){
-		console.log(savedComp)
+		stagedComp.value.push(JSON.parse(elem , deserialize))
 	}
 })
 const log = (evt)=> {

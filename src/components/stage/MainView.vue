@@ -32,9 +32,13 @@
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
 import {stagedComp} from '@/composables/useStage'
+import {useStorage} from '@vueuse/core'
+
+
+const savedComp = useStorage('savedComp', [])
 
 const log = (evt)=> {
-	if(evt.added){
+	if(evt.added){ 
 		// stagedComp.value.push(evt.added.element)
 		console.log(evt.added.element)
 	}
@@ -42,6 +46,8 @@ const log = (evt)=> {
 
 
 }
+
+
 
 const delBlock = (index)=>{
 	stagedComp.value.splice(index, 1)

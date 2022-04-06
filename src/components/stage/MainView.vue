@@ -40,7 +40,7 @@ const savedComp = useStorage('savedComp', [])
 
 onMounted(()=>{
 	for(const elem of savedComp.value){
-		const elemArr = elem.split(' ')
+		const elemArr = elem
 		console.log(elemArr)
 		
 		const d =	import.meta.glob('../../../blocks/Navigations/**')

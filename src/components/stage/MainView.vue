@@ -44,14 +44,14 @@ onMounted(()=>{
 		const elemArrPos = newArr.pop()
 		newArr.pop()
 		const elemName = newArr.join(' ')
-		
-		import(`../../../blocks/Navigations/${elemArrPos}/index.vue`).then((d)=>{
-			console.log(d.default)
+		console.log(elemName)
+		import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d)=>{
+			console.log(new elemObject(d.default,elemArrPos,elem))
 		})
 		
 		
 	}
-	// console.log(new elemObject('a','b','c'))
+	// 
 	
 })
 const log = (evt)=> {

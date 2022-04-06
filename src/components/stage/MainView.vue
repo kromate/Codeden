@@ -33,23 +33,17 @@
 import draggable from 'vuedraggable'
 import {stagedComp, delBlock} from '@/composables/useStage'
 import {useStorage} from '@vueuse/core'
-import { serialize, deserialize } from '@/composables/useUtils'
 import { onMounted } from 'vue'
 
 
 const savedComp = useStorage('savedComp', [])
 
 onMounted(()=>{
-	for(const elem of savedComp.value){
-		stagedComp.value.push(JSON.parse(elem , deserialize))
-	}
+	
 })
 const log = (evt)=> {
 	if(evt.added){ 
-		// stagedComp.value.push(evt.added.element)
-		const elementStringed = JSON.stringify(evt.added.element, serialize)
-		console.log(elementStringed)
-		savedComp.value.push(elementStringed)
+		savedComp.value.push(evt.added.element.name)
 	}
 	console.log(stagedComp.value)
 

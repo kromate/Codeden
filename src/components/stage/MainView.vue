@@ -34,10 +34,16 @@ import draggable from 'vuedraggable'
 import {stagedComp, delBlock} from '@/composables/useStage'
 import {useStorage} from '@vueuse/core'
 import { serialize, deserialize } from '@/composables/useUtils'
+import { onMounted } from 'vue'
 
 
 const savedComp = useStorage('savedComp', [])
 
+onMounted(()=>{
+	for(const elem of savedComp.value){
+		console.log(savedComp)
+	}
+})
 const log = (evt)=> {
 	if(evt.added){ 
 		// stagedComp.value.push(evt.added.element)

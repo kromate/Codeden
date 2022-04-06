@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
-import {stagedComp, delBlock} from '@/composables/useStage'
+import {stagedComp, delBlock, elemObject} from '../../composables/useStage'
 import {useStorage} from '@vueuse/core'
 import { onMounted } from 'vue'
 
@@ -39,6 +39,7 @@ import { onMounted } from 'vue'
 const savedComp = useStorage('savedComp', [])
 
 onMounted(()=>{
+	console.log(new elemObject('a','b','c'))
 	
 })
 const log = (evt)=> {

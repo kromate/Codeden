@@ -42,7 +42,8 @@ onMounted(()=>{
 	for(const elem of savedComp.value){
 		const newArr = elem.split(' ')
 		const elemArrPos = newArr.pop()
-		console.log(elemArrPos, newArr)
+		newArr.pop()
+		const elemName = newArr.join(' ')
 		
 		import(`../../../blocks/Navigations/${elemArrPos}/index.vue`).then((d)=>{
 			console.log(d.default)

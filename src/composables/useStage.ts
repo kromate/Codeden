@@ -15,5 +15,5 @@ export const elemObject = function (comp, pos, name) {
     imgLoaded: false,
     name: name,
   };
-  return obj;
+  //   return obj;
 };

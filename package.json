@@ -13,6 +13,7 @@
     "@vue/eslint-config-typescript": "^10.0.0",
     "@vueuse/core": "^8.2.3",
     "firebase": "^9.6.10",
+    "uuid": "^8.3.2",
     "vue": "^3.2.25",
     "vue-router": "4",
     "vuedraggable": "^4.1.0"

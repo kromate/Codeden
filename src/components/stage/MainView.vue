@@ -1,5 +1,5 @@
 <template>
-
+	<PageLoading/>
 	<draggable
 		
 		class="w-full card ml-56 "
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		</template>
-		
+
 		<div >
 			hello world
 		</div>
@@ -34,6 +34,7 @@
 import draggable from 'vuedraggable'
 import {stagedComp, delBlock, loadSavedComp, detectChnages} from '../../composables/useStage'
 import { onMounted } from 'vue'
+import PageLoading from '../core/PageLoading.vue'
 onMounted(loadSavedComp)
 
 

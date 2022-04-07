@@ -1,30 +1,33 @@
 <template>
-<div class="boxes">
-    <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
+	<div class="body fixed w-screen z-50 inset-0">
+		<div class="boxes">
+			<div class="box">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+
 </template>
 
 <script lang="ts" setup>
@@ -32,14 +35,13 @@
 </script>
 
 <style  scoped>
-body {
+.body {
     min-height: 100vh;
-    font-family: Roboto, Arial;
     color: #ADAFB6;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(249, 251, 255,0.6);  
+    background: rgba(249, 251, 255, 0.829);  
     }
 
 .boxes {

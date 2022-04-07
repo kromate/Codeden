@@ -8,7 +8,7 @@
 		@change="detectChnages"
 		itemKey="id"
 	>
-		<template #item="{ element, index }" v-if="stagedComp.length">
+		<template #item="{ element, index }">
 		
 			<div  class="hover:scale-[1.01] hover:mb-2 hover:ring-4 ring-opacity-0 hover:ring-opacity-50 rounded-lg ring-primary transition duration-300 ease transform ">
 				<component :is="{...element.comp}" class="hover:rounded-lg"/>
@@ -21,11 +21,10 @@
 					</div>
 				</div>
 			</div>
-
-		
 		</template>
-		<div v-else>
-			hello
+		
+		<div >
+			hello world
 		</div>
 	</draggable>
 

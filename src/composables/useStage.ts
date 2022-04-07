@@ -39,6 +39,7 @@ export const loadSavedComp = () => {
 export const detectChnages = (evt) => {
   let newArr = [];
   for (const elem of stagedComp.value) {
-    console.log(elem);
+    newArr.push(elem.name);
   }
+  savedComp.value = newArr;
 };

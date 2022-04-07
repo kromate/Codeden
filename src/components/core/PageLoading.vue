@@ -26,6 +26,8 @@
 				<div></div>
 			</div>
 		</div>
+
+	
 	</div>
 
 </template>
@@ -41,7 +43,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(249, 251, 255, 0.829);  
+    background: rgba(249, 251, 255, 0.994);  
     }
 
 .boxes {

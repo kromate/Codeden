@@ -7,8 +7,8 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import { useAlert, useLoading } from "~/composables/useNotification";
-import { useUser } from "~/composables/useGlobals";
+import { useAlert, useLoading } from "../composables/useNotification";
+import { useUser } from "../composables/useGlobals";
 
 const { openAlert } = useAlert();
 const { openLoading, closeLoading } = useLoading();

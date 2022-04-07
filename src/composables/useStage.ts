@@ -1,5 +1,5 @@
-import { useStorage } from '@vueuse/core';
-import { ref } from 'vue';
+import { useStorage } from "@vueuse/core";
+import { ref } from "vue";
 
 export const elemObject = function (comp, pos, name) {
   let obj = {
@@ -22,7 +22,10 @@ export const delBlock = (index) => {
 };
 
 export const loadSavedComp = () => {
+  console.log(savedComp.value);
+  console.log(stagedComp.value);
   for (const elem of savedComp.value) {
+    console.log(elem);
     const newArr = elem.split(" ");
     const elemArrPos = newArr.pop();
     newArr.pop();
@@ -34,8 +37,8 @@ export const loadSavedComp = () => {
 };
 
 export const detectChnages = (evt) => {
-  if (evt.added) {
-    savedComp.value.push(evt.added.element.name);
+  let newArr = [];
+  for (const elem of stagedComp.value) {
+    console.log(elem);
   }
-  console.log(stagedComp.value);
 };

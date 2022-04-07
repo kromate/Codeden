@@ -1,6 +1,7 @@
 <template>
 
 	<draggable
+		v-if="stagedComp"
 		class="w-full card ml-56 "
 		:list="stagedComp"
 		group="people"
@@ -8,8 +9,7 @@
 		itemKey="id"
 	>
 		<template #item="{ element, index }">
-			<div v-if="index" class="hover:scale-[1.01] hover:mb-2 hover:ring-4 ring-opacity-0 hover:ring-opacity-50 rounded-lg ring-primary transition duration-300 ease transform ">
-				<p class="text-xl font-extrabold">{{index}}</p>
+			<div class="hover:scale-[1.01] hover:mb-2 hover:ring-4 ring-opacity-0 hover:ring-opacity-50 rounded-lg ring-primary transition duration-300 ease transform ">
 				<component :is="{...element.comp}" class="hover:rounded-lg"/>
 				<div class="absolute bottom-0 left-0 z-40 px-4 py-2 mb-4 ml-3 text-xs font-medium text-indigo-600 transition duration-150 ease-out bg-white border border-gray-200 rounded-full shadow-lg opacity-0 action">{{element.name}}</div>
 				<div class="absolute bottom-0 right-0 z-50 flex mb-4 mr-3 opacity-0 action">
@@ -20,11 +20,6 @@
 					</div>
 				</div>
 			</div>
-
-			<div v-else>
-				hello
-			</div>
-		
 		</template>
 	</draggable>
 

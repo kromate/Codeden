@@ -1,5 +1,5 @@
-import { useStorage } from "@vueuse/core";
-import { ref } from "vue";
+import { useStorage } from '@vueuse/core';
+import { ref } from 'vue';
 
 export const stageMeasurements = [
   {
@@ -80,7 +80,7 @@ export const detectChnages = (evt) => {
 
   for (const elem of stagedComp.value) {
     console.log(elem);
-    newArr.push(elem.name);
+    // newArr.push(elem.name);
   }
   savedComp.value = newArr;
 };

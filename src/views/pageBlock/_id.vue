@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import {stagedComp, loadSavedComp} from '../../composables/useStage'
+import {stagedComp, loadOnlinePageBlocks} from '../../composables/useStage'
 import { onMounted, ref } from 'vue'
 import DefaultLayout from '../../layouts/defaultLayout.vue'
 import { useRoute } from 'vue-router'
@@ -14,9 +14,9 @@ import { getSinglepageBlock } from '../../firebase/firestore'
 
 const result = ref(null)
 const id = useRoute().params.id
-console.log(id)
 onMounted(async () => {
 	result.value = await getSinglepageBlock(id)
-	console.log(result.value)
+	console.log(result.value.pageBlogArr)
+	loadOnlinePageBlocks(result.value.pageBlogArr)
 })
 </script>

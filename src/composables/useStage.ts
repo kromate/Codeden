@@ -1,5 +1,5 @@
-import { useStorage } from '@vueuse/core';
-import { ref } from 'vue';
+import { useStorage } from "@vueuse/core";
+import { ref } from "vue";
 
 export const stageMeasurements = [
   {
@@ -51,6 +51,18 @@ export const delBlock = (index) => {
 
 export const loadSavedComp = () => {
   for (const elem of savedComp.value) {
+    const newArr = elem.split(" ");
+    const elemArrPos = newArr.pop();
+    newArr.pop();
+    const elemName = newArr.join(" ");
+    import(`../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
+      //@ts-ignore
+      stagedComp.value.push(new elemObject(d.default, elemArrPos, elem));
+    });
+  }
+};
+export const loadOnlinePageBlocks = (arr) => {
+  for (const elem of arr) {
     console.log(elem);
     const newArr = elem.split(" ");
     const elemArrPos = newArr.pop();

@@ -1,5 +1,28 @@
-import { useStorage } from "@vueuse/core";
-import { ref } from "vue";
+import { useStorage } from '@vueuse/core';
+import { ref } from 'vue';
+
+export const stageMeasurements = [
+  {
+    name: "xl",
+    size: "1280px",
+  },
+  {
+    name: "lg",
+    size: "1024px",
+  },
+  {
+    name: "md",
+    size: "768px",
+  },
+  {
+    name: "sm",
+    size: "640px",
+  },
+  {
+    name: "xs",
+    size: "480px",
+  },
+];
 
 export const elemObject = function (comp, pos, name) {
   let obj = {
@@ -15,6 +38,11 @@ export const elemObject = function (comp, pos, name) {
 
 export const stagedComp = ref([]);
 export const savedComp = useStorage("savedComp", []);
+export const stageWidth = ref(stageMeasurements[0]);
+
+export const switchStageWidth = (val) => {
+  stageWidth.value = val;
+};
 
 export const delBlock = (index) => {
   stagedComp.value.splice(index, 1);
@@ -22,15 +50,13 @@ export const delBlock = (index) => {
 };
 
 export const loadSavedComp = () => {
-  console.log(savedComp.value);
-  console.log(stagedComp.value);
   for (const elem of savedComp.value) {
-    console.log(elem);
     const newArr = elem.split(" ");
     const elemArrPos = newArr.pop();
     newArr.pop();
     const elemName = newArr.join(" ");
     import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
+      //@ts-ignore
       stagedComp.value.push(new elemObject(d.default, elemArrPos, elem));
     });
   }

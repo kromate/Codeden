@@ -20,39 +20,39 @@ const { openLoading, closeLoading } = useLoading();
 export const db = getFirestore(app);
 
 let result = [];
-const timelineRef = collection(db, "timelines");
+const pageBlockRef = collection(db, "pageBlocks");
 
-export const saveTimeline = async (timeline) => {
+export const savepageBlock = async (pageBlock) => {
   const usedId = user.value.uid;
   const id = uuidv4();
-  await setDoc(doc(db, "timelines", id), { ...timeline, usedId, id });
+  await setDoc(doc(db, "pageBlocks", id), { ...pageBlock, usedId, id });
 };
 
-export const editTimeline = async (timeline, id) => {
+export const editpageBlock = async (pageBlock, id) => {
   const usedId = user.value.uid;
-  await setDoc(doc(db, "timelines", id), { ...timeline, usedId, id });
+  await setDoc(doc(db, "pageBlocks", id), { ...pageBlock, usedId, id });
 };
 
-export const delTimeline = async (id) => {
-  openLoading("Deleting the timeline");
-  await deleteDoc(doc(db, "timelines", id));
+export const delpageBlock = async (id) => {
+  openLoading("Deleting the pageBlock");
+  await deleteDoc(doc(db, "pageBlocks", id));
   location.reload();
   closeLoading();
 };
 
-export const getUserTimeline = async () => {
-  openLoading("Getting your timeline, this shouldn't take long 😙");
+export const getUserpageBlock = async () => {
+  openLoading("Getting your pages, this shouldn't take long 😙");
 
   const id = user.value.uid;
   result = [];
 
-  const userTimeline = query(timelineRef, where("usedId", "==", id));
-  const querySnapshot = await getDocs(userTimeline);
+  const userpageBlock = query(pageBlockRef, where("usedId", "==", id));
+  const querySnapshot = await getDocs(userpageBlock);
   querySnapshot.forEach((doc) => {
     result.push(doc.data());
   });
 
-  const unsubscribe = onSnapshot(timelineRef, (snapshot) => {
+  const unsubscribe = onSnapshot(pageBlockRef, (snapshot) => {
     result = [];
     snapshot.docChanges().forEach((change) => {
       result.push(change.doc.data());
@@ -64,10 +64,10 @@ export const getUserTimeline = async () => {
   return result;
 };
 
-export const getSingleTimeline = async (id) => {
-  openLoading("Loading up the timeline 👽");
-  const singleTimelineRef = doc(db, "timelines", id);
-  const docSnap = await getDoc(singleTimelineRef);
+export const getSinglepageBlock = async (id) => {
+  openLoading("Loading up the pageBlock 👽");
+  const singlepageBlockRef = doc(db, "pageBlocks", id);
+  const docSnap = await getDoc(singlepageBlockRef);
   closeLoading();
   if (docSnap.exists()) {
     return docSnap.data();

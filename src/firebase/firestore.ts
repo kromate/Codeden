@@ -33,7 +33,7 @@ export const savepageBlock = async () => {
     usedId,
     id,
   });
-
+  savedComp.value = [];
   closeLoading();
   location.assign("/pageBlock");
 };

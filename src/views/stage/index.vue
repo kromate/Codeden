@@ -12,9 +12,9 @@
 			</div>
 
 			<div class="flex gap-8">
-				<router-link to="/stage/preview" class="btn hover:bg-transparent px-0 font-normal">
+				<button class="btn hover:bg-transparent px-0 font-normal">
 					save 
-				</router-link>
+				</button>
 				<router-link to="/stage/preview" class="btn hover:bg-transparent px-0 font-normal">
 					preview
 				</router-link>

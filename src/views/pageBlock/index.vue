@@ -54,10 +54,10 @@
 				<h3 class="text text-center">
 					You currently do not have any pageBlock, fix up 👍
 				</h3>
-				<nuxt-link
-					to="/setup"
+				<router-link
+					to="/stage"
 					class="btn max-w-[75%] mt-4 justify-center items-center flex"
-				>Create pageBlock</nuxt-link
+				>Create pageBlock</router-link
 				>
 			</div>
 		</div>

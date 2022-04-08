@@ -48,13 +48,11 @@ export const delBlock = (index) => {
   stagedComp.value.splice(index, 1);
   savedComp.value.splice(index, 1);
   detectChnages();
-  console.log(savedComp.value);
 };
 
 export const loadSavedComp = () => {
   for (let i = 0; i < savedComp.value.length; i++) {
     const parsedElem = JSON.parse(savedComp.value[i]);
-    console.log(parsedElem);
     const newArr = parsedElem.name.split(" ");
     const elemArrPos = newArr.pop();
     newArr.pop();
@@ -67,20 +65,23 @@ export const loadSavedComp = () => {
         parsedElem.name
       );
 
-      console.log(stagedComp.value);
     });
   }
 };
 export const loadOnlinePageBlocks = (arr) => {
   for (let i = 0; i < arr.length; i++) {
-    const parsedElem = JSON.parse(arr.value[i]);
+    const parsedElem = JSON.parse(arr[i]);
     const newArr = parsedElem.name.split(" ");
     const elemArrPos = newArr.pop();
     newArr.pop();
     const elemName = newArr.join(" ");
     import(`../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
       //@ts-ignore
-      stagedComp.value.push(new elemObject(d.default, elemArrPos, elem));
+      stagedComp.value[parsedElem.index] = new elemObject(
+        d.default,
+        elemArrPos,
+        parsedElem.name
+      );
     });
   }
 };

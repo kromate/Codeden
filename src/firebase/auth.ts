@@ -39,7 +39,6 @@ export const googleAuth = () => {
     })
     .catch((error) => {
       closeLoading();
-      console.log(error);
       openAlert(`Oops seems something went wrong 😕 : ${error.message}`);
     });
 };

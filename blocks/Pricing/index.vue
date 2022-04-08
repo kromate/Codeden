@@ -31,9 +31,7 @@ onMounted(async()=>{
 	blockDate.value = await getBlockPricings()
 } )
 
-const log = function(evt) {
-	window.console.log(evt)
-}
+
 
 
 </script>

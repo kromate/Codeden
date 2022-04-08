@@ -16,7 +16,6 @@ const result = ref(null)
 const id = useRoute().params.id
 onMounted(async () => {
 	result.value = await getSinglepageBlock(id)
-	console.log(result.value.pageBlogArr)
 	loadOnlinePageBlocks(result.value.pageBlogArr)
 })
 </script>

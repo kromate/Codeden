@@ -9,7 +9,6 @@ import {stagedComp, loadSavedComp} from '../../composables/useStage'
 import { onMounted } from 'vue'
 import DefaultLayout from '../../layouts/defaultLayout.vue'
 onMounted(loadSavedComp)
-console.log(stagedComp.value)
 
 
 </script>

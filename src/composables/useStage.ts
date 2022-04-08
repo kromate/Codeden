@@ -57,7 +57,6 @@ export const loadSavedComp = () => {
     const elemName = newArr.join(" ");
     console.log(`../../../blocks/${elemName}/${elemArrPos}/index.vue`);
     import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
-      console.log(d);
       //@ts-ignore
       stagedComp.value.push(new elemObject(d.default, elemArrPos, elem));
     });
@@ -66,7 +65,9 @@ export const loadSavedComp = () => {
 
 export const detectChnages = (evt) => {
   let newArr = [];
+
   for (const elem of stagedComp.value) {
+    console.log(elem);
     newArr.push(elem.name);
   }
   savedComp.value = newArr;

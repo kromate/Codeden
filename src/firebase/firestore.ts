@@ -51,7 +51,7 @@ export const delpageBlock = async (id) => {
 };
 
 export const getUserpageBlock = async () => {
-  openLoading("Getting your pages, this shouldn't take long 😙");
+  openLoading("Getting your pageBlocks, this shouldn't take long 😙");
 
   const id = user.value.uid;
   result = [];

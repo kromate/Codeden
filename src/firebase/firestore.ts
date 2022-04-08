@@ -13,7 +13,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { useUser } from "../composables/useGlobals";
-import { useLoading } from "../composables/useNotification";
+import { useLoading, useAlert } from "../composables/useNotification";
 import { savedComp } from "../composables/useStage";
 
 const { user } = useUser();
@@ -24,23 +24,27 @@ let result = [];
 const pageBlockRef = collection(db, "pageBlocks");
 
 export const savepageBlock = async () => {
-  openLoading("Saving Your Blocks, You can view it down pages");
-  const usedId = user.value.uid;
-  const id = uuidv4();
-  await setDoc(doc(db, "pageBlocks", id), {
-    date: Date(),
-    pageBlogArr: savedComp.value,
-    usedId,
-    id,
-  });
-  savedComp.value = [];
-  closeLoading();
-  location.assign("/pageBlock");
+  if (user.value) {
+    openLoading("Saving Your Blocks, You can view it under pages");
+    const userId = user.value.uid;
+    const id = uuidv4();
+    await setDoc(doc(db, "pageBlocks", id), {
+      date: Date(),
+      pageBlogArr: savedComp.value,
+      userId,
+      id,
+    });
+    savedComp.value = [];
+    closeLoading();
+    location.assign("/pageBlock");
+  } else {
+    useAlert().openAlert("Your need to Sign in to save 💁‍♂️");
+  }
 };
 
 // export const editpageBlock = async (pageBlock, id) => {
-//   const usedId = user.value.uid;
-//   await setDoc(doc(db, "pageBlocks", id), { ...pageBlock, usedId, id });
+//   const userId = user.value.uid;
+//   await setDoc(doc(db, "pageBlocks", id), { ...pageBlock, userId, id });
 // };
 
 export const delpageBlock = async (id) => {
@@ -56,7 +60,7 @@ export const getUserpageBlock = async () => {
   const id = user.value.uid;
   result = [];
 
-  const userpageBlock = query(pageBlockRef, where("usedId", "==", id));
+  const userpageBlock = query(pageBlockRef, where("userId", "==", id));
   const querySnapshot = await getDocs(userpageBlock);
   querySnapshot.forEach((doc) => {
     result.push(doc.data());

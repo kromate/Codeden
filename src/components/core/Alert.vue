@@ -1,6 +1,6 @@
 <template>
 	<transition appear name="slide">
-		<div v-if="active"  class="overflow-hidden max-w-[70%] rounded-md shadow-xl fixed top-8 left-4 p-4 bg-white z-50 text w-[22rem] bg ">
+		<div v-if="active"  class="overflow-hidden max-w-[70%] rounded-md shadow-xl fixed top-8 left-4 p-4 bg-white z-[150] text w-[22rem] bg ">
 			<div class="h-full w-1.5 bg-inverse absolute left-0 top-0"/>
 			<svg @click="closeAlert" class="w-6 h-6 text-gray-700 absolute right-1 top-0 cursor-pointer text-xl"  fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>

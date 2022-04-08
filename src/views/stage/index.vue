@@ -44,7 +44,9 @@ import DefaultLayout from '../../layouts/defaultLayout.vue'
 import { savepageBlock } from '../../firebase/firestore'
 
 
-const saveBlock = savepageBlock()
+const saveBlock =()=>{
+	savepageBlock()
+} 
 </script>
 
 <style  scoped>

@@ -25,6 +25,7 @@ let result = [];
 const pageBlockRef = collection(db, "pageBlocks");
 
 export const savepageBlock = async () => {
+  const router = useRouter();
   openLoading("Saving Your Blocks, You can view it down pages");
   const usedId = user.value.uid;
   const id = uuidv4();
@@ -35,7 +36,7 @@ export const savepageBlock = async () => {
   // });
 
   closeLoading();
-  const router = useRouter();
+
   router.push("/pageBlock");
 };
 

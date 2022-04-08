@@ -2,8 +2,8 @@
 	<div class="flex flex-col w-full min-h-screen justify-start items-center bg py-10">
 		<div class="md:px-10 px-6 w-auto">
 			<div class="mb-14 w-full text-center mt-4">
-				<h1 class="text-3xl font-semibold text mb-2">My Timelines</h1>
-				<p class="text">This contains a list of all your timelines</p>
+				<h1 class="text-3xl font-semibold text mb-2">My pageBlocks</h1>
+				<p class="text">This contains a list of all your pageBlocks</p>
 			</div>
 
 			<transition-group
@@ -19,23 +19,23 @@
 					:data-index="index"
 					class="overflow-hidden rounded-md shadow-xl p-4 border border-slate-700 dark:border-slate-200 text w-[22rem] max-w-[100%]"
 				>
-					<nuxt-link class="text-xl underline mb-2" :to="`/timeline/${n.id}`">{{ n.value.title }}</nuxt-link>
+					<nuxt-link class="text-xl underline mb-2" :to="`/pageBlock/${n.id}`">{{ n.value.title }}</nuxt-link>
 					<p>{{ n.value.desc }}</p>
 
 					<div class="flex gap-4 mt-4">
 						<nuxt-link
 							class="dark:bg-white bg-black dark:text-black text-white px-3 cursor-pointer rounded-md"
-							:to="`/timeline/${n.id}/edit`"
+							:to="`/pageBlock/${n.id}/edit`"
 						>edit</nuxt-link
 						>
 						<span
 							class="dark:bg-white bg-black dark:text-black text-white px-3 cursor-pointer rounded-md"
-							@click="shareTimeline(n)"
+							@click="sharepageBlock(n)"
 						>Share</span
 						>
 						<span
 							class="dark:bg-white bg-black dark:text-black text-white px-3 cursor-pointer rounded-md"
-							@click="delTimeline(n.id)"
+							@click="delpageBlock(n.id)"
 						>Delete</span
 						>
 					</div>
@@ -52,12 +52,12 @@
 					autoplay
 				></lottie-player>
 				<h3 class="text text-center">
-					You currently do not have any timeline, fix up 👍
+					You currently do not have any pageBlock, fix up 👍
 				</h3>
 				<nuxt-link
 					to="/setup"
 					class="btn max-w-[75%] mt-4 justify-center items-center flex"
-				>Create Timeline</nuxt-link
+				>Create pageBlock</nuxt-link
 				>
 			</div>
 		</div>
@@ -70,7 +70,7 @@ import { onMounted, ref } from 'vue'
 import { useShare, useClipboard } from '@vueuse/core'
 import { useUser } from '@/composables/useGlobals'
 import { useAlert } from '@/composables/useNotification'
-// import { getUserTimeline, delTimeline } from '@/firebase/firestore'
+// import { getUserpageBlock, delpageBlock } from '@/firebase/firestore'
 
 export default {
 	name: 'SetupPage',
@@ -78,7 +78,7 @@ export default {
 		({ redirect }) => {
 			if (!useUser().UserRef) {
 				redirect('/')
-				useAlert().openAlert('You need to sign in to View timelines dhur🙄')
+				useAlert().openAlert('You need to sign in to View pageBlocks dhur🙄')
 			}
 		},
 	],
@@ -90,7 +90,7 @@ export default {
 		const { share, isSupported } = useShare()
 
 		onMounted(async () => {
-			result.value = await getUserTimeline()
+			result.value = await getUserpageBlock()
 		})
 		const copyLink = () => {
 			copy()
@@ -98,15 +98,15 @@ export default {
 				'Seems something went wrong while trying to share, don\'t worry we copied it to your clipboard '
 			)
 		}
-		const shareTimeline = (timeline) => {
-			source.value = `${location.href}/${timeline.id}`
+		const sharepageBlock = (pageBlock) => {
+			source.value = `${location.href}/${pageBlock.id}`
 			if (!isSupported) {
 				copyLink()
 			}
 			try {
 				share({
-					title: timeline.value.title,
-					text: timeline.value.desc,
+					title: pageBlock.value.title,
+					text: pageBlock.value.desc,
 					url: source.value,
 				})
 			} catch {
@@ -132,8 +132,8 @@ export default {
 			beforeEnter,
 			enter,
 			result,
-			delTimeline,
-			shareTimeline,
+			delpageBlock,
+			sharepageBlock,
 		}
 	},
 }

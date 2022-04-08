@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import {googleAuth, signOutUser} from '@/firebase/auth'
+import {googleAuth, signOutUser} from '../firebase/auth'
 import { useUser } from '../composables/useGlobals'
 
 const {user} = useUser()

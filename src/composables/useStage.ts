@@ -47,24 +47,34 @@ export const switchStageWidth = (val) => {
 export const delBlock = (index) => {
   stagedComp.value.splice(index, 1);
   savedComp.value.splice(index, 1);
+  detectChnages();
+  console.log(savedComp.value);
 };
 
 export const loadSavedComp = () => {
-  for (const elem of savedComp.value) {
-    const newArr = elem.split(" ");
+  for (let i = 0; i < savedComp.value.length; i++) {
+    const parsedElem = JSON.parse(savedComp.value[i]);
+    console.log(parsedElem);
+    const newArr = parsedElem.name.split(" ");
     const elemArrPos = newArr.pop();
     newArr.pop();
     const elemName = newArr.join(" ");
     import(`../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
       //@ts-ignore
-      stagedComp.value.push(new elemObject(d.default, elemArrPos, elem));
+      stagedComp.value[parsedElem.index] = new elemObject(
+        d.default,
+        elemArrPos,
+        parsedElem.name
+      );
+
+      console.log(stagedComp.value);
     });
   }
 };
 export const loadOnlinePageBlocks = (arr) => {
-  for (const elem of arr) {
-    console.log(elem);
-    const newArr = elem.split(" ");
+  for (let i = 0; i < arr.length; i++) {
+    const parsedElem = JSON.parse(arr.value[i]);
+    const newArr = parsedElem.name.split(" ");
     const elemArrPos = newArr.pop();
     newArr.pop();
     const elemName = newArr.join(" ");
@@ -75,12 +85,15 @@ export const loadOnlinePageBlocks = (arr) => {
   }
 };
 
-export const detectChnages = (evt) => {
+export const detectChnages = () => {
   let newArr = [];
 
-  for (const elem of stagedComp.value) {
-    console.log(elem);
-    // newArr.push(elem.name);
+  for (let i = 0; i < stagedComp.value.length; i++) {
+    let stringedElem = JSON.stringify({
+      index: i,
+      name: stagedComp.value[i].name,
+    });
+    newArr.push(stringedElem);
   }
   savedComp.value = newArr;
 };

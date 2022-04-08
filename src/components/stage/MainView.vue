@@ -25,9 +25,6 @@
 			</div>
 		</template>
 
-		<div >
-			hello world
-		</div>
 	</draggable>
 
 </template>

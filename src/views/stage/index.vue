@@ -12,7 +12,7 @@
 			</div>
 
 			<div class="flex gap-8">
-				<button class="btn hover:bg-transparent px-0 font-normal" @click="saveBlock">
+				<button class="btn hover:bg-transparent px-0 font-normal" @click="savepageBlock">
 					save 
 				</button>
 				<router-link to="/stage/preview" class="btn hover:bg-transparent px-0 font-normal">
@@ -44,9 +44,7 @@ import DefaultLayout from '../../layouts/defaultLayout.vue'
 import { savepageBlock } from '../../firebase/firestore'
 
 
-const saveBlock =()=>{
-	savepageBlock()
-} 
+
 </script>
 
 <style  scoped>

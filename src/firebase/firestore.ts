@@ -15,7 +15,6 @@ import {
 import { useUser } from "../composables/useGlobals";
 import { useLoading } from "../composables/useNotification";
 import { savedComp } from "../composables/useStage";
-import { useRouter } from "vue-router";
 
 const { user } = useUser();
 const { openLoading, closeLoading } = useLoading();
@@ -25,7 +24,6 @@ let result = [];
 const pageBlockRef = collection(db, "pageBlocks");
 
 export const savepageBlock = async () => {
-  const router = useRouter();
   openLoading("Saving Your Blocks, You can view it down pages");
   const usedId = user.value.uid;
   const id = uuidv4();
@@ -36,8 +34,7 @@ export const savepageBlock = async () => {
   // });
 
   closeLoading();
-
-  router.push("/pageBlock");
+  location.assign("/pageBlock");
 };
 
 // export const editpageBlock = async (pageBlock, id) => {

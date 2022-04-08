@@ -42,7 +42,7 @@
 				</article>
 			</transition-group>
 
-			<div v-else>
+			<div v-else class="flex flex-col justify-center items-center">
 				<lottie-player
 					src="https://assets2.lottiefiles.com/packages/lf20_heejrebm.json"
 					background="transparent"
@@ -86,7 +86,7 @@ export default {
 	setup() {
 		const result = ref([])
 		const source = ref('')
-		const { text, copy, copied } = useClipboard({ source })
+		const { copy } = useClipboard({ source })
 		const { share, isSupported } = useShare()
 
 		onMounted(async () => {

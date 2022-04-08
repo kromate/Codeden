@@ -68,7 +68,7 @@ export const getBlockHeaders = async () => {
         comp: (await import(`../../blocks/Headers/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Headers/${pos}/image.jpeg`)).default,
         index: pos,
-        compLoaded: false,
+        compUrl: `../../blocks/Headers/${pos}/index.vue`,
         imgLoaded: false,
         name: `${BlockArr[i].split("/")[3]}  ${pos}`,
       };

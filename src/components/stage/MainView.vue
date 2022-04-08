@@ -1,8 +1,10 @@
 <template>
 	<PageLoading/>
+
 	<draggable
-		
-		class="w-full card ml-56 "
+		:class="[stageWidth.name == 'xl' ? 'ml-56':'ml-auto mr-12']" 
+		class="w-full card "
+		:style="'max-width:' + stageWidth.size"
 		:list="stagedComp"
 		group="people"
 		@change="detectChnages"
@@ -32,7 +34,7 @@
 
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
-import {stagedComp, delBlock, loadSavedComp, detectChnages} from '../../composables/useStage'
+import {stagedComp, delBlock, loadSavedComp, detectChnages, stageWidth} from '../../composables/useStage'
 import { onMounted } from 'vue'
 import PageLoading from '../core/PageLoading.vue'
 onMounted(loadSavedComp)

@@ -51,11 +51,12 @@ export const delBlock = (index) => {
 
 export const loadSavedComp = () => {
   for (const elem of savedComp.value) {
+    console.log(elem);
     const newArr = elem.split(" ");
     const elemArrPos = newArr.pop();
     newArr.pop();
     const elemName = newArr.join(" ");
-    import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
+    import(`../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
       //@ts-ignore
       stagedComp.value.push(new elemObject(d.default, elemArrPos, elem));
     });
@@ -64,7 +65,9 @@ export const loadSavedComp = () => {
 
 export const detectChnages = (evt) => {
   let newArr = [];
+
   for (const elem of stagedComp.value) {
+    console.log(elem);
     newArr.push(elem.name);
   }
   savedComp.value = newArr;

@@ -29,13 +29,14 @@ export const savepageBlock = async () => {
   openLoading("Saving Your Blocks, You can view it down pages");
   const usedId = user.value.uid;
   const id = uuidv4();
-  await setDoc(doc(db, "pageBlocks", id), {
-    pageBlogArr: savedComp.value,
-    usedId,
-    id,
-  });
+  // await setDoc(doc(db, "pageBlocks", id), {
+  //   pageBlogArr: savedComp.value,
+  //   usedId,
+  //   id,
+  // });
 
   closeLoading();
+  router.push("/pageBlock");
 };
 
 // export const editpageBlock = async (pageBlock, id) => {

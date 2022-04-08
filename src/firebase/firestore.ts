@@ -17,7 +17,6 @@ import { useLoading } from "../composables/useNotification";
 import { savedComp } from "../composables/useStage";
 import { useRouter } from "vue-router";
 
-const router = useRouter();
 const { user } = useUser();
 const { openLoading, closeLoading } = useLoading();
 export const db = getFirestore(app);
@@ -36,6 +35,7 @@ export const savepageBlock = async () => {
   // });
 
   closeLoading();
+  const router = useRouter();
   router.push("/pageBlock");
 };
 

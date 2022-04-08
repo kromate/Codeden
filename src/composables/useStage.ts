@@ -55,10 +55,7 @@ export const loadSavedComp = () => {
     const elemArrPos = newArr.pop();
     newArr.pop();
     const elemName = newArr.join(" ");
-    console.log("`../../../blocks/${elemName}/*/**.vue`");
-    console.log(import.meta.glob(`../../../blocks/${elemName}/*/**.vue`));
-    import(`../../../blocks/${elemName}/${elemArrPos}/*.vue`).then((d) => {
-      console.log(d);
+    import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
       //@ts-ignore
       stagedComp.value.push(new elemObject(d.default, elemArrPos, elem));
     });

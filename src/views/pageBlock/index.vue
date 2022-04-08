@@ -70,7 +70,7 @@ import { onMounted, ref } from 'vue'
 import { useShare, useClipboard } from '@vueuse/core'
 import { useUser } from '@/composables/useGlobals'
 import { useAlert } from '@/composables/useNotification'
-// import { getUserpageBlock, delpageBlock } from '@/firebase/firestore'
+import { getUserpageBlock, delpageBlock } from '@/firebase/firestore'
 
 export default {
 	name: 'SetupPage',

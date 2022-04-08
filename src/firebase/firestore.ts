@@ -24,6 +24,7 @@ let result = [];
 const pageBlockRef = collection(db, "pageBlocks");
 
 export const savepageBlock = async () => {
+  openLoading("Saving Your Blocks, You can view it down pages");
   const usedId = user.value.uid;
   const id = uuidv4();
   await setDoc(doc(db, "pageBlocks", id), {

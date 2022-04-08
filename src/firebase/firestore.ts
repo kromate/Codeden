@@ -15,7 +15,9 @@ import {
 import { useUser } from "../composables/useGlobals";
 import { useLoading } from "../composables/useNotification";
 import { savedComp } from "../composables/useStage";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const { user } = useUser();
 const { openLoading, closeLoading } = useLoading();
 export const db = getFirestore(app);
@@ -32,6 +34,8 @@ export const savepageBlock = async () => {
     usedId,
     id,
   });
+
+  closeLoading();
 };
 
 // export const editpageBlock = async (pageBlock, id) => {

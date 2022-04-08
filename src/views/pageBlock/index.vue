@@ -10,6 +10,7 @@
 				<transition-group
 					v-if="result.length"
 					appear
+					tag="div"
 					class="gap-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
 					@before-enter="beforeEnter"
 					@enter="enter"

@@ -19,14 +19,14 @@
 					:data-index="index"
 					class="overflow-hidden rounded-md shadow-xl p-4 border border-slate-700 dark:border-slate-200 text w-[22rem] max-w-[100%]"
 				>
-					<nuxt-link class="text-xl underline mb-2" :to="`/pageBlock/${n.id}`">{{ n.value.title }}</nuxt-link>
+					<router-link class="text-xl underline mb-2" :to="`/pageBlock/${n.id}`">{{ n.value.title }}</router-link>
 					<p>{{ n.value.desc }}</p>
 
 					<div class="flex gap-4 mt-4">
-						<nuxt-link
+						<router-link
 							class="dark:bg-white bg-black dark:text-black text-white px-3 cursor-pointer rounded-md"
 							:to="`/pageBlock/${n.id}/edit`"
-						>edit</nuxt-link
+						>edit</router-link
 						>
 						<span
 							class="dark:bg-white bg-black dark:text-black text-white px-3 cursor-pointer rounded-md"

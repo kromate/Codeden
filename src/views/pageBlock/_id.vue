@@ -6,13 +6,17 @@
 
 <script setup>
 import {stagedComp, loadSavedComp} from '../../composables/useStage'
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import DefaultLayout from '../../layouts/defaultLayout.vue'
 import { useRoute } from 'vue-router'
-onMounted(loadSavedComp)
+import { getSinglepageBlock } from '../../firebase/firestore'
+// onMounted(loadSavedComp)
 
-
-
+const result = ref(null)
 const id = useRoute().params.id
 console.log(id)
+onMounted(async () => {
+	result.value = await getSinglepageBlock(id)
+	console.log(result.value)
+})
 </script>

@@ -14,6 +14,7 @@ import {
 } from "firebase/firestore";
 import { useUser } from "../composables/useGlobals";
 import { useLoading } from "../composables/useNotification";
+import { savedComp } from "../composables/useStage";
 
 const { user } = useUser();
 const { openLoading, closeLoading } = useLoading();
@@ -22,16 +23,20 @@ export const db = getFirestore(app);
 let result = [];
 const pageBlockRef = collection(db, "pageBlocks");
 
-export const savepageBlock = async (pageBlock) => {
+export const savepageBlock = async () => {
   const usedId = user.value.uid;
   const id = uuidv4();
-  await setDoc(doc(db, "pageBlocks", id), { ...pageBlock, usedId, id });
+  await setDoc(doc(db, "pageBlocks", id), {
+    pageBlogArr: savedComp.value,
+    usedId,
+    id,
+  });
 };
 
-export const editpageBlock = async (pageBlock, id) => {
-  const usedId = user.value.uid;
-  await setDoc(doc(db, "pageBlocks", id), { ...pageBlock, usedId, id });
-};
+// export const editpageBlock = async (pageBlock, id) => {
+//   const usedId = user.value.uid;
+//   await setDoc(doc(db, "pageBlocks", id), { ...pageBlock, usedId, id });
+// };
 
 export const delpageBlock = async (id) => {
   openLoading("Deleting the pageBlock");

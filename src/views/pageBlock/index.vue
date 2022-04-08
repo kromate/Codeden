@@ -19,7 +19,7 @@
 					:data-index="index"
 					class="overflow-hidden rounded-md shadow-xl p-4 border border-slate-700 dark:border-slate-200 text w-[22rem] max-w-[100%]"
 				>
-					<router-link class="text-xl underline mb-2" :to="`/pageBlock/${n.id}`">Created on {{ n.date }}</router-link>
+					<router-link class="text-xl underline mb-2" :to="`/pageBlock/${n.id}`"> <p class="font-bold">Created on</p> {{ n.date }}</router-link>
 
 
 					<div class="flex gap-4 mt-4">

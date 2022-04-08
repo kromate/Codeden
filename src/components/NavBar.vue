@@ -10,14 +10,17 @@
 
 			<transition name="slideUp" >
 				<div v-if="showMenu" class="w-full gap-4">
-					<router-link to="#_"  class="btn rounded-none py-3 w-full" v-if="user">Pages</router-link>
+					<router-link to="/pageBlock"  class="btn rounded-none py-3 w-full" v-if="user">Pages</router-link>
 					<button   class="btn rounded-none py-3 w-full mt-2" @click="user? signOutUser() : googleAuth()">{{user ? 'Log Out' : 'Login'}}</button>
 				</div>
 			
 			</transition>
 			
-			
-			<button class="btn pc py-3" @click="user? signOutUser() : googleAuth()">{{user ? 'Log Out' : 'Login'}}</button>
+			<div class="flex gap-4">
+				<router-link to="/pageBlock"  class="btn pc py-3" v-if="user">Pages</router-link>
+				<button class="btn pc py-3" @click="user? signOutUser() : googleAuth()">{{user ? 'Log Out' : 'Login'}}</button>
+			</div>
+
 			
 			<div @click="showMenu = !showMenu" class="absolute right-0 flex flex-col items-center  justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">
 				<svg class="w-6 h-6 text-gray-700" v-if="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak="">
@@ -33,7 +36,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import {googleAuth, signOutUser} from '@/firebase/auth'
+import {googleAuth, signOutUser} from '../firebase/auth'
 import { useUser } from '../composables/useGlobals'
 
 const {user} = useUser()

@@ -12,9 +12,9 @@
 			</div>
 
 			<div class="flex gap-8">
-				<router-link to="/stage/preview" class="btn hover:bg-transparent px-0 font-normal">
+				<button class="btn hover:bg-transparent px-0 font-normal" @click="savepageBlock">
 					save 
-				</router-link>
+				</button>
 				<router-link to="/stage/preview" class="btn hover:bg-transparent px-0 font-normal">
 					preview
 				</router-link>
@@ -41,6 +41,7 @@ import SideMenu from '@/components/stage/SideMenu.vue'
 import MainView from '@/components/stage/MainView.vue'
 import {stageMeasurements, stageWidth, switchStageWidth} from '../../composables/useStage'
 import DefaultLayout from '../../layouts/defaultLayout.vue'
+import { savepageBlock } from '../../firebase/firestore'
 
 
 

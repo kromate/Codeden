@@ -57,7 +57,7 @@ export const loadSavedComp = () => {
     newArr.pop();
     const elemName = newArr.join(" ");
     console.log(`../../../blocks/${elemName}/${elemArrPos}/index.vue`);
-    import(`../../../blocks/${elemName}/${elemArrPos}/index.vue`).then((d) => {
+    import(`../../../blocks/Headers/${elemArrPos}/index.vue`).then((d) => {
       //@ts-ignore
       stagedComp.value.push(new elemObject(d.default, elemArrPos, elem));
     });
@@ -69,7 +69,7 @@ export const detectChnages = (evt) => {
 
   for (const elem of stagedComp.value) {
     console.log(elem);
-    newArr.push(elem.compUrl);
+    newArr.push(elem.name);
   }
   savedComp.value = newArr;
 };

@@ -1,5 +1,5 @@
-import { useStorage } from '@vueuse/core';
-import { ref } from 'vue';
+import { useStorage } from "@vueuse/core";
+import { ref } from "vue";
 
 export const GlobalState = useStorage("GlobalState", {
   darkMode: "",

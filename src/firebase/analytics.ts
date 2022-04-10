@@ -1,4 +1,4 @@
-import { getAnalytics, logEvent } from 'firebase/analytics';
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const analytics = getAnalytics();
-logEvent(analytics, 'init');
+logEvent(analytics, "init");

@@ -1,5 +1,5 @@
-import { useStorage } from '@vueuse/core';
-import { ref } from 'vue';
+import { useStorage } from "@vueuse/core";
+import { ref } from "vue";
 
 export const stageMeasurements = [
   {
@@ -64,7 +64,6 @@ export const loadSavedComp = () => {
         elemArrPos,
         parsedElem.name
       );
-
     });
   }
 };

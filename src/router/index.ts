@@ -1,24 +1,5 @@
-// import { createRouter, createWebHistory } from 'vue-router';
-// import type { RouteRecordRaw } from 'vue-router';
-
-// export const routes: RouteRecordRaw[] = [
-//     {
-//         path: '/',
-//         component: () => import('../views/index.vue'),
-//     },
-//     {
-//         path: '/stage',
-//         component: () => import('../views/stage/index.vue'),
-//     },
-// ]
-
-// export const router = createRouter({
-//     history: createWebHistory(),
-//     routes,
-// })
-
-import { routes } from "@/router/routes";
-import { createRouter, createWebHistory } from "vue-router";
+import { routes } from '@/router/routes';
+import { createRouter, createWebHistory } from 'vue-router';
 
 export const setupRouter = async () => {
   const router = createRouter({

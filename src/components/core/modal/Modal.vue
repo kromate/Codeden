@@ -1,90 +1,82 @@
 <template>
-	<ModalRoot
-		:close="closeModal"
-		:close-on-background="closeOnBackground"
-		background-class="modal-background"
-		modal-class="modal-inner"
-		class="fixed "
-	>
-		<div class="d-flex justify-content-end">
-			<a class="fas fa-times" style="font-size: 1.5rem;" @click.prevent="closeModal" />
+
+	<transition name="slide" appear :duration="500">
+		<div  class="bg transition-all">
+			<transition  appear @before-enter="beforeEnter" @leave="onLeave"
+				@enter="enter"
+			>
+				<slot/>
+			</transition>
 		</div>
-		<Heading class="my-1" variant="3">
-			<slot name="title">
-				Title
-			</slot>
-		</Heading>
-		<hr v-if="!hideSeparator">
-		<slot>
-			<p>This is the default content of the modal</p>
-		</slot>
-	</ModalRoot>
+	</transition>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import ModalRoot from './ModalRoot.vue'
-import { modal } from '../../../composables/core/modals'
+<script>
+import gsap from 'gsap'
+import { defineComponent } from '@nuxtjs/composition-api'
+
 
 export default defineComponent({
 	name: 'Modal',
-	components: { ModalRoot },
-	props: {
-		modal: {
-			type: String,
-			required: true
-		},
-		close: {
-			type: Function,
-			required: false,
-			default: () => {}
-		},
-		hideSeparator: {
-			type: Boolean,
-			required: false,
-			default: false
-		},
-		closeOnBackground: {
-			type: Boolean,
-			required: false,
-			default: false
+
+	setup(){
+		const timeline = gsap.timeline({defaults:{duration:0.5}})
+		const beforeEnter = (el) => {
+			  el.style.opacity = 0
+			el.style.transform = 'scale(0.5)'
 		}
-	},
-	setup (props) {
-		const closeModal = () => {
-			modal.close(props.modal)
-			props.close?.()
+		const enter = (el, done) => {
+			timeline.to(el, {
+				opacity: 1,
+				y: 0,
+				scale:1,
+				duration: 0.35,
+				onComplete: done,
+			},)
 		}
-		return { closeModal }
+		const onLeave=(el, done)=> {
+			console.log(el)
+			
+			gsap.to(el, {
+				opacity: 0,
+				y: 0,
+				scale:0.1,
+				duration: 0.35,
+				onComplete: done,
+			},)
+		}
+
+		return{ beforeEnter, enter, onLeave }
 	}
 })
 </script>
 
-<style lang="scss">
-	.modal-background {
-		background: rgba($color-dark, 0.9);
-	}
+<style scoped>
 
-	.modal-inner {
-		border-radius: 0.5rem;
-		background: $color-white;
-		box-shadow: 0 4px 8px $color-black;
-		animation: slide-up 0.25s;
-	}
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.40);
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
 
-	@media (min-width: $md) {
-		.modal-inner {
-			border-radius: 1rem;
-		}
-	}
+.slide-enter-active,
+.slide-leave-active {
+  transition: all .5s ease;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: scale(0);
+  opacity: 0
+}
 
-	@keyframes slide-up {
-		from {
-			bottom: -100px;
-		}
 
-		to {
-			bottom: 0;
-		}
-	}
 </style>

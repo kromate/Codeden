@@ -7,15 +7,14 @@
 				@enter="enter"
 			>
 			
-				<div class="h-60 bg-white max-w-full  py-4 px-6 rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-lg ">
+				<div class="h-60 bg-white   py-4 px-6 rounded-lg overflow-hidden shadow-xl transform transition-all w-full max-w-[76%] sm:max-w-lg ">
 					<div class="flex w-full justify-between">
-						<div class="flex items-center relative w-full">
-							<a class="las la-times absolute right-[10px]"  @click.prevent="closeModal" />
-								
+						<form class="flex items-center relative w-full">
+							<a class="las la-times absolute right-[10px] cursor-pointer"  @click.prevent="closeModal" />
 							<span class="font-semibold text-xl">
-								Accounts
+								Save Page
 							</span>
-						</div>
+						</form>
 			
 					</div>
 

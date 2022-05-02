@@ -1,16 +1,15 @@
 <template>
 	<Modal modal="$atts.modal"
-		title="Save This Page"
+		title="Save Page"
 	>
 		<div
 			class="relative flex items-center max-w-lg mx-auto mt-12 overflow-hidden text-center rounded-md border-2 border-primary"
 		>
 			<input
-				disabled
 				type="text"
 				name="search"
-				placeholder="Search components"
-				class="w-full h-12 px-6 py-2 font-medium text-indigo-800 focus:outline-none cursor-not-allowed"
+				placeholder="Title of Page"
+				class="w-full h-12 px-3 py-2 font-medium text-indigo-800 focus:outline-none "
 			/>
 			<span class="relative top-0 right-0 block">
 				<button

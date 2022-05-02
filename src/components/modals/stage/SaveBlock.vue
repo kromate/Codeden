@@ -1,5 +1,5 @@
 <template>
-	<Modal modal="$attrs.modal">
+	<Modal modal="$atts.modal">
 		<div class="h-screen bg-white max-w-[79%]  w-[190rem] right-0 fixed py-9 px-12 ">
 			<div class="flex w-full justify-between">
 				<div class="flex items-center">
@@ -30,11 +30,6 @@ export default {
 	name: 'Accounts',
 	components: { Modal },
 	props:{
-		showModal: {
-			type: Boolean,
-			required: true,
-			default: false
-		},
 		close:{
 			type: Function,
 			required: true,

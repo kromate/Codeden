@@ -11,44 +11,39 @@
 	</transition>
 </template>
 
-<script>
+<script setup lang="ts">
 import gsap from 'gsap'
-import { defineComponent } from '@nuxtjs/composition-api'
 
 
-export default defineComponent({
-	name: 'Modal',
 
-	setup(){
-		const timeline = gsap.timeline({defaults:{duration:0.5}})
-		const beforeEnter = (el) => {
+const timeline = gsap.timeline({defaults:{duration:0.5}})
+const beforeEnter = (el) => {
 			  el.style.opacity = 0
-			el.style.transform = 'scale(0.5)'
-		}
-		const enter = (el, done) => {
-			timeline.to(el, {
-				opacity: 1,
-				y: 0,
-				scale:1,
-				duration: 0.35,
-				onComplete: done,
-			},)
-		}
-		const onLeave=(el, done)=> {
-			console.log(el)
+	el.style.transform = 'scale(0.5)'
+}
+const enter = (el, done) => {
+	timeline.to(el, {
+		opacity: 1,
+		y: 0,
+		scale:1,
+		duration: 0.35,
+		onComplete: done,
+	},)
+}
+const onLeave=(el, done)=> {
+	console.log(el)
 			
-			gsap.to(el, {
-				opacity: 0,
-				y: 0,
-				scale:0.1,
-				duration: 0.35,
-				onComplete: done,
-			},)
-		}
+	gsap.to(el, {
+		opacity: 0,
+		y: 0,
+		scale:0.1,
+		duration: 0.35,
+		onComplete: done,
+	},)
+}
 
-		return{ beforeEnter, enter, onLeave }
-	}
-})
+
+
 </script>
 
 <style scoped>

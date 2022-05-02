@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Modal from '@/components/core/modal'
+import Modal from '@/components/core/modal/Modal.vue'
 
 export default {
 	name: 'Accounts',

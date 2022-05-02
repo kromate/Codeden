@@ -5,9 +5,13 @@
 			:close-on-background="closeOnBackground"
 			background-class="modal-background"
 			modal-class="modal-inner" class="bg transition-all">
+			<div class="d-flex justify-content-end">
+				<a class="las la-times" style="font-size: 1.5rem;" @click.prevent="closeModal" />
+			</div>
 			<transition  appear @before-enter="beforeEnter" @leave="onLeave"
 				@enter="enter"
 			>
+			
 				<slot/>
 			</transition>
 		</div>

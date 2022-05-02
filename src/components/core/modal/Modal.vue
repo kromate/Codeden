@@ -9,12 +9,15 @@
 			
 				<div class="h-60 bg-white   py-4 px-6 rounded-lg overflow-hidden shadow-xl transform transition-all w-full max-w-[76%] sm:max-w-lg ">
 					<div class="flex w-full justify-between">
-						<form class="flex items-center relative w-full">
-							<a class="las la-times absolute right-[10px] cursor-pointer"  @click.prevent="closeModal" />
-							<span class="font-semibold text-2xl text-center w-full">
-								Save Page
-							</span>
-						</form>
+						<div class="flex flex-col items-center relative w-full">
+							<div class="w-full"> 
+								<a class="las la-times absolute right-[10px] cursor-pointer text-xl"  @click.prevent="closeModal" />
+								<span class="font-semibold text-2xl text-center w-full">
+									{{title}}
+								</span>
+							</div>
+							<slot/>
+						</div>
 			
 					</div>
 
@@ -34,6 +37,10 @@ const props = defineProps({
 		type: String,
 		required: true
 	},
+	title:{
+		type:String,
+		required: true
+	}
 })
 
 

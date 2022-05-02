@@ -11,7 +11,7 @@
 	</transition>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import gsap from 'gsap'
 
 

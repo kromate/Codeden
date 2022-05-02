@@ -34,7 +34,7 @@
 					save
 				</button>
 				<router-link
-					v-if="stagedComp"
+					v-if="stagedComp.length"
 					to="/stage/preview"
 					class="btn hover:bg-transparent px-0 font-normal"
 				>

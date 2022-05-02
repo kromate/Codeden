@@ -20,6 +20,7 @@
 
 <script lang="ts" >
 import gsap from 'gsap'
+import { modal } from '@/composables/core/modals'
 
 export default {
 	name: 'Modal',
@@ -46,6 +47,10 @@ export default {
 		}
 	},
 	setup (props) {
+		const closeModal = () => {
+			modal.close(props.modal)
+			props.close?.()
+		}
 		const timeline = gsap.timeline({defaults:{duration:0.5}})
 		const beforeEnter = (el) => {
 			  el.style.opacity = 0
@@ -72,7 +77,7 @@ export default {
 			},)
 		}
 
-		return{onLeave, enter, beforeEnter}
+		return{onLeave, enter, beforeEnter, closeModal}
 	}
 }
 </script>

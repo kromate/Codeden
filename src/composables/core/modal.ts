@@ -1,5 +1,6 @@
 import { Ref } from '@vue/reactivity'
-import { VueConstructor as Vue } from 'vue/types/umd'
+// import { VueConstructor as Vue } from 'vue/types/umd'
+
 
 const capitalize = (text: string) => (text[0] ?? '').toUpperCase() + text.slice(1)
 const merge = (type: string, key: string) => type + key

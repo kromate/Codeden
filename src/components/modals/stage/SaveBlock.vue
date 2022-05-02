@@ -4,12 +4,7 @@
 			<div class="flex w-full justify-between">
 				<div class="flex items-center">
 					<div class="btn-outline-2 mr-6 cursor-pointer" @click="close()">
-						<Icon
-							name="downArrow"
-							size="s"
-							class="rotate-90"
-						/>
-						close
+						<a class="las la-times" style="font-size: 1.5rem;" @click.prevent="closeModal" />
 					</div>
 					<span class="font-semibold text-xl">
 						Accounts

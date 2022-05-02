@@ -13,53 +13,50 @@
 	</transition>
 </template>
 
-<script lang="ts" >
+<script lang="ts" setup>
 import gsap from 'gsap'
 import { modal } from '@/composables/core/modals'
 
-export default {
-	name: 'Modal',
-	props: {
-		modal: {
-			type: String,
-			required: true
-		},
-
-	
+const props = defineProps({
+  		modal: {
+		type: String,
+		required: true
 	},
-	setup (props) {
-		const closeModal = () => {
-			modal.close(props.modal)
-		}
-		const timeline = gsap.timeline({defaults:{duration:0.5}})
-		const beforeEnter = (el) => {
-			  el.style.opacity = 0
-			el.style.transform = 'scale(0.5)'
-		}
-		const enter = (el, done) => {
-			timeline.to(el, {
-				opacity: 1,
-				y: 0,
-				scale:1,
-				duration: 0.35,
-				onComplete: done,
-			},)
-		}
-		const onLeave=(el, done)=> {
-			console.log(el)
-			
-			gsap.to(el, {
-				opacity: 0,
-				y: 0,
-				scale:0.1,
-				duration: 0.35,
-				onComplete: done,
-			},)
-		}
+})
 
-		return{onLeave, enter, beforeEnter, closeModal}
-	}
+
+const closeModal = () => {
+	modal.close(props.modal)
 }
+const timeline = gsap.timeline({defaults:{duration:0.5}})
+const beforeEnter = (el) => {
+			  el.style.opacity = 0
+	el.style.transform = 'scale(0.5)'
+}
+const enter = (el, done) => {
+	timeline.to(el, {
+		opacity: 1,
+		y: 0,
+		scale:1,
+		duration: 0.35,
+		onComplete: done,
+	},)
+}
+const onLeave=(el, done)=> {
+	console.log(el)
+			
+	gsap.to(el, {
+		opacity: 0,
+		y: 0,
+		scale:0.1,
+		duration: 0.35,
+		onComplete: done,
+	},)
+}
+
+
+
+
 </script>
 
 

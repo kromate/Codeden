@@ -41,7 +41,7 @@ export default {
 			default: false
 		}
 	},
-	setup (props) {
+	setup () {
 		const timeline = gsap.timeline({defaults:{duration:0.5}})
 		const beforeEnter = (el) => {
 			  el.style.opacity = 0
@@ -67,6 +67,8 @@ export default {
 				onComplete: done,
 			},)
 		}
+
+		return{onLeave, enter, beforeEnter}
 	}
 }
 </script>

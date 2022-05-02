@@ -26,7 +26,7 @@
 					<div class="flex flex-col items-center mt-12 text-center">
 						<span class="relative flex flex-wrap w-full md:w-auto gap-4">
 							<router-link to="/" class="btn" @click="test"> Get Started </router-link>
-							<router-link to="/" class="btn" @click="close"> Get Started </router-link>
+							<router-link to="/" class="btn z-[100000px]" @click="close"> Get Started </router-link>
 							<router-link to="/stage" class="btn"> Stage </router-link>
 							<router-link to="/components" class="btn">
 								components

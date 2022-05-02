@@ -3,7 +3,7 @@
 		title="Save Page"
 	>
 		<div
-			class="relative flex items-center max-w-lg mx-auto mt-12 overflow-hidden text-center rounded-md border-2 border-primary"
+			class="relative flex items-center max-w-sm w-full mx-auto mt-12 overflow-hidden text-center rounded-md border-2 border-primary"
 		>
 			<input
 				type="text"

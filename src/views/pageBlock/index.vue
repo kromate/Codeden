@@ -27,14 +27,15 @@
 							class="text-xl underline mb-2"
 							:to="`/pageBlock/${n.id}`"
 						>
-							<div>
+							<p v-if="n.name" class="">{{n.name}}</p>
+							<div v-else>
 								<p class="font-bold" >Created on</p>
 								{{ n.date }}
 							</div>
 						
 						</router-link>
 
-						<div class="flex gap-4 mt-4">
+						<div class="flex gap-4 mt-auto">
 							<span
 								class="dark:bg-white bg-black dark:text-black text-white px-3 cursor-pointer rounded-md"
 								@click="sharepageBlock(n)"

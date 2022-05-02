@@ -2,9 +2,7 @@
 
 	<transition name="slide" appear :duration="500">
 		<div 	:close="closeModal"
-			:close-on-background="closeOnBackground"
-			background-class="modal-background"
-			modal-class="modal-inner" class="bg transition-all">
+			class="bg transition-all">
 			<div class="d-flex justify-content-end z-40">
 				<a class="las la-times" style="font-size: 1.5rem;" @click.prevent="closeModal" />
 			</div>

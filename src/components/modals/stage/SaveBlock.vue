@@ -1,6 +1,6 @@
 <template>
 	<Modal modal="$attrs.modal">
-		<div class="h-screen bg-white max-w-[79%]  w-[190rem] right-0 fixed py-9 px-12 z-10">
+		<div class="h-screen bg-white max-w-[79%]  w-[190rem] right-0 fixed py-9 px-12 ">
 			<div class="flex w-full justify-between">
 				<div class="flex items-center">
 					<div class="btn-outline-2 mr-6 cursor-pointer" @click="close()">

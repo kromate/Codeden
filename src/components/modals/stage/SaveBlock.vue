@@ -2,10 +2,12 @@
 	<Modal modal="$atts.modal"
 		title="Save Page"
 	>
-		<div
+		<form
+			@submit.prevent="savepageBlock"
 			class="relative flex items-center max-w-sm w-full mx-auto mt-12 overflow-hidden text-center rounded-md border-2 border-primary"
 		>
 			<input
+				required
 				type="text"
 				name="search"
 				placeholder="Title of Page"
@@ -14,14 +16,14 @@
 			/>
 			<span class="relative top-0 right-0 block">
 				<button
-					@click="savepageBlock"
-					type="button"
+					
+					type="submit"
 					class="flex justify-center items-center w-32 h-12 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-indigo-700 focus:outline-none active:bg-indigo-700"
 				>
 					Save
 				</button>
 			</span>
-		</div>
+		</form>
 	</Modal>
 </template>
 

@@ -2,7 +2,7 @@
 
 	<transition name="slide" appear :duration="500">
 		<div 	:close="closeModal"
-			class="bg transition-all">
+			class="bg transition-all" @click.prevent="closeModal">
 			<div class="d-flex justify-content-end z-40">
 				<a class="las la-times" style="font-size: 1.5rem;" @click.prevent="closeModal" />
 			</div>

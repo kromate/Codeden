@@ -8,14 +8,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onBeforeUnmount, onMounted, PropType } from '@nuxtjs/composition-api'
-import { disableScroll, enableScroll } from '@utils/html'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
 	name: 'Modal',
 	props: {
 		close: {
-			type: Function as PropType<() => void>,
+			type: Function,
 			required: true
 		},
 		closeOnBackground: {
@@ -34,14 +33,11 @@ export default defineComponent({
 			default: ''
 		}
 	},
-	setup () {
-		onMounted(disableScroll)
-		onBeforeUnmount(enableScroll)
-	}
+
 })
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 	.sd-modal-background {
 		position: fixed;
 		left: 0;
@@ -51,7 +47,7 @@ export default defineComponent({
 		display: flex;
 		z-index: 100;
 		overflow: scroll;
-
+    }
 		.sd-modal-under {
 			width: 100%;
 			height: 100%;
@@ -60,40 +56,4 @@ export default defineComponent({
 			top: 0;
 		}
 
-		.sd-modal-inner {
-			width: 100%;
-			margin: auto;
-			max-height: 99.9%;
-			max-width: 800px;
-			border-radius: 0.5rem;
-			overflow-y: auto;
-			-ms-overflow-style: none;
-			padding: 0.5rem 0.5rem 1rem;
-			@media (min-width: $sm) {
-				padding: 1rem 1rem 1.5rem;
-			}
-			@media (min-width: $md) {
-				padding: 1.5rem 1.5rem 2rem;
-			}
-			@media (min-width: $lg) {
-				padding: 2rem 2rem 2.5rem;
-			}
-
-			&::-webkit-scrollbar {
-				display: none;
-			}
-
-			position: relative;
-		}
-		@media (min-width: $sm) {
-			.sd-modal-inner {
-				width: 95%;
-			}
-		}
-		@media (min-width: $md) {
-			.sd-modal-inner {
-				width: 90%;
-			}
-		}
-	}
 </style>

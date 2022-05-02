@@ -1,5 +1,7 @@
 <template>
-	<Modal modal="$atts.modal">
+	<Modal modal="$atts.modal"
+		title="Save This Page"
+	>
 		<div
 			class="relative flex items-center max-w-lg mx-auto mt-12 overflow-hidden text-center rounded-md border-2 border-primary"
 		>
@@ -13,10 +15,9 @@
 			<span class="relative top-0 right-0 block">
 				<button
 					type="button"
-					disabled
-					class="inline-flex items-center w-32 h-12 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-indigo-700 focus:outline-none active:bg-indigo-700 cursor-not-allowed"
+					class="flex justify-center items-center w-32 h-12 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-indigo-700 focus:outline-none active:bg-indigo-700"
 				>
-					Search
+					Save
 				</button>
 			</span>
 		</div>

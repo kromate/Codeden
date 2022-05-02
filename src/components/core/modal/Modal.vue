@@ -10,7 +10,7 @@
 				<div class="h-60 bg-white   py-4 px-6 rounded-lg overflow-hidden shadow-xl transform transition-all w-full max-w-[76%] sm:max-w-lg ">
 					<div class="flex w-full justify-between">
 						<div class="flex flex-col items-center relative w-full">
-							<div class="w-full"> 
+							<div class="w-full flex"> 
 								<a class="las la-times absolute right-[10px] cursor-pointer text-xl"  @click.prevent="closeModal" />
 								<span class="font-semibold text-2xl text-center w-full">
 									{{title}}

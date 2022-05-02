@@ -43,10 +43,10 @@
 import NavBar from '@/components/NavBar.vue'
 import DefaultLayout from '@/layouts/defaultLayout.vue'
 
-import { useAccountModal } from '@/composables/core/modals'
+import { useStageModal } from '@/composables/core/modals'
 
-const test = ()=> useAccountModal().openMakePayment()
-const close = ()=> useAccountModal().closeMakePayment()
+const test = ()=> useStageModal().openSaveBlock()
+const close = ()=> useStageModal().closeSaveBlock()
 </script>
 
 <style scoped>

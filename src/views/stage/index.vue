@@ -29,7 +29,7 @@
 			<div class="flex gap-8">
 				<button
 					class="btn hover:bg-transparent px-0 font-normal"
-					@click="savepageBlock"
+					@click="saveBlock"
 				>
 					save
 				</button>
@@ -64,6 +64,9 @@ import SideMenu from '@/components/stage/SideMenu.vue'
 import MainView from '@/components/stage/MainView.vue'
 import {stageMeasurements,stageWidth,switchStageWidth} from '@/composables/useStage'
 import DefaultLayout from '@/layouts/defaultLayout.vue'
+import {useStageModal} from '@/composables/core/modals'
+
+const saveBlock = useStageModal().openSaveBlock()
 // import { savepageBlock } from "@/firebase/firestore";
 </script>
 

@@ -1,5 +1,4 @@
 import { Ref } from '@vue/reactivity'
-// import { VueConstructor as Vue } from 'vue/types/umd'
 
 
 const capitalize = (text: string) => (text[0] ?? '').toUpperCase() + text.slice(1)
@@ -22,7 +21,7 @@ export const useModal = (stack: Ref<string[]>) => {
         if (index > -1) stack.value.splice(index)
     }
 
-    function register<Key extends string>(type: string, modalObject: Record<Key, Vue>) {
+    function register<Key extends string>(type: string, modalObject: Record<Key, any>) {
         Object.assign(modals, spreadModals(type, modalObject))
         const helpers = Object.fromEntries(
             Object.keys(modalObject)

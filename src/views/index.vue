@@ -26,6 +26,7 @@
 					<div class="flex flex-col items-center mt-12 text-center">
 						<span class="relative flex flex-wrap w-full md:w-auto gap-4">
 							<router-link to="/" class="btn" @click="test"> Get Started </router-link>
+							<router-link to="/" class="btn" @click="close"> Get Started </router-link>
 							<router-link to="/stage" class="btn"> Stage </router-link>
 							<router-link to="/components" class="btn">
 								components
@@ -40,11 +41,12 @@
 
 <script lang="ts" setup>
 import NavBar from '@/components/NavBar.vue'
-import DefaultLayout from '../layouts/defaultLayout.vue'
+import DefaultLayout from '@/layouts/defaultLayout.vue'
 
-import { useAccountModal } from '../composables/core/modals'
+import { useAccountModal } from '@/composables/core/modals'
 
 const test = ()=> useAccountModal().openMakePayment()
+const close = ()=> useAccountModal().closeMakePayment()
 </script>
 
 <style scoped>

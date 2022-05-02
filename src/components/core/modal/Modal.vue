@@ -4,6 +4,7 @@
 		:close-on-background="closeOnBackground"
 		background-class="modal-background"
 		modal-class="modal-inner"
+		class="fixed "
 	>
 		<div class="d-flex justify-content-end">
 			<a class="fas fa-times" style="font-size: 1.5rem;" @click.prevent="closeModal" />

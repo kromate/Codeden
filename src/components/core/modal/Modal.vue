@@ -7,13 +7,13 @@
 				@enter="enter"
 			>
 			
-				<div class="!h-60 bg-white max-w-full  py-4 px-6 rounded-lg overflow-hidden shadow-xl transform transition-all w-[5120px] sm:w-full sm:min-w-[] ">
+				<div class="h-60 bg-white max-w-full  py-4 px-6 rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-lg ">
 					<div class="flex w-full justify-between">
-						<div class="flex items-center relative">
+						<div class="flex items-center">
 							<a class="las la-times absolute" style="font-size: 1.5rem;" @click.prevent="closeModal" />
 								
 							<span class="font-semibold text-xl">
-								Accountssfd
+								Accounts
 							</span>
 						</div>
 			

@@ -2,7 +2,7 @@
 
 	<transition name="slide" appear :duration="500">
 		<div 	:close="closeModal"
-			class="bg transition-all" @click.prevent="closeModal">
+			class="bg transition-all">
 			<div class="d-flex justify-content-end z-40">
 				<a class="las la-times" style="font-size: 1.5rem;" @click.prevent="closeModal" />
 			</div>
@@ -78,7 +78,7 @@ export default {
   width: 100vw;
   max-width: 100vw;
   min-height: 100%;
-  z-index: 10;
+  z-index: 1000000;
   display: flex;
   justify-content: center;
   align-items: center;

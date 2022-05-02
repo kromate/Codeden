@@ -66,7 +66,7 @@ import {stageMeasurements,stageWidth,switchStageWidth} from '@/composables/useSt
 import DefaultLayout from '@/layouts/defaultLayout.vue'
 import {useStageModal} from '@/composables/core/modals'
 
-const saveBlock = useStageModal().openSaveBlock()
+const saveBlock =()=> useStageModal().openSaveBlock()
 // import { savepageBlock } from "@/firebase/firestore";
 </script>
 

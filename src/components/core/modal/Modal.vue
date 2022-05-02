@@ -21,9 +21,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@nuxtjs/composition-api'
-import ModalRoot from '@app/components/core/modals/ModalRoot.vue'
-import { modal } from '@app/hooks/core/modals'
+import { defineComponent } from 'vue'
+import ModalRoot from './ModalRoot.vue'
+import { modal } from '../../../composables/core/modals'
 
 export default defineComponent({
 	name: 'Modal',
@@ -34,10 +34,9 @@ export default defineComponent({
 			required: true
 		},
 		close: {
-			type: Function as PropType<() => void>,
+			type: Function,
 			required: false,
-			default: () => {
-			}
+			default: () => {}
 		},
 		hideSeparator: {
 			type: Boolean,

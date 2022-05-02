@@ -31,6 +31,7 @@ export const savepageBlock = async () => {
     const id = uuidv4();
     await setDoc(doc(db, "pageBlocks", id), {
       date: Date(),
+      name: pageTitle.value,
       pageBlogArr: savedComp.value,
       userId,
       id,

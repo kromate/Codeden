@@ -15,6 +15,7 @@ import {
 import { useUser } from "../composables/useGlobals";
 import { useLoading, useAlert } from "../composables/useNotification";
 import { savedComp } from "../composables/useStage";
+import { ref } from '@vue/reactivity'
 
 const { user } = useUser();
 const { openLoading, closeLoading } = useLoading();
@@ -22,7 +23,7 @@ export const db = getFirestore(app);
 
 let result = [];
 const pageBlockRef = collection(db, "pageBlocks");
-
+export const pageTitle = ref('')
 export const savepageBlock = async () => {
   if (user.value) {
     openLoading("Saving Your Blocks, You can view it under pages");

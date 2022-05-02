@@ -9,7 +9,8 @@
 				type="text"
 				name="search"
 				placeholder="Title of Page"
-				class="w-full h-12 px-3 py-2 font-medium text-indigo-800 focus:outline-none "
+				class="w-full h-12 px-3 py-2 font-medium text-indigo-800 focus:outline-none"
+				v-model="pageTitle"
 			/>
 			<span class="relative top-0 right-0 block">
 				<button
@@ -27,7 +28,7 @@
 <script setup lang="ts">
 import Modal from '@/components/core/modal/Modal.vue'
 
-import { savepageBlock } from '@/firebase/firestore'
+import { savepageBlock, pageTitle } from '@/firebase/firestore'
 
 </script>
 

@@ -34,7 +34,7 @@
 					save
 				</button>
 				<router-link
-        v-if="ded"
+					v-if="stagedComp"
 					to="/stage/preview"
 					class="btn hover:bg-transparent px-0 font-normal"
 				>
@@ -63,7 +63,7 @@
 <script lang="ts" setup>
 import SideMenu from '@/components/stage/SideMenu.vue'
 import MainView from '@/components/stage/MainView.vue'
-import {stageMeasurements,stageWidth,switchStageWidth} from '@/composables/useStage'
+import {stageMeasurements,stageWidth,switchStageWidth, stagedComp} from '@/composables/useStage'
 import DefaultLayout from '@/layouts/defaultLayout.vue'
 import {useStageModal} from '@/composables/core/modals'
 

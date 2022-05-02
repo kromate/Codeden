@@ -7,12 +7,11 @@
 				@enter="enter"
 			>
 			
-				<div class="h-60 bg-white max-w-full  py-4 px-6 rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-lg ">
+				<div class="h-60 bg-white max-w-full  py-4 px-6 rounded-lg overflow-hidden shadow-xl transform transition-all w-[5120px] sm:w-full sm:min-w-[] ">
 					<div class="flex w-full justify-between">
-						<div class="flex items-center">
-							<div class="btn-outline-2 mr-6 cursor-pointer" @click="close()">
-								<a class="las la-times" style="font-size: 1.5rem;" @click.prevent="closeModal" />
-							</div>
+						<div class="flex items-center relative">
+							<a class="las la-times absolute" style="font-size: 1.5rem;" @click.prevent="closeModal" />
+								
 							<span class="font-semibold text-xl">
 								Accounts
 							</span>

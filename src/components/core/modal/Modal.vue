@@ -11,7 +11,7 @@
 					<div class="flex w-full justify-between">
 						<form class="flex items-center relative w-full">
 							<a class="las la-times absolute right-[10px] cursor-pointer"  @click.prevent="closeModal" />
-							<span class="font-semibold text-xl">
+							<span class="font-semibold text-2xl text-center w-full">
 								Save Page
 							</span>
 						</form>

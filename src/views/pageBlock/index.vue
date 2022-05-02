@@ -21,7 +21,7 @@
 						v-for="(n, index) in result"
 						:key="n.id"
 						:data-index="index"
-						class="overflow-hidden rounded-md shadow-xl p-4 border border-slate-700 dark:border-slate-200 text w-[22rem] max-w-[100%]"
+						class="overflow-hidden flex flex-col rounded-md shadow-xl p-4 border border-slate-700 text w-[22rem] max-w-[100%]"
 					>
 						<router-link
 							class="text-xl underline mb-2"
@@ -35,18 +35,18 @@
 						
 						</router-link>
 
-						<div class="flex gap-4 mt-auto">
+						<di2v class="flex gap-4 mt-auto">
 							<span
-								class="dark:bg-white bg-black dark:text-black text-white px-3 cursor-pointer rounded-md"
+								class=" bg-black  text-white px-3 cursor-pointer rounded-md"
 								@click="sharepageBlock(n)"
 							>Share</span
 							>
 							<span
-								class="dark:bg-white bg-black dark:text-black text-white px-3 cursor-pointer rounded-md"
+								class=" bg-black  text-white px-3 cursor-pointer rounded-md"
 								@click="delpageBlock(n.id)"
 							>Delete</span
 							>
-						</div>
+						</di2v>
 					</article>
 				</transition-group>
 

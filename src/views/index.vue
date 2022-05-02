@@ -25,8 +25,7 @@
 					</div>
 					<div class="flex flex-col items-center mt-12 text-center">
 						<span class="relative flex flex-wrap w-full md:w-auto gap-4">
-							<router-link to="/" class="btn" @click="test"> Get Started </router-link>
-							<router-link to="/" class="btn z-[100000px]" @click="close"> Get Started </router-link>
+							<router-link to="/" class="btn"> Get Started </router-link>
 							<router-link to="/stage" class="btn"> Stage </router-link>
 							<router-link to="/components" class="btn">
 								components
@@ -43,10 +42,6 @@
 import NavBar from '@/components/NavBar.vue'
 import DefaultLayout from '@/layouts/defaultLayout.vue'
 
-import { useStageModal } from '@/composables/core/modals'
-
-const test = ()=> useStageModal().openSaveBlock()
-const close = ()=> useStageModal().closeSaveBlock()
 </script>
 
 <style scoped>

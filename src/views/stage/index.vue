@@ -34,6 +34,7 @@
 					save
 				</button>
 				<router-link
+        v-if="ded"
 					to="/stage/preview"
 					class="btn hover:bg-transparent px-0 font-normal"
 				>
@@ -67,7 +68,7 @@ import DefaultLayout from '@/layouts/defaultLayout.vue'
 import {useStageModal} from '@/composables/core/modals'
 
 const saveBlock =()=> useStageModal().openSaveBlock()
-// import { savepageBlock } from "@/firebase/firestore";
+
 </script>
 
 <style scoped></style>

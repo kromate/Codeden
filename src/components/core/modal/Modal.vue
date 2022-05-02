@@ -27,27 +27,12 @@ export default {
 			type: String,
 			required: true
 		},
-		close: {
-			type: Function,
-			required: false,
-			default: () => {
-			}
-		},
-		hideSeparator: {
-			type: Boolean,
-			required: false,
-			default: false
-		},
-		closeOnBackground: {
-			type: Boolean,
-			required: false,
-			default: false
-		}
+
+	
 	},
 	setup (props) {
 		const closeModal = () => {
 			modal.close(props.modal)
-			props.close?.()
 		}
 		const timeline = gsap.timeline({defaults:{duration:0.5}})
 		const beforeEnter = (el) => {

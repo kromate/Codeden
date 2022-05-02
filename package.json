@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "tails": "TAILWIND_MODE=watch postcss -i tailwind.css -o build.css --watch",
-    "dev": " yarn tails, vite",
+    "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",

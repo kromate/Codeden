@@ -1,7 +1,7 @@
 <template>
 	<DefaultLayout>
 		<nav
-			class="bg-primary px-4 z-50 fixed top-0 inset-x-0 mb-48 flex justify-between"
+			class="bg-primary px-4 z-50 fixed top-0 inset-x-0 mb-48 flex justify-between min-h-[52px]"
 		>
 			<router-link
 				to="/"
@@ -28,6 +28,7 @@
 
 			<div class="flex gap-8">
 				<button
+					v-if="stagedComp.length"
 					class="btn hover:bg-transparent px-0 font-normal"
 					@click="saveBlock"
 				>

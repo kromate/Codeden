@@ -397,3 +397,26 @@ export const getBlockBlog = async () => {
 
   return result;
 };
+
+//component blocks
+export const getNavigationComp = async () => {
+  //@ts-ignore
+  const requireComponent = import.meta.glob(
+    `../../componentBlocks/Navigations/**`
+  );
+  const BlockArr = Object.keys(requireComponent);
+  let result = [];
+  for (let i = 0; i < BlockArr.length; i++) {
+    let pos = BlockArr[i].split("/")[4];
+    if (pos !== "index.vue") {
+      let obj = {
+        comp: (await import(`../../componentBlocks/Navigations/${pos}`))
+          .default,
+        name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
+      };
+      result.push(obj);
+    }
+  }
+  console.log(result);
+  return result;
+};

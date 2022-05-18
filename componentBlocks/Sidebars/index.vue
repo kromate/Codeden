@@ -3,11 +3,11 @@
 </template>
 
 <script lang="ts" setup>
-import { getNavigationComp } from "@/composables/useFileSystem";
+import { getSidebarComp } from "@/composables/useFileSystem";
 import { onMounted, shallowRef } from "vue";
 
 const blockDate = shallowRef();
 onMounted(async () => {
-  blockDate.value = await getNavigationComp();
+  blockDate.value = await getSidebarComp();
 });
 </script>

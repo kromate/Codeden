@@ -46,8 +46,7 @@
               </span>
             </div>
           </div>
-          <Navigation />
-          <!-- <NavBlock /> -->
+          <MainView />
         </div>
       </div>
     </section>
@@ -57,8 +56,7 @@
 <script lang="ts" setup>
 import NavBar from "@/components/NavBar.vue";
 import DefaultLayout from "../../layouts/defaultLayout.vue";
-import Navigation from "../../../componentBlocks/Navigations/index.vue";
-import NavBlock from "../../../componentBlocks/Navigations/NavBlock.vue";
+import MainView from "@/components/componentBlocks/MainView.vue";
 </script>
 
 <style scoped>

@@ -3,11 +3,11 @@
 </template>
 
 <script lang="ts" setup>
-import { getNavigationComp } from "@/composables/useFileSystem";
+import { getDropdownComp } from "@/composables/useFileSystem";
 import { onMounted, shallowRef } from "vue";
 
 const blockDate = shallowRef();
 onMounted(async () => {
-  blockDate.value = await getNavigationComp();
+  blockDate.value = await getDropdownComp();
 });
 </script>

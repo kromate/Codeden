@@ -2,6 +2,14 @@
 	<div class="fixed inset-0 z-50 transition-opacity bg-black opacity-50 xl:hidden hidden"></div>
 
 	<div class="fixed inset-y-0 left-0 z-50 flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto transition duration-200 transform bg-white border-gray-200 shadow-lg xl:translate-x-0 xl:static xl:inset-0 -translate-x-full ease-in">
+		<div class="flex items-end">
+			<img src="../../assets/logo.png" alt="logo" class="w-6 h-auto"> 	
+			<span class=" text-xl font-black leading-none text-indigo-600 ml-2">
+				<span>CodeDen</span>
+				<span class="text-indigo-600">.</span>
+			</span>
+		</div>
+	
 		<nav class="mt-6">
 			<div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform">
 				<button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">

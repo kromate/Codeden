@@ -1,0 +1,70 @@
+<template>
+	<div class="fixed inset-0 z-50 transition-opacity bg-black opacity-50 xl:hidden hidden"></div>
+
+	<div class="fixed inset-y-0 left-0 z-50 flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto transition duration-200 transform bg-white border-gray-200 shadow-lg xl:translate-x-0 xl:static xl:inset-0 -translate-x-full ease-in">
+		<div class="flex items-end">
+			<img src="../../assets/logo.png" alt="logo" class="w-6 h-auto"> 	
+			<span class=" text-xl font-black leading-none text-indigo-600 ml-2">
+				<span>CodeDen</span>
+				<span class="text-indigo-600">.</span>
+			</span>
+		</div>
+	
+		<nav class="mt-6">
+			<div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform">
+				<button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+					Alerts
+				</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Authentication
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Breadcrumbs
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Buttons
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Cards
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				CTA
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				FAQ
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Features
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Forms
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Dropdowns
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Navbars
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Heros
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Sidebar
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Sections
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Tabs
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Teams
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Pricing
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-blue-500 bg-blue-50"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Pagination
+			</button> </div><div class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"><button class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline">
+				Footers
+			</button> </div></nav></div>
+                        
+
+	<button type="button" class="fixed z-50 flex items-center justify-center p-3 text-white bg-gray-900 rounded-full focus:outline-none xl:hidden bottom-24 right-8">
+		<span class="sr-only">Open site navigation</span>
+		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+			<path d="M21 18H9V16H21V18ZM21 13H3V11H21V13ZM21 8H9V6H21V8Z" fill="currentColor"></path>
+		</svg> 
+	</button>
+</template>
+
+<script setup lang="ts">
+
+</script>
+
+<style scoped>
+
+</style>

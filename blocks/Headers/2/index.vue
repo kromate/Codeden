@@ -3,7 +3,6 @@
 		<div class="mx-auto max-w-7xl">
 			<nav
 				class="flex items-center w-full h-24 select-none"
-				x-data="{ showMenu: false }"
 			>
 				<div
 					class="relative flex flex-wrap items-center justify-between w-full h-24 mx-auto font-medium md:justify-center"
@@ -64,11 +63,9 @@
 					<div
          
 						class="absolute right-0 z-50 flex flex-col items-end w-10 h-10 p-2 mr-4 rounded-full cursor-pointer md:hidden hover:bg-gray-900 hover:bg-opacity-10"
-						:class="{ 'text-gray-400': showMenu, 'text-gray-100': !showMenu }"
 					>
 						<svg
 							class="w-6 h-6"
-							x-show="!showMenu"
 							fill="none"
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -81,7 +78,6 @@
 						</svg>
 						<svg
 							class="w-6 h-6"
-							x-show="showMenu"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"

@@ -1,5 +1,4 @@
 import { app } from "./init";
-// eslint-disable-next-line import/named
 import {
   getAuth,
   GoogleAuthProvider,

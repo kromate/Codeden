@@ -23,7 +23,7 @@ const { user } = useUser();
 const { openLoading, closeLoading } = useLoading();
 export const db = getFirestore(app);
 
-let result = [];
+let result = [] as any;
 const pageBlockRef = collection(db, "pageBlocks");
 export const pageTitle = ref('')
 export const savepageBlock = async () => {

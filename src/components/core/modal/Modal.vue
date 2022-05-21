@@ -62,8 +62,6 @@ const enter = (el, done) => {
 	},)
 }
 const onLeave=(el, done)=> {
-	console.log(el)
-			
 	gsap.to(el, {
 		opacity: 0,
 		y: 0,

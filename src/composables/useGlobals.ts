@@ -23,7 +23,7 @@ export const useUser = () => {
 
   const clearUser = () => {
     currentUser.user.value = null;
-    GlobalState.value.UserRef = null;
+    GlobalState.value.UserRef = "";
     GlobalState.value.isLoggedIn = false;
   };
 

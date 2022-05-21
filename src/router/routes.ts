@@ -16,17 +16,17 @@ const makeRoute = async (page: string[]) => {
 
   // to understand why we need to use several conditional statement here, see: https://github.com/vitejs/vite/issues/4945
   if (page.length == 1) {
-    const { default: component } = await import(`../views/${page[0]}.vue`);
+    var { default: component } = await import(`../views/${page[0]}.vue`);
   } else if (page.length == 2) {
-    const { default: component } = await import(
+    var { default: component } = await import(
       `../views/${page[0] + "/" + page[1]}.vue`
     );
   } else if (page.length == 3) {
-    const { default: component } = await import(
+    var { default: component } = await import(
       `../views/${page[0] + "/" + page[1] + "/" + page[2]}.vue`
     );
   } else if (page.length == 4) {
-    const { default: component } = await import(
+    var { default: component } = await import(
       `../views/${page[0] + "/" + page[1] + "/" + page[2] + "/" + page[3]}.vue`
     );
   }

@@ -38,7 +38,7 @@ module.exports = {
 		],
 		'@typescript-eslint/no-use-before-define': 'off',
 		'no-tabs': 'off',
-		'no-var': 'error',
+		'no-var': 'off',
 		'no-use-before-define': 'off',
 		indent: ['off', 'tab', { SwitchCase: 1 }],
 		'no-mixed-spaces-and-tabs': ['off', 'smart-tabs'],

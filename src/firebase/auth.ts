@@ -1,5 +1,4 @@
 import { app } from "./init";
-
 import {
   getAuth,
   GoogleAuthProvider,

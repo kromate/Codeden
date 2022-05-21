@@ -6,7 +6,7 @@
     "tails": "TAILWIND_MODE=watch postcss -i tailwind.css -o build.css --watch",
     "dev": "vite",
     "preload": "node bin/copy",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build --config vite.config.ts",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier .  --write",

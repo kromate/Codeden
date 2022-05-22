@@ -25,7 +25,7 @@ export const stageMeasurements = [
 ];
 
 export const elemObject = function (comp, pos, name) {
-  let obj = {
+  const obj = {
     comp: comp,
     img: null,
     index: pos,
@@ -36,7 +36,7 @@ export const elemObject = function (comp, pos, name) {
   return obj;
 };
 
-export const stagedComp = ref([]);
+export const stagedComp = ref([]) as any;
 export const savedComp = useStorage("savedComp", []);
 export const stageWidth = ref(stageMeasurements[0]);
 
@@ -86,10 +86,10 @@ export const loadOnlinePageBlocks = (arr) => {
 };
 
 export const detectChnages = () => {
-  let newArr = [];
+  const newArr = [] as any;
 
   for (let i = 0; i < stagedComp.value.length; i++) {
-    let stringedElem = JSON.stringify({
+    const stringedElem = JSON.stringify({
       index: i,
       name: stagedComp.value[i].name,
     });

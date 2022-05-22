@@ -13,6 +13,7 @@ const getPath = (page: string[]) =>
 
 const makeRoute = async (page: string[]) => {
   const path = "/" + getPath(page);
+
   // to understand why we need to use several conditional statement here, see: https://github.com/vitejs/vite/issues/4945
   if (page.length == 1) {
     var { default: component } = await import(`../views/${page[0]}.vue`);

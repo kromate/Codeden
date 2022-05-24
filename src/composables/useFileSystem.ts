@@ -60,11 +60,7 @@ export const getBlockHeaders = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Headers/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -88,11 +84,7 @@ export const getBlockHeros = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Heros/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -116,11 +108,7 @@ export const getBlockPricings = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Pricing/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -144,11 +132,7 @@ export const getBlockTestimonials = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Testimonials/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -174,11 +158,7 @@ export const getBlockTeams = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Teams/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -202,11 +182,7 @@ export const getBlockLogos = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Logos/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -256,11 +232,7 @@ export const getBlockForms = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Forms/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -284,11 +256,7 @@ export const getBlockFooters = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Footers/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -312,11 +280,7 @@ export const getBlockFeatures = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Features/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -340,11 +304,7 @@ export const getBlockFAQs = async () => {
   const requireComponent = import.meta.glob(`../../blocks/FAQs/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -368,11 +328,7 @@ export const getBlockContent = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Content/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -396,11 +352,7 @@ export const getBlockCallToActions = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Call To Actions/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -426,11 +378,7 @@ export const getBlockBlog = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Blog/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-<<<<<<< HEAD
-  let result: getBlockObject[] = [];
-=======
   const result: getBlockObject[] = [];
->>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
@@ -452,13 +400,13 @@ export const getBlockBlog = async () => {
 
 //component blocks
 export const readComp = () => {
-  let result: readBlockObject[] = [];
+  const result: readBlockObject[] = [];
   //@ts-ignore
   const requireComponent = import.meta.glob("../../components/*/index.vue");
   const BlockArr = Object.keys(requireComponent);
 
   for (let i = 0; i < BlockArr.length; i++) {
-    let obj = {
+    const obj = {
       comp: requireComponent[BlockArr[i]],
       name: BlockArr[i].split("/")[3],
     };
@@ -472,11 +420,11 @@ export const getNavigationComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Navigations/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Navigations/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -490,11 +438,11 @@ export const getFooterComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Footers/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Footers/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -508,11 +456,11 @@ export const getHeroComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Heros/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Heros/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -526,11 +474,11 @@ export const getAlertComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Alerts/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Alerts/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -546,11 +494,11 @@ export const getAuthComp = async () => {
     `../../components/Authentication/**`
   );
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Authentication/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -564,11 +512,11 @@ export const getBreadcrumbComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Breadcrumbs/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Breadcrumbs/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -582,11 +530,11 @@ export const getButtonComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Buttons/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Buttons/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -600,11 +548,11 @@ export const getCardComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Cards/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Cards/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -618,11 +566,11 @@ export const getCTAComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/CTA/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/CTA/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -636,11 +584,11 @@ export const getDropdownComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Dropdowns/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Dropdowns/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -654,11 +602,11 @@ export const getFAQComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/FAQ/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/FAQ/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -672,11 +620,11 @@ export const getFeatureComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Features/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Features/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -690,11 +638,11 @@ export const getFormComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Forms/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Forms/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -708,11 +656,11 @@ export const getPaginationComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Pagination/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Pagination/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -726,11 +674,11 @@ export const getPricingComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Pricing/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Pricing/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -744,11 +692,11 @@ export const getSectionComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Sections/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Sections/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -762,11 +710,11 @@ export const getSidebarComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Sidebars/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Sidebars/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -780,11 +728,11 @@ export const getTabComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Tabs/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Tabs/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };
@@ -798,11 +746,11 @@ export const getTeamComp = async () => {
   //@ts-ignore
   const requireComponent = import.meta.glob(`../../components/Teams/**`);
   const BlockArr = Object.keys(requireComponent);
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../components/Teams/${pos}`)).default,
         name: `${BlockArr[i].split("/")[3]} ${pos.split(".")[0]}`,
       };

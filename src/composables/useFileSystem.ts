@@ -12,13 +12,13 @@ export interface getBlockObject {
 }
 
 export const readBlocks = () => {
-  let result: readBlockObject[] = [];
+  const result: readBlockObject[] = [];
   //@ts-ignore
   const requireComponent = import.meta.glob("../../blocks/*/index.vue");
   const BlockArr = Object.keys(requireComponent);
 
   for (let i = 0; i < BlockArr.length; i++) {
-    let obj = {
+    const obj = {
       comp: requireComponent[BlockArr[i]],
       name: BlockArr[i].split("/")[3],
     };
@@ -34,11 +34,11 @@ export const getBlockNavigations = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Navigations/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Navigations/${pos}/index.vue`))
           .default,
         img: (await import(`../../blocks/Navigations/${pos}/image.jpeg`))
@@ -60,11 +60,15 @@ export const getBlockHeaders = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Headers/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Headers/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Headers/${pos}/image.jpeg`)).default,
         index: pos,
@@ -84,11 +88,15 @@ export const getBlockHeros = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Heros/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Heros/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Heros/${pos}/image.jpeg`)).default,
         index: pos,
@@ -108,11 +116,15 @@ export const getBlockPricings = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Pricing/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Pricing/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Pricing/${pos}/image.jpeg`)).default,
         index: pos,
@@ -132,11 +144,15 @@ export const getBlockTestimonials = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Testimonials/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Testimonials/${pos}/index.vue`))
           .default,
         img: (await import(`../../blocks/Testimonials/${pos}/image.jpeg`))
@@ -158,11 +174,15 @@ export const getBlockTeams = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Teams/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Teams/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Teams/${pos}/image.jpeg`)).default,
         index: pos,
@@ -182,11 +202,15 @@ export const getBlockLogos = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Logos/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Logos/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Logos/${pos}/image.jpeg`)).default,
         index: pos,
@@ -206,11 +230,11 @@ export const getBlockIntergrations = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Intergrations/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
-  let result: getBlockObject[] = [];
+  const result: getBlockObject[] = [];
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Intergrations/${pos}/index.vue`))
           .default,
         img: (await import(`../../blocks/Intergrations/${pos}/image.jpeg`))
@@ -232,11 +256,15 @@ export const getBlockForms = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Forms/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Forms/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Forms/${pos}/image.jpeg`)).default,
         index: pos,
@@ -256,11 +284,15 @@ export const getBlockFooters = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Footers/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Footers/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Footers/${pos}/image.jpeg`)).default,
         index: pos,
@@ -280,11 +312,15 @@ export const getBlockFeatures = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Features/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Features/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Features/${pos}/image.jpeg`)).default,
         index: pos,
@@ -304,11 +340,15 @@ export const getBlockFAQs = async () => {
   const requireComponent = import.meta.glob(`../../blocks/FAQs/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/FAQs/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/FAQs/${pos}/image.jpeg`)).default,
         index: pos,
@@ -328,11 +368,15 @@ export const getBlockContent = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Content/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Content/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Content/${pos}/image.jpeg`)).default,
         index: pos,
@@ -352,11 +396,15 @@ export const getBlockCallToActions = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Call To Actions/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Call To Actions/${pos}/index.vue`))
           .default,
         img: (await import(`../../blocks/Call To Actions/${pos}/image.jpeg`))
@@ -378,11 +426,15 @@ export const getBlockBlog = async () => {
   const requireComponent = import.meta.glob(`../../blocks/Blog/**`);
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
+<<<<<<< HEAD
   let result: getBlockObject[] = [];
+=======
+  const result: getBlockObject[] = [];
+>>>>>>> 72413869e5fd93119b00a26d5876acd646bc21eb
   for (let i = 0; i < BlockArr.length; i++) {
-    let pos = BlockArr[i].split("/")[4];
+    const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
-      let obj = {
+      const obj = {
         comp: (await import(`../../blocks/Blog/${pos}/index.vue`)).default,
         img: (await import(`../../blocks/Blog/${pos}/image.jpeg`)).default,
         index: pos,

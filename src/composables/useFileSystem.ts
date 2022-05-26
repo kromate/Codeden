@@ -11,10 +11,15 @@ export interface getBlockObject {
   name: string;
 }
 
-export const readBlocks = () => {
+const FolderReaderList = {
+  'blocks': import.meta.glob("../../blocks/*/index.vue"),
+  'components': import.meta.glob("../../components/*/index.vue")
+}
+
+export const FolderReader = (data: string) => {
   const result: readBlockObject[] = [];
   //@ts-ignore
-  const requireComponent = import.meta.glob("../../blocks/*/index.vue");
+  const requireComponent = FolderReaderList[data]
   const BlockArr = Object.keys(requireComponent);
 
   for (let i = 0; i < BlockArr.length; i++) {
@@ -28,6 +33,11 @@ export const readBlocks = () => {
 
   return result;
 };
+
+const FolderBlockList = {
+  'blocks': import.meta.glob("../../blocks/*/index.vue"),
+  'components': import.meta.glob("../../components/*/index.vue")
+}
 
 export const getBlockNavigations = async () => {
   //@ts-ignore
@@ -399,22 +409,7 @@ export const getBlockBlog = async () => {
 };
 
 //component blocks
-export const readComp = () => {
-  const result: readBlockObject[] = [];
-  //@ts-ignore
-  const requireComponent = import.meta.glob("../../components/*/index.vue");
-  const BlockArr = Object.keys(requireComponent);
 
-  for (let i = 0; i < BlockArr.length; i++) {
-    const obj = {
-      comp: requireComponent[BlockArr[i]],
-      name: BlockArr[i].split("/")[3],
-    };
-
-    result.push(obj);
-  }
-  return result;
-};
 
 export const getNavigationComp = async () => {
   //@ts-ignore

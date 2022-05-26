@@ -27,7 +27,7 @@
 
 <script lang="ts" setup>
 import { ref, shallowRef } from 'vue'
-import { readBlocks } from '../../composables/useFileSystem'
+import { FolderReader } from '../../composables/useFileSystem'
 
 const currentBlockName = ref('')
 const currentBlockComp = shallowRef('')
@@ -41,7 +41,7 @@ const test = async (name, comp) => {
 const close = () => {
 	currentBlockName.value = ''
 }
-const Block = readBlocks()
+const Block = FolderReader('blocks')
 </script>
 
 <style scoped>

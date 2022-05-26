@@ -68,12 +68,12 @@
 </template>
 
 <script lang="ts" setup>
-import { readComp } from '../../composables/useFileSystem'
+import { FolderReader } from '../../composables/useFileSystem'
 import { ref } from 'vue'
 
 const emit = defineEmits(['changeComponent'])
 const showComponentNav = ref(false)
-const Block = readComp()
+const Block = FolderReader('components')
 
 const showNav = () => {
 	showComponentNav.value = !showComponentNav.value

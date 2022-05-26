@@ -1,13 +1,15 @@
 <template>
-  <component :is="n.comp" v-for="n of blockDate" :key="n.name" />
+	<div>
+		<component :is="n.comp" v-for="n of blockDate" :key="n.name" />
+	</div>
 </template>
 
 <script lang="ts" setup>
-import { getFAQComp } from "@/composables/useFileSystem";
+import { FolderComp } from "@/composables/useFileSystem";
 import { onMounted, shallowRef } from "vue";
 
 const blockDate = shallowRef();
 onMounted(async () => {
-  blockDate.value = await getFAQComp();
+  blockDate.value = await FolderComp('FAQ');
 });
 </script>

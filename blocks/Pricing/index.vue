@@ -26,14 +26,14 @@
 
 <script lang="ts" setup>
 //@ts-ignore
-import { getBlockPricings } from "@/composables/useFileSystem";
+import { FolderBlock } from "@/composables/useFileSystem";
 import draggable from "vuedraggable";
 import { ref, onMounted } from "vue";
 import SkeletonLoader from "@/components/core/SkeletonLoader.vue";
 
 const blockDate = ref();
 onMounted(async () => {
-  blockDate.value = await getBlockPricings();
+  blockDate.value = await FolderBlock('Pricing');
 });
 </script>
 

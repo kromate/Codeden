@@ -4,17 +4,22 @@ interface readBlockObject {
 }
 export interface getBlockObject {
   comp: () => Promise<{ [key: string]: any }>;
-  img: string;
-  index: string;
-  compLoaded: boolean;
-  imgLoaded: boolean;
+  img?: string;
+  index?: string;
+  compLoaded?: boolean;
+  imgLoaded?: boolean;
   name: string;
 }
 
-export const readBlocks = () => {
+const FolderReaderList = {
+  'blocks': import.meta.glob("../../blocks/*/index.vue"),
+  'components': import.meta.glob("../../components/*/index.vue")
+}
+
+export const FolderReader = (data: string) => {
   const result: readBlockObject[] = [];
   //@ts-ignore
-  const requireComponent = import.meta.glob("../../blocks/*/index.vue");
+  const requireComponent = FolderReaderList[data]
   const BlockArr = Object.keys(requireComponent);
 
   for (let i = 0; i < BlockArr.length; i++) {
@@ -29,9 +34,27 @@ export const readBlocks = () => {
   return result;
 };
 
-export const getBlockNavigations = async () => {
+const FolderBlockList = {
+  'Navigations': import.meta.glob(`../../blocks/Navigations/**`),
+  'Headers': import.meta.glob(`../../blocks/Headers/**`),
+  'Heros': import.meta.glob(`../../blocks/Heros/**`),
+  'Pricing': import.meta.glob(`../../blocks/Pricing/**`),
+  'Testimonials': import.meta.glob(`../../blocks/Testimonials/**`),
+  'Teams': import.meta.glob(`../../blocks/Teams/**`),
+  'Logos': import.meta.glob(`../../blocks/Logos/**`),
+  'Intergrations': import.meta.glob(`../../blocks/Intergrations/**`),
+  'Forms': import.meta.glob(`../../blocks/Forms/**`),
+  'Footers': import.meta.glob(`../../blocks/Footers/**`),
+  'Features': import.meta.glob(`../../blocks/Features/**`),
+  'FAQs': import.meta.glob(`../../blocks/FAQs/**`),
+  'Content': import.meta.glob(`../../blocks/Content/**`),
+  'Call To Actions': import.meta.glob(`../../blocks/Call To Actions/**`),
+  'Blog': import.meta.glob(`../../blocks/Blog/**`),
+}
+
+export const FolderBlock = async (data: string) => {
   //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Navigations/**`);
+  const requireComponent = FolderBlockList[data];
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
   const result: getBlockObject[] = [];
@@ -39,107 +62,9 @@ export const getBlockNavigations = async () => {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
       const obj = {
-        comp: (await import(`../../blocks/Navigations/${pos}/index.vue`))
+        comp: (await import(`../../blocks/${data}/${pos}/index.vue`))
           .default,
-        img: (await import(`../../blocks/Navigations/${pos}/image.jpeg`))
-          .default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};
-export const getBlockHeaders = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Headers/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Headers/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Headers/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};
-export const getBlockHeros = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Heros/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Heros/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Heros/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};
-export const getBlockPricings = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Pricing/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Pricing/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Pricing/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};
-export const getBlockTestimonials = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Testimonials/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Testimonials/${pos}/index.vue`))
-          .default,
-        img: (await import(`../../blocks/Testimonials/${pos}/image.jpeg`))
+        img: (await import(`../../blocks/${data}/${pos}/image.jpeg`))
           .default,
         index: pos,
         compLoaded: false,
@@ -153,57 +78,33 @@ export const getBlockTestimonials = async () => {
 
   return result;
 };
-export const getBlockTeams = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Teams/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Teams/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Teams/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
 
-  return result;
-};
-export const getBlockLogos = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Logos/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Logos/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Logos/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
+const FolderCompList = {
+  'Navigations': import.meta.glob(`../../components/Navigations/**`),
+  'Headers': import.meta.glob(`../../components/Headers/**`),
+  'Footers': import.meta.glob(`../../components/Footers/**`),
+  'Heros': import.meta.glob(`../../components/Heros/**`),
+  'Alerts': import.meta.glob(`../../components/Alerts/**`),
+  'Authentication': import.meta.glob(`../../components/Authentication/**`),
+  'Breadcrumbs': import.meta.glob(`../../components/Breadcrumbs/**`),
+  'Buttons': import.meta.glob(`../../components/Buttons/**`),
+  'Cards': import.meta.glob(`../../components/Cards/**`),
+  'CTA': import.meta.glob(`../../components/CTA/**`),
+  'Dropdowns': import.meta.glob(`../../components/Dropdowns/**`),
+  'FAQ': import.meta.glob(`../../components/FAQ/**`),
+  'Features': import.meta.glob(`../../components/Features/**`),
+  'Forms': import.meta.glob(`../../components/Forms/**`),
+  'Pagination': import.meta.glob(`../../components/Pagination/**`),
+  'Pricing': import.meta.glob(`../../components/Pricing/**`),
+  'Sections': import.meta.glob(`../../components/Sections/**`),
+  'Sidebars': import.meta.glob(`../../components/Sidebars/**`),
+  'Tabs': import.meta.glob(`../../components/Tabs/**`),
+  'Teams': import.meta.glob(`../../components/Teams/**`),
+}
 
-  return result;
-};
-export const getBlockIntergrations = async () => {
+export const FolderComp = async (data: string) => {
   //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Intergrations/**`);
+  const requireComponent = FolderCompList[data];
   const BlockArr = Object.keys(requireComponent);
   let curr = "";
   const result: getBlockObject[] = [];
@@ -211,9 +112,9 @@ export const getBlockIntergrations = async () => {
     const pos = BlockArr[i].split("/")[4];
     if (curr !== pos && pos !== "index.vue") {
       const obj = {
-        comp: (await import(`../../blocks/Intergrations/${pos}/index.vue`))
+        comp: (await import(`../../components/${data}/${pos}/index.vue`))
           .default,
-        img: (await import(`../../blocks/Intergrations/${pos}/image.jpeg`))
+        img: (await import(`../../components/${data}/${pos}/image.jpeg`))
           .default,
         index: pos,
         compLoaded: false,
@@ -227,173 +128,5 @@ export const getBlockIntergrations = async () => {
 
   return result;
 };
-export const getBlockForms = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Forms/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Forms/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Forms/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
 
-  return result;
-};
-export const getBlockFooters = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Footers/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Footers/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Footers/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
 
-  return result;
-};
-export const getBlockFeatures = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Features/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Features/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Features/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};
-export const getBlockFAQs = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/FAQs/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/FAQs/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/FAQs/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};
-export const getBlockContent = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Content/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Content/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Content/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};
-export const getBlockCallToActions = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Call To Actions/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Call To Actions/${pos}/index.vue`))
-          .default,
-        img: (await import(`../../blocks/Call To Actions/${pos}/image.jpeg`))
-          .default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};
-export const getBlockBlog = async () => {
-  //@ts-ignore
-  const requireComponent = import.meta.glob(`../../blocks/Blog/**`);
-  const BlockArr = Object.keys(requireComponent);
-  let curr = "";
-  const result: getBlockObject[] = [];
-  for (let i = 0; i < BlockArr.length; i++) {
-    const pos = BlockArr[i].split("/")[4];
-    if (curr !== pos && pos !== "index.vue") {
-      const obj = {
-        comp: (await import(`../../blocks/Blog/${pos}/index.vue`)).default,
-        img: (await import(`../../blocks/Blog/${pos}/image.jpeg`)).default,
-        index: pos,
-        compLoaded: false,
-        imgLoaded: false,
-        name: `${BlockArr[i].split("/")[3]}  ${pos}`,
-      };
-      result.push(obj);
-      curr = pos;
-    }
-  }
-
-  return result;
-};

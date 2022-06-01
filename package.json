@@ -17,6 +17,7 @@
     "@vueuse/core": "^8.2.3",
     "firebase": "^9.6.10",
     "gsap": "^3.10.2",
+    "unplugin-vue-components": "^0.19.6",
     "uuid": "^8.3.2",
     "vue": "^3.2.33",
     "vue-router": "4",

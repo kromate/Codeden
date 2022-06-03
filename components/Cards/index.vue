@@ -1,8 +1,9 @@
 <template>
-	<div>
-		<component :is="n.comp" v-for="n of blockDate" :key="n.name" />
-	</div>
-
+  <div>
+    <div v-for="n of blockDate" :key="n.name">
+      <component :is="n.comp" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -11,6 +12,6 @@ import { onMounted, shallowRef } from "vue";
 
 const blockDate = shallowRef();
 onMounted(async () => {
-  blockDate.value = await FolderComp('Cards');
+  blockDate.value = await FolderComp("Cards");
 });
 </script>

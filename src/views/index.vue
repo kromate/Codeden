@@ -54,7 +54,7 @@ import DefaultLayout from '@/layouts/defaultLayout.vue'
   color: #4f46e5;
   background-image: -webkit-linear-gradient(92deg, #3426f3, #feab3a);
   background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
   animation: hue 10s infinite linear;
 }
 

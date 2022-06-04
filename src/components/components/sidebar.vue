@@ -18,19 +18,20 @@
 				class="inline-flex items-center text-xl font-bold text-gray-700 transition-colors duration-200 transform md:text-2xl hover:text-blue-500"
 			><img src="/logo.png" alt="logo" class="mr-2 w-7 h-7" />
 
-				<span class="p-1 text-xl font-black leading-none text-gray-900"
+				<span class="p-1 text-xl font-black leading-none text-primary"
 				><span>CodeDen</span><span class="text-indigo-600">.</span></span
 				>
 			</router-link>
+
 			<nav class="mt-6">
 				<div
-					class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"
+					class="flex items-center justify-between px-4 py-1.5 mt-1  rounded-md outline-none text-gray-500 hover:text-white hover:text-blue-500 hover:bg-primary"
 					v-for="n in Block"
 					:key="n.name"
 					@click="changeComponent(n.name)"
 				>
 					<button
-						class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline"
+						class="transition-colors duration-200 ease-in-out focus:outline-none w-full font-semibold text-left"
 					>
 						{{ n.name }}
 					</button>
@@ -62,7 +63,6 @@
 					fill="currentColor"
 				></path>
 			</svg>
-			<!---->
 		</button>
 	</div>
 </template>

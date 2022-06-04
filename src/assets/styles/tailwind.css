@@ -12,7 +12,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px; /* Remove scrollbar space */
+  width: 6px; /* Remove scrollbar space */
   height: 6px; /* Remove scrollbar space */
   background: #7483bf4e; /* Optional: just make scrollbar invisible */
 }
@@ -22,6 +22,7 @@ body {
   background: #4e46e588;
   border-radius: 100px;
   cursor: pointer;
+  padding: 4px;
 }
 
 @layer components {

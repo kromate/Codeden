@@ -27,7 +27,7 @@
 					class="flex items-center justify-between px-4 py-2 mt-1 rounded-md focus:outline-none text-gray-500 hover:text-blue-500 transition-colors duration-200 transform"
 					v-for="n in Block"
 					:key="n.name"
-					@click="changeComponent(n.name)"
+					@click="[changeComponent(n.name), (showComponentNav = false)]"
 				>
 					<button
 						class="transition-colors duration-200 ease-in-out focus:outline-none w-full text-left hover:underline"
@@ -68,21 +68,16 @@
 </template>
 
 <script lang="ts" setup>
-import { FolderReader } from '../../composables/useFileSystem'
-import { ref } from 'vue'
+import { FolderReader } from "../../composables/useFileSystem";
+import { ref } from "vue";
+import { changeComponent } from "../../composables/useComponents";
 
-const emit = defineEmits(['changeComponent'])
-const showComponentNav = ref(false)
-const Block = FolderReader('components')
+const showComponentNav = ref(false);
+const Block = FolderReader("components");
 
 const showNav = () => {
-	showComponentNav.value = !showComponentNav.value
-}
-
-const changeComponent = (name) => {
-	emit('changeComponent', name)
-	showComponentNav.value = false
-}
+  showComponentNav.value = !showComponentNav.value;
+};
 </script>
 
 <style scoped></style>

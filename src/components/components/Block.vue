@@ -12,29 +12,25 @@
 						aria-label="Rtl"
 						class="transition-colors duration-200 ease-in-out focus:outline-none p-1 rounded-md hover:text-gray-700 hover:bg-gray-400 bg-gray-200 text-gray-600"
 					>
-						<i class="las la-exchange-alt"></i>
-           
+						<i class="las la-exchange-alt text-2xl"></i>
 					</button>
 					<button
 						aria-label="dark mode button"
-						class="transition-colors duration-200 ease-in-out focus:outline-none p-1 text-gray-600 bg-gray-200 rounded-md hover:text-gray-700 hover:bg-gray-400"
+						class="transition-colors duration-200 ease-in-out focus:outline-none p-1 bg-gray-200 text-gray-600 rounded-md hover:text-gray-700 hover:bg-gray-400"
 					>
-						<i class="las la-moon"></i>
-            
+						<i class="las la-moon text-2xl"></i>
 					</button>
 					<button
 						aria-label="View code snippet"
 						class="transition-colors duration-200 ease-in-out focus:outline-none p-1 rounded-md hover:text-gray-700 hover:bg-gray-400 bg-gray-200 text-gray-600"
 					>
-						<i class="las la-code"></i>
-            
+						<i class="las la-code text-2xl"></i>
 					</button>
 					<button
 						aria-label="Copy"
 						class="transition-colors duration-200 ease-in-out focus:outline-none p-1 text-gray-600 bg-gray-200 rounded-md hover:text-gray-700 hover:bg-gray-400"
 					>
-						<i class="las la-clipboard"></i>
-            
+						<i class="las la-clipboard text-2xl"></i>
 					</button>
 				</div>
 			</div>

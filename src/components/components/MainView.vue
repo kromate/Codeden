@@ -5,14 +5,12 @@
 	>
 		<div class="container px-4 mx-auto sm:px-6">
 		<Header />
-			<section>
-				<h1 class="mb-6 text-2xl font-semibold text-gray-800 capitalize">
-					{{ currentComponent }}
-				</h1>
+		<section>
+				<h1 class="mb-6 text-2xl font-semibold text-gray-800 capitalize">{{ currentComponent }}</h1>
 				<component :is="component" />
 			</section>
 		<Footer />
-		</div>
+	</div>
 	</main>
 </template>
 

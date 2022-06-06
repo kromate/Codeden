@@ -16,6 +16,8 @@ module.exports = {
 	rules: {
 		'no-console': 'warn',
 		'no-debugger': 'warn',
+		'vue/valid-template-root': 'off',
+		"vue/no-multiple-template-root": "off",
 		'vue/no-deprecated-slot-attribute': 'off',
 		'@typescript-eslint/no-unused-vars': 'off',
 		'@typescript-eslint/no-non-null-assertion': 'off',

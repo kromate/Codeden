@@ -19,7 +19,16 @@
 <script lang="ts" setup>
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
-defineProps(["component", "currentComponent"]);
+
+import { currentComponent, component } from "../../composables/useComponents";
+import { onMounted } from "vue";
+
+onMounted(async () => {
+  const block = await import(
+    `../../../components/${currentComponent.value}/index.vue`
+  );
+  component.value = block.default;
+});
 </script>
 
 <style scoped></style>
